@@ -1,0 +1,34 @@
+[project]
+name = "product-slm"
+version = "0.1.0"
+description = "LoRA-fine-tuned small language model that extracts product attributes from retail titles as schema-valid JSON"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "MIT"
+authors = [{ name = "Houssem Yousfi", email = "houssemyousfi1999@gmail.com" }]
+dependencies = [
+    "pydantic>=2.8",
+    "pydantic-settings>=2.4",
+    "duckdb>=1.1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pslm"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
