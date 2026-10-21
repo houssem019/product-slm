@@ -3,7 +3,7 @@ name = "product-slm"
 version = "0.1.0"
 description = "LoRA-fine-tuned small language model that extracts product attributes from retail titles as schema-valid JSON"
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.11,<3.14"
 license = "MIT"
 authors = [{ name = "Houssem Yousfi", email = "houssemyousfi1999@gmail.com" }]
 dependencies = [
@@ -16,10 +16,10 @@ dependencies = [
 
 [project.optional-dependencies]
 train = [
-    "accelerate>=1.15.0",
-    "peft>=0.21.2",
-    "torch>=2.14.1",
-    "transformers>=5.20.2",
+    "accelerate>=1.0",
+    "peft>=0.13",
+    "torch>=2.4",
+    "transformers>=4.56",
 ]
 
 [dependency-groups]

@@ -76,3 +76,17 @@ Format: **Problem → Root cause → Fix → What I'd do at scale.**
 - **Root cause:** a backward pass through a 0.5B fp32 model has no GPU and no fast low-precision kernels. bitsandbytes 4-bit needs CUDA, so CPU QLoRA isn't possible at all.
 - **Fix:** the CPU path is kept for what it's good at. A 2-step run on a tiny random-weight model with the real Qwen tokenizer checks tokenization, masking, LoRA wiring and saving in seconds. Real training runs on a free T4 (`notebooks/train_colab.ipynb`).
 - **At scale:** one GPU-hour on a T4 is free on Colab/Kaggle and costs well under $1 elsewhere. Trying to train on CPU wastes engineer time, which costs far more.
+
+## 11. The notebook broke on Colab's Python 3.13, and failed silently
+- **Problem:** the first Colab run failed at `pip install`: `requires a different Python: 3.13.15 not in '<3.13,>=3.11'`. The notebook kept going, and the first visible error came three cells later: `FileNotFoundError: outputs/.../train_summary.json`.
+- **Root causes:**
+  1. I copied `requires-python = "<3.13"` from the sibling repos, where it was a precaution. Colab had moved to 3.13, and nothing tested the project there.
+  2. A failed `!command` in a notebook doesn't stop execution. The error scrolled past, and the symptom showed up far from the cause.
+  3. A latent issue: the `train` extra required `torch>=2.14` (the version uv happened to resolve locally). On Colab, pip would have replaced its preinstalled CUDA build with a multi-GB download.
+- **Fixes:**
+  - `requires-python = ">=3.11,<3.14"`. I verified it: the full test suite and the cassette replay pass on 3.13.
+  - CI now runs on both 3.11 and 3.13, so the version Colab ships is exercised on every push.
+  - The `train` extra floors are now what the code actually needs: torch ≥ 2.4, transformers ≥ 4.56 (the first version with `dtype=`), peft ≥ 0.13, accelerate ≥ 1.0. pip keeps Colab's own builds.
+  - Notebook commands run through a `sh()` helper that raises on a non-zero exit, so the notebook stops at the failing step. The setup cell also checks for a GPU up front and pulls the latest code on reruns.
+- **Lesson:** a version floor should be the oldest version you've verified, not whatever your lockfile resolved today. Pins belong in the lockfile, not in `pyproject.toml`. And notebooks need explicit failure handling; their default is to carry on.
+- **Side finding:** the first local 3.13 check failed with a `ModuleNotFoundError` inside the anthropic SDK. That was Windows' 260-char path limit: a long temp path plus a long generated module filename. It wasn't a 3.13 problem; re-running from a short path passed.
