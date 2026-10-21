@@ -28,3 +28,9 @@ jobs:
       # Includes validation of the committed splits and labels (schema, alignment, grounding, disjoint splits).
       - name: Tests
         run: uv run pytest -q
+
+      # Replays the recorded zero-shot baseline (no Ollama, no network). Fails on a cassette miss, i.e. when the
+      # teacher prompt or docs/LABELING.md changed without re-recording.
+      - name: Baseline replay (qwen2.5:7b cassette)
+        if: hashFiles('data/cassettes/qwen2.5-7b.json') != ''
+        run: uv run python -m pslm.distill.label val --provider fake --model qwen2.5:7b --out replay-preds

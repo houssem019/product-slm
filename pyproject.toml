@@ -10,6 +10,8 @@ dependencies = [
     "pydantic>=2.8",
     "pydantic-settings>=2.4",
     "duckdb>=1.1",
+    "anthropic>=1.15.0",
+    "httpx>=0.27",
 ]
 
 [dependency-groups]

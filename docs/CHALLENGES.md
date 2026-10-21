@@ -25,3 +25,25 @@ Format: **Problem → Root cause → Fix → What I'd do at scale.**
 - **Problem:** LLM labelers sometimes "know" a brand that isn't in the text (e.g. using the store name), or normalize a size into a string that never appears.
 - **Fix:** a grounding check makes brand and size verbatim spans that must appear in the title (case- and whitespace-insensitive). It runs in pytest on every committed label. 800/800 pass.
 - **Limitation:** the check can't validate category or material. The human review of the test set covers those, and `teacher_label` keeps the teacher's original for error-rate measurement.
+
+## 5. Few-shot examples nearly leaked the test set
+- **Problem:** the first teacher prompt included four worked examples. I picked them from memory of the titles I had labeled, and all four were **test** titles. Any model prompted with them would have been graded on answers it was shown.
+- **Root cause:** the test split was labeled first, so its titles were the most familiar. Nothing checked where prompt examples came from.
+- **Fix:** I replaced them with verbatim train titles. `test_few_shot_examples_come_from_train_only` now asserts every example is in train and absent from val/test, so this can't silently come back.
+- **At scale:** treat everything that reaches a prompt (examples, retrieved neighbours, RAG context) as training data, and run leakage checks on it the same way as on the splits.
+
+## 6. Pydantic's JSON schema is not what constrained decoders want
+- **Problem:** `ProductAttributes.model_json_schema()` emits `$defs`/`$ref` for the enum and `anyOf: [{type: string}, {type: null}]` for nullable fields. Constrained decoders (Claude structured outputs, Ollama `format`, vLLM guided JSON) support those constructs unevenly.
+- **Fix:** `output_schema()` is a hand-written flat schema:
+  - the category enum is inline;
+  - nullable fields are `type: ["string", "null"]`;
+  - every key is `required`;
+  - `additionalProperties: false`.
+  
+  Pydantic still validates the parsed output, so the two can't drift without a failing test (`test_output_schema_is_flat_and_complete`).
+- **Lesson:** "required + nullable" beats "optional". The model must state null explicitly, so a missing key is always an error, never a silent default.
+
+## 7. F1 of a field with no positives is undefined, not 0
+- **Problem:** on a 3-title smoke run with no gold materials, the report showed material F1 = 0.000 for a model that correctly predicted null three times.
+- **Fix:** when TP + FP + FN = 0, P/R/F1 are `None`, shown as `n/a`. They aren't counted as 0, and they aren't counted as a perfect 1 either.
+- **Why it matters:** per-category or small-slice reports hit this constantly. Reporting 0 would make a model look broken on exactly the slices where it did nothing wrong.

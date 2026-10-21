@@ -69,6 +69,22 @@ class ProductAttributes(BaseModel):
 FIELDS: tuple[str, ...] = ("category", "brand", "size", "material")
 
 
-def json_schema() -> dict:
-    """JSON schema for structured outputs / guided decoding."""
-    return ProductAttributes.model_json_schema()
+def output_schema() -> dict:
+    """Flat JSON schema for constrained decoding (Claude structured outputs, Ollama `format`, vLLM guided JSON).
+
+    Written by hand instead of `model_json_schema()`: Pydantic emits `$defs`/`$ref` and `anyOf` for the enum and
+    the nullable fields, which constrained decoders support unevenly. Every field is required, so "unknown" is
+    an explicit null rather than a missing key.
+    """
+    nullable = {"type": ["string", "null"]}
+    return {
+        "type": "object",
+        "properties": {
+            "category": {"type": "string", "enum": [c.value for c in Category]},
+            "brand": nullable,
+            "size": nullable,
+            "material": nullable,
+        },
+        "required": list(FIELDS),
+        "additionalProperties": False,
+    }
