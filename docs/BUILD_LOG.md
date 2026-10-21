@@ -18,8 +18,14 @@ Read this before an interview to retell the story of the project.
 | 11. Sync labeler / baseline runner | `pslm.distill.label <split> --provider ...`: predicts, writes `data/preds/<split>/<model>.jsonl`, and scores against the reference labels. Also reports strict JSON rate, latency p50/p95 and cost per 1k titles. | One runner for "label with the teacher" and "zero-shot baseline". The baseline comparison table later reuses exactly this output. |
 | 12. Batch API teacher | `pslm.distill.batch estimate|submit|collect`: same `request_params` as sync (minus refusal fallbacks, which batches reject). `custom_id` = product id; results are re-ordered by id. | **50% cheaper and asynchronous**, the right tool for one-off bulk labeling. `estimate` gives offline cost: 600 titles cost ~$1.6 on Opus 5.5 and ~$0.04 on Haiku 5.5. Implemented and unit-tested with fake result objects. **Not run: no API key** on this machine; the committed labels come from the in-session teacher. |
 | 13. Metrics | `pslm.eval.metrics.score`: per-field accuracy; extraction P/R/F1 for brand/size/material; all-fields exact match; per-category accuracy; invalid-output breakdown. | Accuracy alone flatters a model that always says null (~74% of titles have no size). P/R/F1 with non-null as the positive class shows whether it actually extracts. An undefined F1 is `None`, not 0 (CHALLENGES #7). |
+| 14. Test-set review | A second pass over all 150 test labels against the guidelines. 2 edits: #146 size `32x64in` → `Large` ("Large Size" comes first); #61 brand "Emily the Strange" → null (licensed character). Both originals are kept as `teacher_label`. A scan of train/val for the same patterns found **an ambiguity, not more errors**: "Small Travel Umbrella" uses Small as an adjective. So `docs/LABELING.md` now defines when Small/Large is a size designation. | The user delegated the review to me. **Caveat: the reviewer is the same model that labeled.** It catches rule slips, not systematic blind spots. Every record says `reviewer: "claude-opus-5-5 (second pass, same model as the labeler)"`, and the README doesn't call the test set human-reviewed. The guideline edit changed the teacher prompt hash, so the qwen baseline was **re-recorded**: exact 0.40 → 0.46, with only that one sentence changed. That's within n=50 noise, but it's also a measurement of zero-shot prompt sensitivity. |
+| 15. SFT data | `pslm.train.format` writes `data/sft/{train,val}.jsonl`: (`STUDENT_SYSTEM`, `Title: ...`, canonical JSON). The canonical JSON has a fixed key order, `, `/`: ` separators and explicit nulls. `build("test")` raises. | **One target string per title:** if `{"brand":..}` and `{"brand": ..}` were both acceptable, the loss would be spent learning formatting variance. The test split never reaches training code, and a test enforces that. |
+| 16. Trainer | `pslm.train.train`: plain HF `Trainer` + a 20-line collator. **Loss on assistant tokens only**; the prompt is masked to -100. LoRA r=16/α=32/dropout 0.05 on all 7 attention+MLP projections. `--load-in-4bit` = QLoRA (NF4, double quant, fp16 compute, k-bit prep + gradient checkpointing). 3 epochs, lr 2e-4 cosine, effective batch 16. | **Masking:** the ~150-token prompt is identical boilerplate. Unmasked, it would dominate the loss on 600 examples. A test decodes the unmasked tokens with the real Qwen2.5 template and asserts they equal exactly the JSON + `<|im_end|>`, so the model also learns to stop. **All-linear LoRA:** adapting only q/v underfits format-heavy tasks on small models. **Not TRL:** its SFT API has churned across versions; the explicit collator is easier to verify and to explain. **transformers 5:** `warmup_ratio` is gone, so the 5% warmup is computed into `warmup_steps`. Max sequence is 278 tokens (mean 179), so `max_len=384` never truncates, and an over-long example raises instead of being cut silently. |
+| 17. Base model | **Qwen2.5-1.5B-Instruct** for the T4 run; the tiny `trl-internal-testing/tiny-Qwen2ForCausalLM-2.5` for smoke tests. | It's Apache-2.0 and not gated (Llama 3.2 needs a license click-through on every machine, including Colab), and PEFT, bitsandbytes and vLLM support it well. Qwen3 was rejected because of its default thinking mode: extra chat-template handling for no gain on a 40-token JSON task. The tiny model has random weights but the real tokenizer and template, so the smoke test exercises exactly the masking path. |
+| 18. HF inference provider | `pslm.llm.hf_client.HFLLM`: loads base + adapter, merges the LoRA, decodes greedily with **no constraints**, `max_new_tokens=96`. Registered as `--provider hf` in the same runner, so it gets the same metrics, prediction files and cassettes. | **One runner for every model** makes the comparison table apples-to-apples. Unconstrained decoding here measures the student's own JSON validity; guided decoding is a serving-time guarantee (vLLM, next milestone). The **zero-shot base with the same short prompt** is also run, which isolates what fine-tuning added. |
+| 19. Colab notebook | `notebooks/train_colab.ipynb` (linted and formatted by ruff like the rest of the code): clone → install `[train]` + bitsandbytes → format → QLoRA → eval fine-tuned and zero-shot on val+test with `--record` → zip the preds, cassettes, summary and adapter. | **There's no local NVIDIA GPU.** A free T4 is the target. Recording cassettes on Colab means CI can replay the GPU model's outputs on a CPU runner. |
 
-## Label statistics (teacher labels, before human review)
+## Label statistics (teacher labels; test split second-pass reviewed, 2 edits)
 
 | split | n | brand non-null | size non-null | material non-null |
 |---|---|---|---|---|
@@ -31,17 +37,17 @@ Top categories in train: apparel 97, electronics 70, automotive 48, home_kitchen
 
 ## First baseline: zero-shot qwen2.5:7b (Ollama, CPU), val split
 
-These are measured on the 50 **val** titles against the in-session teacher labels (not yet human-reviewed). The prompt is the teacher prompt with Ollama's schema-constrained decoding. `data/preds/val/qwen2.5-7b.report.json` has the full numbers, and CI replays it from `data/cassettes/qwen2.5-7b.json`.
+These are measured on the 50 **val** titles against the in-session teacher labels. The prompt is the teacher prompt with Ollama's schema-constrained decoding. `data/preds/val/qwen2.5-7b.report.json` has the full numbers, and CI replays it from `data/cassettes/qwen2.5-7b.json`.
 
 | metric | value |
 |---|---|
 | JSON valid (lenient / strict) | 1.00 / 1.00 (constrained decoding) |
-| exact match (all 4 fields) | 0.40 |
+| exact match (all 4 fields) | 0.46 (0.40 before the step-14 guideline clarification; see below) |
 | category accuracy | 0.68 |
-| brand acc / F1 | 0.86 / 0.873 |
+| brand acc / F1 | 0.88 / 0.889 |
 | size acc / F1 | 0.80 / 0.571 (precision 0.47) |
-| material acc / F1 | 0.86 / 0.640 |
-| latency p50 / p95 | 9.8 s / 13.2 s per title (CPU, 1.7k-token prompt) |
+| material acc / F1 | 0.90 / 0.696 |
+| latency p50 | 10.6 s per title (CPU, 1.7k-token prompt) |
 
 **Error analysis:** most misses break a written rule the model was given.
 - **Category:**

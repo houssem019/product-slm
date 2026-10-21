@@ -3,11 +3,11 @@
  "model": "qwen2.5:7b",
  "n": 50,
  "strict_json": 1.0,
- "latency_ms_p50": 9786.6,
- "latency_ms_p95": 13227.6,
+ "latency_ms_p50": 10577.9,
+ "latency_ms_p95": 15607.7,
  "usage": {
-  "input_tokens": 83845,
-  "output_tokens": 1393,
+  "input_tokens": 91445,
+  "output_tokens": 1389,
   "cache_read_tokens": 0,
   "cache_write_tokens": 0
  },
@@ -16,34 +16,34 @@
  "metrics": {
   "n": 50,
   "json_valid": 1.0,
-  "exact_match": 0.4,
+  "exact_match": 0.46,
   "accuracy": {
    "category": 0.68,
-   "brand": 0.86,
+   "brand": 0.88,
    "size": 0.8,
-   "material": 0.86
+   "material": 0.9
   },
   "f1": {
-   "brand": 0.873,
+   "brand": 0.889,
    "size": 0.571,
-   "material": 0.64
+   "material": 0.696
   }
  },
  "report": {
   "n": 50,
   "valid": 50,
-  "exact": 20,
+  "exact": 23,
   "correct": {
    "category": 34,
-   "brand": 43,
+   "brand": 44,
    "size": 40,
-   "material": 43
+   "material": 45
   },
   "prf": {
    "brand": {
-    "precision": 0.912,
-    "recall": 0.838,
-    "f1": 0.873
+    "precision": 0.914,
+    "recall": 0.865,
+    "f1": 0.889
    },
    "size": {
     "precision": 0.471,
@@ -51,9 +51,9 @@
     "f1": 0.571
    },
    "material": {
-    "precision": 0.615,
+    "precision": 0.727,
     "recall": 0.667,
-    "f1": 0.64
+    "f1": 0.696
    }
   },
   "per_category": {
@@ -83,11 +83,11 @@
    },
    "footwear": {
     "n": 4,
-    "correct": 1
+    "correct": 2
    },
    "furniture": {
     "n": 3,
-    "correct": 1
+    "correct": 0
    },
    "health_household": {
     "n": 1,

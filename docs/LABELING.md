@@ -38,6 +38,12 @@ don't settle a case, pick the more conservative answer, which usually means `nul
   - If it lists several sizes or variants, take the first one mentioned. That includes named sizes
     (`Regular & Plus Size` → `Regular`, `Junior Size, 5-1/2" x 8-1/2"` → `Junior`).
   - Copy only the value, without a label: `Height = 5/8"` → `5/8"`.
+  - A word like Small/Large only counts as a named size when it's a **size designation**:
+    - a garment, shoe or bedding size (`M`, `XL`, `Queen`, `Twin`);
+    - an explicit "X Size" (`Large Size`, `Junior Size`);
+    - a value in a size/variant parenthetical (`(S)`, `(Small: 5.25-6")`).
+    
+    A descriptive adjective is not a size: "Small Travel Umbrella ... 40.5inch" → `40.5inch`; "Large Mouse Pad, 31.5x11.8 Inch" → `31.5x11.8 Inch`.
 - Ambiguous bare numbers (`Willow Bucket 24`) and optics specs (`18-200mm` focal length) are `null`.
 - **Not a size:**
   - pack counts or piece counts (`5 Pcs`, `Pack of 2`);

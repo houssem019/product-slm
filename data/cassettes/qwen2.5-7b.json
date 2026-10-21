@@ -1,652 +1,652 @@
 {
- "b6755b0f4bfe31ca605f7943": {
+ "d0f5ce1649904080156801fa": {
   "user": "Title: Dewkou Pack-1 Tri-Color Grille Decor Badge, Car Decoration Accessories for Toyota 4Runner Tacoma Tundra & Other Mesh or Slotted Grille (American Flag Red)",
   "text": "{\"category\": \"automotive\", \"brand\": \"Dewkou\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1685,
+   "input_tokens": 1837,
    "output_tokens": 27,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 11555.0
+  "latency_ms": 134397.8
  },
- "a72846642ef67cff327be769": {
+ "2e76fb8acb224ba8eb4bee79": {
   "user": "Title: Small Butterfly Craft Stencils for Painting 3 inch Bee Dragonfly Hummingbird Bird Nature Stencils for Kids Adults on Wood Fabric Rock Card Art Paint Wall Furniture Home Decor (60 Animals)",
   "text": "{\"category\": \"arts_crafts\", \"brand\": null, \"size\": \"3 inch\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1688,
+   "input_tokens": 1840,
    "output_tokens": 27,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 11294.2
+  "latency_ms": 10845.9
  },
- "dacdc636d8f623258ea90b7e": {
+ "f8026f76bc6ab0051f9cc6b0": {
   "user": "Title: LA LEELA Men's Standard Swimsuits Sarong Full Beach Wrap",
   "text": "{\"category\": \"apparel\", \"brand\": \"LA LEELA\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1662,
+   "input_tokens": 1814,
    "output_tokens": 27,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 8881.7
+  "latency_ms": 7746.9
  },
- "5fa015e7d76d2b6a63801a1c": {
+ "3d1ee8ab7a4e06cbb74d2aa6": {
   "user": "Title: POLO Ralph Lauren Men's Classic Fit Cotton Knit Boxers, 3-Pack",
   "text": "{\"category\": \"apparel\", \"brand\": \"POLO Ralph Lauren\", \"size\": \"3-Pack\", \"material\": \"cotton\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1664,
+   "input_tokens": 1816,
    "output_tokens": 31,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9643.8
+  "latency_ms": 8706.8
  },
- "9fa7f94ee09fc3a670c07128": {
+ "41605c0aff9c2cee26b8eaef": {
   "user": "Title: AVEVA RGBW LED Under Cabinet Lights,Puck Lights with Remote USB Rechargeable Lights Closet Lights with Timing, 3500K 7 Color Dimmable Night Lights,Under Cabinet Lights Wireless-3Pack",
   "text": "{\"category\": \"home_kitchen\", \"brand\": \"AVEVA\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1693,
+   "input_tokens": 1845,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 11598.1
+  "latency_ms": 9401.0
  },
- "1eccee22ae71b46d4e2ac402": {
+ "2c8c0b8485dab70377430714": {
   "user": "Title: Kenneth Cole Women's Stand Down Wedge Pump Lace-up",
   "text": "{\"category\": \"apparel\", \"brand\": \"Kenneth Cole\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1658,
+   "input_tokens": 1810,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 8180.2
+  "latency_ms": 7103.0
  },
- "7d6bca2f2f9a3dce917c4a7e": {
+ "1e72eb61fab9ec375f2eed45": {
   "user": "Title: Skinit Clear Case Compatible with Samsung Galaxy S23 - Officially Licensed NFL Dallas Cowboys Distressed Design",
   "text": "{\"category\": \"electronics\", \"brand\": \"Skinit\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1668,
+   "input_tokens": 1820,
    "output_tokens": 24,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 8636.8
+  "latency_ms": 7877.9
  },
- "a43a8b0358c0446ebc42154f": {
+ "d2f716f55dc653fbfa1553f5": {
   "user": "Title: Everything Legwear Kids Valentine's Day 2 Pair Pack Crew Socks - You Are Berry Cute Strawberries - Fits Shoe Size 9-3 (2 Pair)",
   "text": "{\"category\": \"apparel\", \"brand\": null, \"size\": \"9-3\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1680,
+   "input_tokens": 1832,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9261.4
+  "latency_ms": 9145.5
  },
- "e002ec5ec0c4fa374d88c4bc": {
+ "3bd7eb2896ce4286e58e1063": {
   "user": "Title: 24 Inch Manual Tile Cutter, Professional Porcelain Ceramic Floor Tile Cutting Machine Hand Cutter Tools with Anti-slid Rubber Handle for Precising Cutting",
-  "text": "{\"category\": \"tools_home_improvement\", \"brand\": null, \"size\": \"24 Inch\", \"material\": \"ceramic\"}",
+  "text": "{\"category\": \"tools_home_improvement\", \"brand\": null, \"size\": \"24 Inch\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1676,
-   "output_tokens": 31,
+   "input_tokens": 1828,
+   "output_tokens": 29,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 10906.1
+  "latency_ms": 11783.3
  },
- "5892e5d4f3ca0ba0cffeb66b": {
+ "8faf9f272c4e2573cb593430": {
   "user": "Title: Simple Joys by Carter's Baby Boys' Long-Sleeve Bodysuit, Pack of 5",
-  "text": "{\"category\": \"baby\", \"brand\": \"Carter's\", \"size\": \"null\", \"material\": null}",
+  "text": "{\"category\": \"baby\", \"brand\": \"Carter's\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1668,
-   "output_tokens": 26,
+   "input_tokens": 1820,
+   "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7764.2
+  "latency_ms": 9539.6
  },
- "3cacb339f0b9f13440d1fd88": {
+ "bbb613e61c59d683d8a3ff52": {
   "user": "Title: Men's The Nightmare Before Christmas Halloween Oogie Boogie and his Boys Moon Tarot Card Pull Over Hoodie",
   "text": "{\"category\": \"apparel\", \"brand\": null, \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1669,
+   "input_tokens": 1821,
    "output_tokens": 23,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7848.8
+  "latency_ms": 8619.3
  },
- "4e63fe298a2dc8bca84dfd5d": {
+ "1a7e80fa7f96d12a2f739a0d": {
   "user": "Title: Men's The Late Late Show with James Corden Classic Logo T-Shirt",
   "text": "{\"category\": \"apparel\", \"brand\": null, \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1661,
+   "input_tokens": 1813,
    "output_tokens": 23,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 6905.3
+  "latency_ms": 7806.3
  },
- "554b2e60bca2525c4eda4e52": {
+ "e9a6f7c420a8a7510115611c": {
   "user": "Title: Pentel Wow! Retractable Super Smooth Ballpoint Pen, (1.4mm) Bold Line, Triangular Barrel, Black Ink, 12 Pack",
   "text": "{\"category\": \"office_school\", \"brand\": \"Pentel\", \"size\": \"12 Pack\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1680,
+   "input_tokens": 1832,
    "output_tokens": 29,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 10098.5
+  "latency_ms": 10763.7
  },
- "2f7a81f4e9e7921fd11f788e": {
+ "d7012aec45b71ef6076188ef": {
   "user": "Title: Ray-Ban Women's Rb3747 Round Sunglasses",
   "text": "{\"category\": \"apparel\", \"brand\": \"Ray-Ban\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1661,
+   "input_tokens": 1813,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7688.9
+  "latency_ms": 8479.5
  },
- "bb13d76ef383d851147a1f12": {
+ "6e2f24e153800701d2763c0c": {
   "user": "Title: IHMOLN Redhead Girls Diamond Painting Kits Meet The Sun and The Hurricane - by Number Full Diamond Cross Stitch Kits for Adults for Tasteful Room Decor & Valentines Day Decor 8x12inch",
   "text": "{\"category\": \"arts_crafts\", \"brand\": \"IHMOLN\", \"size\": \"8x12inch\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1690,
+   "input_tokens": 1842,
    "output_tokens": 34,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 12449.5
+  "latency_ms": 12364.8
  },
- "a3e45305c82729f201c24c62": {
+ "11b03042ea4959ea7d9e3cda": {
   "user": "Title: ANartcle Pan Bun Rack Cover,600D Waterproof and Dustproof Bun Rack Cover,Suitable for Commercial Bun Pan Bakery Rack - 10 Sheet,23\" W x 26\" D x 34\" H,Black",
-  "text": "{\"category\": \"home_kitchen\", \"brand\": \"ANartcle\", \"size\": \"23\\\" W x 26\\\" D x 34\\\" H\", \"material\": \"600d waterproof\"}",
+  "text": "{\"category\": \"home_kitchen\", \"brand\": \"ANartcle\", \"size\": \"23\\\" W x 26\\\" D x 34\\\" H\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1698,
-   "output_tokens": 48,
+   "input_tokens": 1850,
+   "output_tokens": 43,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 16790.5
+  "latency_ms": 15526.3
  },
- "c49e046a8ed0b141d1400f81": {
+ "6dab740e288bfeb55cf7e3d4": {
   "user": "Title: Konideke 16 Inches F10T5 Replacement Bulb for Jasco T5 10 Watt Warm White 3000K F10T5/830 Fluorescent Tube for Counter and Cabinet Fixture (3)",
   "text": "{\"category\": \"home_kitchen\", \"brand\": \"Konideke\", \"size\": \"16 Inches\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1700,
+   "input_tokens": 1852,
    "output_tokens": 30,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 13104.4
+  "latency_ms": 12100.1
  },
- "fd216810d67318cf49166858": {
+ "f7251ec3883d19b922811e48": {
   "user": "Title: Vionic Fallyn Women's Toe Post Supportive Sandal",
-  "text": "{\"category\": \"apparel\", \"brand\": \"Vionic\", \"size\": null, \"material\": null}",
+  "text": "{\"category\": \"footwear\", \"brand\": \"Vionic\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1660,
+   "input_tokens": 1812,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 8263.9
+  "latency_ms": 7555.5
  },
- "0ced1935ec540d1c2a1cd4be": {
+ "e840566bf875d9514e08c42d": {
   "user": "Title: Geox Women's Lola62 Ballerina Flat",
   "text": "{\"category\": \"apparel\", \"brand\": \"Geox\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1658,
+   "input_tokens": 1810,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7736.1
+  "latency_ms": 6668.3
  },
- "7b2042c063a0f161f517bb73": {
+ "00bc36e02be33852933aba20": {
   "user": "Title: Hello Kitty Baby Girls 5 Pack No Show Socks",
   "text": "{\"category\": \"apparel\", \"brand\": \"Hello Kitty\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1658,
+   "input_tokens": 1810,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7570.9
+  "latency_ms": 6465.7
  },
- "50464348b62a6a9d25aa0150": {
+ "887f34b2d08ac995ca8e7026": {
   "user": "Title: Personalized Library Book Stamp (036)",
   "text": "{\"category\": \"office_school\", \"brand\": null, \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1657,
+   "input_tokens": 1809,
    "output_tokens": 23,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7167.7
+  "latency_ms": 6376.7
  },
- "b427df5712ac24e29d7d6c2d": {
+ "c02ea3743337458e744d2051": {
   "user": "Title: Clarks Women's Laurieann Bay Clog",
   "text": "{\"category\": \"footwear\", \"brand\": \"Clarks\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1656,
+   "input_tokens": 1808,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7706.7
+  "latency_ms": 7787.4
  },
- "8409545a36b85fc5c4499ea3": {
+ "d5490c77b5b34233ce73db09": {
   "user": "Title: RHOTALL Switch Controller Charger for Nintendo Switch, OLED, Lite, 6 in 1 Joycon and Pro Controller Charging Dock Station, Controller Charging Stand with LED Indicator and Type C Charge Cable",
   "text": "{\"category\": \"electronics\", \"brand\": \"RHOTALL\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1686,
+   "input_tokens": 1838,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 10168.8
+  "latency_ms": 10894.5
  },
- "3ee0befd222ceb0b4cbb65d7": {
+ "7a1a79b5a4856f7da3c8f805": {
   "user": "Title: JGTONG Digital Spoon Scale, Digital Kitchen Scales 500g/0.1g Kitchen Measuring Spoon Food Scale Digital Multi-Function with Accurate LCD Display for Dispensing Coffee Beans, Milk, Flour,Condiment",
   "text": "{\"category\": \"home_kitchen\", \"brand\": \"JGTONG\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1695,
+   "input_tokens": 1847,
    "output_tokens": 27,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 11355.5
+  "latency_ms": 12937.1
  },
- "c17b036a18554c6b7582c46b": {
+ "3b66b6488c260292c9d21743": {
   "user": "Title: Danxee Leisure Chair Accent Chair Armchair Upholstered Linen Accent Chair with Wood Legs Reading Chair for Living Room Home Office Bedroom (Beige)",
   "text": "{\"category\": \"home_kitchen\", \"brand\": \"Dannxe\", \"size\": null, \"material\": \"linen\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1677,
+   "input_tokens": 1829,
    "output_tokens": 29,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 10589.1
+  "latency_ms": 10548.3
  },
- "c69aafe222a4f52080dec20c": {
+ "800b5d782df9314ef2020e42": {
   "user": "Title: YiXinBB Custom Name & Number Phone Case Atlanta Basketball Jersey Phone Case TPU Shock Protective for iPhone 14 Pro Max 13 12 11 Pro Mini Xs Xr 8 7 6 Plus",
   "text": "{\"category\": \"electronics\", \"brand\": \"YiXinBB\", \"size\": null, \"material\": \"tpu\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1695,
+   "input_tokens": 1847,
    "output_tokens": 29,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9816.6
+  "latency_ms": 11090.3
  },
- "551a5522ee4ef84d1514cef3": {
+ "85c2b367fe981d325dfa9328": {
   "user": "Title: USTZFTBCL Spring Autumn Vintage Suit Women Jeans Jacket Casual Tops Loose Short Denim Suit Outerwear Female Cowboy Coat",
   "text": "{\"category\": \"apparel\", \"brand\": \"USTZFTBCL\", \"size\": null, \"material\": \"denim\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1672,
+   "input_tokens": 1824,
    "output_tokens": 30,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 10003.5
+  "latency_ms": 9339.4
  },
- "d9de6395ee73b2964f0d5eb2": {
+ "3245bb24728f174e693d588d": {
   "user": "Title: Boncun Footstools and Ottomans Small Foot Stool Wooden Footrest Ottoman Small Foot Rest for Chair Wood Foot Stool for Living Room (Log-Yellow)",
-  "text": "{\"category\": \"home_kitchen\", \"brand\": null, \"size\": \"Small\", \"material\": \"wood\"}",
+  "text": "{\"category\": \"home_kitchen\", \"brand\": \"Boncun\", \"size\": \"Small\", \"material\": \"wood\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1682,
-   "output_tokens": 26,
+   "input_tokens": 1834,
+   "output_tokens": 29,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 10008.7
+  "latency_ms": 10482.0
  },
- "8bd5f6f1bae54eb9595f6515": {
+ "dbc131675db400ed4f012302": {
   "user": "Title: OKMAGE Teeth Whitening Strips, Teeth Whitening Sensitive Teeth Products, Professional Effects Tooth Whitening 7D, Whitening Strips for Teeth 14 Treatments (28 Strips)",
   "text": "{\"category\": \"beauty_personal_care\", \"brand\": \"OKMAGE\", \"size\": \"28 Strips\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1690,
+   "input_tokens": 1842,
    "output_tokens": 33,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 12336.6
+  "latency_ms": 13888.1
  },
- "e2845697c5a94563688311b7": {
+ "fef0ccd72b4ccb07521bac37": {
   "user": "Title: yonwait 1 Pack Rearview Mirror Phone Holder, Rotatable and Retractable Adjustment Car Phone Holder, GPS Holder, Suitable for Most Mobile Phones and Cars (Black)",
   "text": "{\"category\": \"automotive\", \"brand\": \"yonwait\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1683,
+   "input_tokens": 1835,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9786.6
+  "latency_ms": 13144.8
  },
- "d21ba09fc6ccddffd29fbab9": {
+ "0b771659fdd292c8212fcd02": {
   "user": "Title: ZGZR Industrial Pipe Clothing Rack Heavy Duty Double Closet Rod Clothes Rack, Clothing Rods for Hanging Clothes, Wall Mounted Clothes Garment Rack Closet System 90in Black",
   "text": "{\"category\": \"industrial_scientific\", \"brand\": \"ZGZR\", \"size\": \"90in\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1682,
+   "input_tokens": 1834,
    "output_tokens": 32,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 11472.7
+  "latency_ms": 12699.9
  },
- "40bb85fa2f60b96afa9647cb": {
+ "348bda2570b8f9012f59d2ad": {
   "user": "Title: Casual Pants for Women Loose Fit Lounge Trousers Fashion Trousers Loose Comfy Linen Pants for Ladies",
   "text": "{\"category\": \"apparel\", \"brand\": null, \"size\": null, \"material\": \"linen\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1669,
+   "input_tokens": 1821,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9277.7
+  "latency_ms": 9726.1
  },
- "ddade7aaab4d092410d26fd0": {
+ "cc8baebdedcf3724fd184b73": {
   "user": "Title: Ever-Pretty Women's V-Neck Ruffle Sleeves Ruched Bust Chiffon Floor Length Formal Dresses 0164A-USA",
   "text": "{\"category\": \"apparel\", \"brand\": \"Ever-Pretty\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1679,
+   "input_tokens": 1831,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9740.0
+  "latency_ms": 10577.9
  },
- "7830bb66446238d8b247122b": {
+ "a2c0da7b6d4038f6aa6410d2": {
   "user": "Title: Bsubseach Women Swimwear Beach Kimono Cardigan Long Swimsuit Cover Ups Bikini Cover Up",
   "text": "{\"category\": \"apparel\", \"brand\": \"Bsubseach\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1669,
+   "input_tokens": 1821,
    "output_tokens": 27,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9055.7
+  "latency_ms": 10220.9
  },
- "c3a75a0f25e594fb1e153ca5": {
+ "fe2d29d3d8c0b8d83a1fc85d": {
   "user": "Title: Woodies Paradise Challenge Collab Flat Lens Mirrored Zebra Wood Polarized Sunglasses | 100% UVA/UVB Protection",
   "text": "{\"category\": \"apparel\", \"brand\": \"Woodies\", \"size\": null, \"material\": \"wood\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1676,
+   "input_tokens": 1828,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9449.0
+  "latency_ms": 10608.1
  },
- "328e3897043398272e5d8d1f": {
+ "412e6d54b869adefcdd03018": {
   "user": "Title: FOCO Kids' Wordmark Family Matching Collection Set Holiday Pjs",
   "text": "{\"category\": \"apparel\", \"brand\": \"FOCO\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1661,
+   "input_tokens": 1813,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7853.3
+  "latency_ms": 8664.3
  },
- "5bf11165449676ead81c06a4": {
+ "dda01e530b58c1bed666c219": {
   "user": "Title: CUENSTOP Power Supply for Genesis 2 3, AV Cable for Genesis 2 3, AC Power Adapter and Audio Video RCA AV Cable Compatible with SEGA Genesis 2 3 Console",
   "text": "{\"category\": \"electronics\", \"brand\": \"CUENSTOP\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1687,
+   "input_tokens": 1839,
    "output_tokens": 25,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 10057.5
+  "latency_ms": 10695.7
  },
- "cae5a4facf0def11e0e3195a": {
+ "894caf173d0e85dd444c2cdd": {
   "user": "Title: The ConfiDental Cleansing Tablets (140 tablets) - Mouthguard Cleaner & Dental Appliances Cleaner. Clean and Brightens, Removable Dental Alliances",
   "text": "{\"category\": \"health_household\", \"brand\": null, \"size\": \"140 tablets\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1680,
+   "input_tokens": 1832,
    "output_tokens": 28,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 10278.4
+  "latency_ms": 11702.5
  },
- "b2e8b83425abc05349b86bf5": {
+ "9fbfa9d10ac7c772847137e3": {
   "user": "Title: 100 Pieces Floss Bobbins and 36 Compartments Jewelry Storage Box, 1 Pieces Floss Winder and 2 Pieces Color Chip",
   "text": "{\"category\": \"jewelry_accessories\", \"brand\": null, \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1680,
+   "input_tokens": 1832,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9518.9
+  "latency_ms": 10861.4
  },
- "cd72493e87872b08b4752fe4": {
+ "110501e9e9bed2d5200550ff": {
   "user": "Title: Magnetic Phone Case Shockproof Cover Cases Magnet Ring Wierless Charging Compatible with iPhone 13 Pro Soft TPU Protective Bumper Red",
   "text": "{\"category\": \"electronics\", \"brand\": null, \"size\": null, \"material\": \"tpu\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1674,
+   "input_tokens": 1826,
    "output_tokens": 24,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 8398.2
+  "latency_ms": 8907.8
  },
- "a9070e6938bac29141a91b22": {
+ "fa37b0a004471eec776c40f8": {
   "user": "Title: Comforter Storage Bag - Large Capacity Clothes Storage Bag Organizer with Reinforced Handle Thick Fabric for Comforters, Pillows, Blankets, Bedding/Quilt, Blanket, Duvet, Mothproof & Space Saver",
   "text": "{\"category\": \"bedding_bath\", \"brand\": null, \"size\": null, \"material\": \"thick fabric\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1694,
+   "input_tokens": 1846,
    "output_tokens": 28,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 11229.4
+  "latency_ms": 11954.2
  },
- "4d7aaba6211164f4bd9ef0eb": {
+ "a7e25ad1fbd44518c77f931d": {
   "user": "Title: 925 Sterling Silver Abalone Dragonfly Bangle Bracelet Animal Cuff Slip On Fine Jewelry For Women Gifts For Her",
   "text": "{\"category\": \"jewelry_accessories\", \"brand\": null, \"size\": null, \"material\": \"sterling silver\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1673,
+   "input_tokens": 1825,
    "output_tokens": 29,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 9738.9
+  "latency_ms": 10929.5
  },
- "3dbad019c2772897e04704ba": {
+ "2202de3372d8972719fe11bb": {
   "user": "Title: adidas Men's Preseason Stretch Fit",
   "text": "{\"category\": \"apparel\", \"brand\": \"adidas\", \"size\": \"Preseason\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1654,
+   "input_tokens": 1806,
    "output_tokens": 27,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 7598.7
+  "latency_ms": 9319.2
  },
- "c11635a9724f5fcb84815cc5": {
+ "0af66b0c26c9bbe70c3b8706": {
   "user": "Title: Screen Protector for iPhone 14 Pro Max 6.7 inch, 2 Tempered Glass [Easy Installation Frame] [9H Hardness] [99.99% HD Clear] [Case Friendly] [Bubble Free] 2 screen protector in 1",
   "text": "{\"category\": \"electronics\", \"brand\": null, \"size\": \"6.7 inch\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1703,
+   "input_tokens": 1855,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 11800.5
+  "latency_ms": 14230.9
  },
- "c114d2db4add622944ef7bd8": {
+ "c7f14bd7a77b0e9cb0d68e89": {
   "user": "Title: Anime One Piece Shower Curtain Thousand Sunny Oda's Art Ukiyo-e for Bathroom Decor Waterproof Polyester Fabric Bath Curtain with 12 Hooks,70 x 70 inch",
   "text": "{\"category\": \"bedding_bath\", \"brand\": null, \"size\": \"70 x 70 inch\", \"material\": \"polyester\"}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1683,
+   "input_tokens": 1835,
    "output_tokens": 34,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 12362.6
+  "latency_ms": 12960.0
  },
- "533c065fb003b3d77d28fd31": {
+ "c991c5f2119376dd62531824": {
   "user": "Title: MOONSMILE elbow brace (Black)",
   "text": "{\"category\": \"health_household\", \"brand\": \"MOONSMILE\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1656,
+   "input_tokens": 1808,
    "output_tokens": 28,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 8778.8
+  "latency_ms": 9392.4
  },
- "3a12e06393c83582454048ab": {
+ "a377b1ae9e9b08638700f73d": {
   "user": "Title: APEXSUN Universal Cup Holder,Mega Strength Adjustable Clamp for Holder for Baby Stroller,Bike,Motorcycle,Wheelchair,Walker,360 Degrees Rotation Drink Holder fits Any Size Cup,Bottle,Can etc(White)",
   "text": "{\"category\": \"home_kitchen\", \"brand\": \"APEXSUN\", \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1695,
+   "input_tokens": 1847,
    "output_tokens": 27,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 11575.6
+  "latency_ms": 11752.6
  },
- "d98c8003363d6e93106ecb89": {
+ "eb4a73c35ffbd4bb31ce45fc": {
   "user": "Title: Coofel 47 Inch Computer Desk, Modern Simple Style Small Office Desk, Writing Desk, Study Table, Work Desk for Home Office, Student Study Writing (47\" x 24\" x 30\")",
-  "text": "{\"category\": \"furniture\", \"brand\": \"Coofel\", \"size\": \"47\\\" x 24\\\" x 30\\\"\", \"material\": null}",
+  "text": "{\"category\": \"home_kitchen\", \"brand\": \"Coofel\", \"size\": \"47\\\" x 24\\\" x 30\\\"\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1693,
-   "output_tokens": 38,
+   "input_tokens": 1845,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 13909.4
+  "latency_ms": 15607.7
  },
- "993dc178000d0df661b1829a": {
+ "bebce53f07f71de7d374c3be": {
   "user": "Title: QUICQOD Retro Groovy Aesthetics Distorted Pastel Purple and Yellow Plaid Checkered Mouse Pad 8.7 x 8.7 Inches,Non-Slip Rubber Base Mousepads for Home Office Dorm Desk Decor,Gifts for Teen Girls",
   "text": "{\"category\": \"electronics\", \"brand\": \"QUICQOD\", \"size\": \"8.7 x 8.7 Inches\", \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1701,
+   "input_tokens": 1853,
    "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 13227.6
+  "latency_ms": 17629.7
  },
- "35148170c10d61f0a7343b60": {
+ "37d3888067f1ec765c9b1781": {
   "user": "Title: Pataku Tools & Home Improvement > Storage & Home Organization > Garage Storage > Mounted Storage Systems",
   "text": "{\"category\": \"tools_home_improvement\", \"brand\": null, \"size\": null, \"material\": null}",
   "stop_reason": "end_turn",
   "model": "qwen2.5:7b",
   "usage": {
-   "input_tokens": 1666,
+   "input_tokens": 1818,
    "output_tokens": 26,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 8316.8
+  "latency_ms": 9325.7
  }
 }

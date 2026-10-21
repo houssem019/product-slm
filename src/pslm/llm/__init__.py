@@ -34,6 +34,12 @@ def get_llm(
         from pslm.llm.ollama_client import OllamaLLM
 
         llm = OllamaLLM(model or cfg.ollama_model, cfg.ollama_host)
+    elif provider == "hf":
+        from pslm.llm.hf_client import HFLLM
+
+        if model is None:
+            raise ValueError("the hf provider needs --model (an adapter dir or a Hub model id)")
+        llm = HFLLM(model)
     else:
-        raise ValueError(f"unknown LLM provider {provider!r} (anthropic | ollama | fake)")
+        raise ValueError(f"unknown LLM provider {provider!r} (anthropic | ollama | hf | fake)")
     return ReplayLLM(cassette, inner=llm) if record and cassette else llm

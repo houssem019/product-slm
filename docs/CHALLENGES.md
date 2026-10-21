@@ -47,3 +47,32 @@ Format: **Problem → Root cause → Fix → What I'd do at scale.**
 - **Problem:** on a 3-title smoke run with no gold materials, the report showed material F1 = 0.000 for a model that correctly predicted null three times.
 - **Fix:** when TP + FP + FN = 0, P/R/F1 are `None`, shown as `n/a`. They aren't counted as 0, and they aren't counted as a perfect 1 either.
 - **Why it matters:** per-category or small-slice reports hit this constantly. Reporting 0 would make a model look broken on exactly the slices where it did nothing wrong.
+
+## 8. One guideline sentence moved the zero-shot baseline by 6 points
+- **Problem:** after I added one clarifying sentence to `docs/LABELING.md` (when Small/Large counts as a size), the qwen2.5:7b val baseline went from exact match 0.40 to 0.46. Brand F1 went 0.873 → 0.889 and material F1 0.640 → 0.696. Model, data and temperature (0) were all unchanged.
+- **Root cause:** 3 of 50 titles flipped. A zero-shot model conditions on every token of a 1.5k-token prompt, so any edit perturbs its outputs somewhere, not only on the rule that changed.
+- **What it means:**
+  1. On n=50, ±0.06 is noise. Compare models on the 150-title test set, and report n.
+  2. Prompt sensitivity is itself an argument for fine-tuning. A fine-tuned student with a fixed short prompt doesn't drift when someone edits a guideline doc.
+  3. The cassette design caught it: the edit invalidated the recording, CI would have failed, and the number was re-measured instead of silently stale.
+
+## 9. "Human review" was delegated back to the labeler
+- **Problem:** the plan called for a human to review the 150 test labels. The owner asked me to do it instead, so the reviewer is the same model that produced the labels.
+- **Consequence:** a second pass catches **rule slips**. It found 2: a first-size violation and a licensed-character brand. It can't catch **shared blind spots**: if the labeler misreads a rule, the reviewer misreads it the same way. Agreement between the two passes says little about accuracy.
+- **Mitigation:** the provenance is explicit:
+  - `reviewer: "claude-opus-5-5 (second pass, same model as the labeler)"` on every record;
+  - `teacher_label` keeps the 2 originals;
+  - the README says "model-reviewed", not "human-reviewed".
+  
+  All reported scores are agreement with Claude's guideline-following labels, which is exactly what distillation optimizes for.
+- **At scale:** hand a random 10–20% to a human (or a different model family), measure per-field agreement, and adjudicate disagreements into guideline changes.
+
+## 10. CPU training is a smoke test, not a fallback
+- **Problem:** the plan had a "CPU fallback" for training. I measured 3 optimizer steps (effective batch 16) of plain LoRA on Qwen2.5-0.5B in fp32 on this laptop CPU.
+- **Measured:**
+  - **834 s for 3 steps (~278 s per step)**, with 8.8M trainable params (1.75%);
+  - a full 3-epoch run (~112 steps) would take **~8.7 hours**, and the 1.5B target ~3x longer;
+  - train loss after 3 steps was already 0.62, because the instruct model can almost do the format zero-shot.
+- **Root cause:** a backward pass through a 0.5B fp32 model has no GPU and no fast low-precision kernels. bitsandbytes 4-bit needs CUDA, so CPU QLoRA isn't possible at all.
+- **Fix:** the CPU path is kept for what it's good at. A 2-step run on a tiny random-weight model with the real Qwen tokenizer checks tokenization, masking, LoRA wiring and saving in seconds. Real training runs on a free T4 (`notebooks/train_colab.ipynb`).
+- **At scale:** one GPU-hour on a T4 is free on Colab/Kaggle and costs well under $1 elsewhere. Trying to train on CPU wastes engineer time, which costs far more.
