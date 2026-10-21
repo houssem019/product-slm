@@ -6,7 +6,7 @@ larger prompted LLM.
 
 > **Frontier comparison:** the code to benchmark Claude Haiku/Sonnet on the same test set exists (`--provider anthropic`). It hasn't been run, because this project was built without API credits. With a key, it's one command per model, at cents for 150 titles.
 
-> 🚧 Work in progress. Done: data, labels, LLM layer, QLoRA training on a T4, evaluation, CI eval gate. Next: serving (vLLM with JSON-guided decoding, a `/extract` endpoint) and Docker. See `docs/BUILD_LOG.md`.
+> Done: data, labels, LLM layer, QLoRA training on a T4, evaluation with a CI gate, and serving (FastAPI on vLLM with JSON-schema-constrained decoding, plus Docker). Pending: GPU serving benchmark numbers (`notebooks/serve_bench_colab.ipynb`). See `docs/BUILD_LOG.md`.
 
 ```
 "Tal 64OZ Ranger Pro Stainless Steel Vacuum Insulated Water Bottle (Black)"
@@ -48,6 +48,31 @@ uv sync --extra train
 uv run python -m pslm.train.format
 uv run python -m pslm.train.train --base trl-internal-testing/tiny-Qwen2ForCausalLM-2.5 --max-steps 2 --out outputs/smoke
 ```
+
+## Serving
+`POST /extract` takes a list of titles and returns one result per title, in order. A title that fails gets `attributes: null` plus an `error`; it never fails the batch.
+```bash
+curl -X POST localhost:8000/extract -H 'Content-Type: application/json' \
+  -d '{"titles": ["Tal 64OZ Ranger Pro Stainless Steel Vacuum Insulated Water Bottle - Leak-Proof Double Walled Thermos w/Carry Loop 80 Hrs Cold, 26 Hot Reusable Metal holds 8 cups (WM2584) (Black)"]}'
+# {"results": [{"title": "...", "attributes": {"category": "home_kitchen", "brand": "Tal", "size": "64OZ",
+#   "material": "stainless steel"}, "error": null}], "model": "...", "latency_ms": ...}
+```
+There are three backends (`SERVE_BACKEND`), all sharing the same prompt and the same output parser as evaluation:
+
+| backend | what | where |
+|---|---|---|
+| `vllm` | base + LoRA adapter on vLLM; **decoding constrained to the JSON schema**; the whole request in one batched `generate` | `Dockerfile.gpu` (`vllm/vllm-openai:v0.31.0`), GPU |
+| `hf` | plain transformers with the adapter merged; sequential | CPU fallback (`docker build --build-arg WITH_HF=1 .`) |
+| `replay` | serves the fine-tuned model's recorded outputs | default `Dockerfile`; CI smoke test, no model needed |
+
+```bash
+docker build -t product-slm . && docker run -p 8000:8000 product-slm      # replay demo
+docker build -f Dockerfile.gpu -t product-slm:gpu .
+docker run --gpus all -p 8000:8000 -v "$PWD/outputs/qwen2.5-1.5b-lora/adapter:/models/adapter:ro" product-slm:gpu
+```
+- `GET /health` reports the backend and model.
+- `GET /metrics` reports latency p50/p95, throughput and errors by type.
+- Throughput and latency on a T4 come from `notebooks/serve_bench_colab.ipynb`: vLLM guided vs unguided vs plain transformers, at batch sizes 1/8/32/150, with accuracy measured for each.
 
 ## Usage
 ```bash

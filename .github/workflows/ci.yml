@@ -60,3 +60,36 @@ jobs:
         with:
           name: replay-preds-py${{ matrix.python-version }}
           path: replay-preds/
+
+  # Builds the CPU image and exercises the real HTTP path inside it (replay backend: the fine-tuned model's
+  # recorded outputs, no torch, no GPU). Catches packaging problems the in-process tests can't: missing files in
+  # the image, wrong entrypoint, a healthcheck that never goes green.
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: docker build -t product-slm:ci .
+
+      - name: Smoke test (/health, /extract, /metrics)
+        run: |
+          docker run -d --name slm -p 8000:8000 product-slm:ci
+          for i in $(seq 1 30); do
+            [ "$(docker inspect -f '{{.State.Health.Status}}' slm)" = healthy ] && break
+            sleep 2
+          done
+          docker inspect -f '{{.State.Health.Status}}' slm | grep -q healthy || { docker logs slm; exit 1; }
+          title=$(head -n 1 data/titles/test.jsonl | python3 -c "import sys, json; print(json.load(sys.stdin)['title'])")
+          body=$(python3 -c "import json, sys; print(json.dumps({'titles': [sys.argv[1], 'never recorded title']}))" "$title")
+          resp=$(curl -sf -X POST localhost:8000/extract -H 'Content-Type: application/json' -d "$body")
+          echo "$resp"
+          echo "$resp" | python3 -c "
+          import json, sys
+          r = json.load(sys.stdin)['results']
+          assert r[0]['attributes'] and r[0]['attributes']['category'], r
+          assert r[1] == {'title': 'never recorded title', 'attributes': None, 'error': 'not_recorded'}, r
+          "
+          curl -sf localhost:8000/metrics | python3 -c "import json, sys; m = json.load(sys.stdin); assert m['titles'] == 2, m"
+          docker logs slm

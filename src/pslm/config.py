@@ -22,6 +22,12 @@ class Settings(BaseSettings):
     ollama_model: str = _env("OLLAMA_MODEL", "qwen2.5:7b")
     ollama_host: str = _env("OLLAMA_HOST", "http://localhost:11434")
     cassette_dir: Path = _env("CASSETTE_DIR", ROOT / "data" / "cassettes")
+    # Serving
+    serve_backend: str = _env("SERVE_BACKEND", "replay")  # vllm | hf | replay
+    # adapter dir (vllm/hf), Hub id (hf), or cassette path (replay; default: the fine-tuned model's cassette)
+    serve_model: str | None = _env("SERVE_MODEL", None)
+    serve_guided: bool = _env("SERVE_GUIDED", True)  # vLLM structured outputs on the JSON schema
+    serve_max_batch: int = _env("SERVE_MAX_BATCH", 256)
 
 
 settings = Settings()

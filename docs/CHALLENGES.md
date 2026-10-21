@@ -128,3 +128,16 @@ The full list comes from comparing `data/preds/test/qwen2.5-1.5b-lora.jsonl` aga
 - **Observed:** train loss went 0.40 → 0.055 → 0.027 → 0.010 by the end of each epoch. Val loss went 0.0536 → **0.0477** → 0.0493. The best val loss was after epoch 2; epoch 3 cut train loss ~3x while val loss rose.
 - **Why it's only mild:** task metrics are still strong (val exact 0.64). The val rise is small, and val is only 50 titles.
 - **What I'd do:** retrain with `--epochs 2`, or keep the best-val checkpoint (`load_best_model_at_end` with `save_strategy="epoch"`). Pick by val loss, and confirm on test once. I did **not** re-tune after seeing test results; doing so would make the test number optimistic.
+
+## 15. A slow network made "just benchmark it on CPU" an hour-long download
+- **Problem:** the local CPU benchmark of the real fine-tuned model hung for 18 minutes. The 3.1 GB base model (`Qwen2.5-1.5B-Instruct`) was downloading through Hugging Face's Xet client, which had throttled itself to one connection ("connection struggling"). Its cache held 1.7 MB.
+- **Diagnosis:** the process was at 100% CPU, which looked like work but was retry/backoff. A `.incomplete` blob sat stuck at 43 KB, and the Xet log showed the cause. Forcing plain HTTP (`HF_HUB_DISABLE_XET=1`) wasn't the fix: it got 231 MB in 5 minutes. The link itself was slow (~0.8 MB/s).
+- **Decision:** I skipped the local CPU benchmark of the real model. The CPU code path is already smoke-tested on a tiny model, and the T4 numbers are what matter for serving.
+- **Lessons:** for a long-running step, monitor progress (bytes, steps), not CPU usage. And put big downloads where bandwidth is cheap: Colab's network, or a model baked into the image.
+- **At scale:** a model registry or a pre-pulled image layer, so a pod's cold start never depends on the public Hub.
+
+## 16. Serving concurrency: vLLM's offline engine is not thread-safe
+- **Problem:** FastAPI runs sync endpoints in a thread pool, so two concurrent `/extract` calls would call `LLM.generate` from two threads at once.
+- **Fix:** a lock around the backend. Each request's titles still go to vLLM as one batch, which is where the GPU efficiency comes from for a bulk-enrichment API (callers send lists).
+- **Trade-off:** many small concurrent requests queue behind each other instead of being batched together.
+- **At scale:** run vLLM's async engine (or `vllm serve --enable-lora` with its OpenAI-compatible API) and make this service a thin client. vLLM's continuous batching then merges concurrent requests on the GPU. Keep the same `output_schema()` in the request's structured-output field.

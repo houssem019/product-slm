@@ -1,0 +1,10 @@
+.venv*/
+.git/
+outputs/
+data/raw/
+data/preds/
+data/bench/
+**/__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.zip

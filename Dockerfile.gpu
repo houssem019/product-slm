@@ -1,0 +1,29 @@
+# GPU image: the extraction API on vLLM (base model + LoRA adapter, output constrained to the JSON schema).
+#
+#   docker build -f Dockerfile.gpu -t product-slm:gpu .
+#   docker run --gpus all -p 8000:8000 \
+#     -v "$PWD/outputs/qwen2.5-1.5b-lora/adapter:/models/adapter:ro" \
+#     -v "$HOME/.cache/huggingface:/root/.cache/huggingface" \
+#     product-slm:gpu
+#
+# The adapter (74 MB) is mounted, not baked in. The base model (Qwen/Qwen2.5-1.5B-Instruct, ~3 GB) downloads to
+# the mounted HF cache on first start. Pin both in a real deployment: bake them into a private image or a model
+# registry, so a cold start doesn't depend on the Hub.
+#
+# vLLM pins its own torch/CUDA stack, so this image starts from vLLM's release image and installs this package
+# *without* its torch-based extras. v0.31.0 is the newest release that has been out for 2+ weeks.
+# (Not built in CI: the GitHub runners have no GPU, and the image is ~10 GB.)
+FROM vllm/vllm-openai:v0.31.0
+
+WORKDIR /app
+COPY pyproject.toml uv.lock README.md ./
+COPY src ./src
+COPY docs/LABELING.md ./docs/LABELING.md
+RUN pip install --no-cache-dir .
+
+ENV SERVE_BACKEND=vllm SERVE_MODEL=/models/adapter SERVE_GUIDED=true PYTHONUNBUFFERED=1
+EXPOSE 8000
+HEALTHCHECK --interval=15s --timeout=3s --start-period=180s --retries=10 \
+  CMD python3 -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"
+# The base image's ENTRYPOINT is vLLM's own OpenAI server; replace it with this API.
+ENTRYPOINT ["uvicorn", "pslm.serve.api:app", "--host", "0.0.0.0", "--port", "8000"]
