@@ -90,3 +90,18 @@ Format: **Problem → Root cause → Fix → What I'd do at scale.**
   - Notebook commands run through a `sh()` helper that raises on a non-zero exit, so the notebook stops at the failing step. The setup cell also checks for a GPU up front and pulls the latest code on reruns.
 - **Lesson:** a version floor should be the oldest version you've verified, not whatever your lockfile resolved today. Pins belong in the lockfile, not in `pyproject.toml`. And notebooks need explicit failure handling; their default is to carry on.
 - **Side finding:** the first local 3.13 check failed with a `ModuleNotFoundError` inside the anthropic SDK. That was Windows' 260-char path limit: a long temp path plus a long generated module filename. It wasn't a 3.13 problem; re-running from a short path passed.
+
+## 12. An unused preinstalled package broke evaluation (torchao)
+- **Problem:** QLoRA training on Colab succeeded, but loading the adapter for evaluation crashed inside `PeftModel.from_pretrained`: `ImportError: Found an incompatible version of torchao. Found version 0.10.0, but only versions above 0.16.0 are supported`.
+- **Root cause:**
+  - When peft wraps a layer with LoRA, it tries a chain of "dispatchers" (bitsandbytes, torchao, …).
+  - The torchao dispatcher checks whether torchao is installed. If an *old* version is present, it raises instead of skipping. Colab preinstalls torchao 0.10.
+  - Training never reached that check: its layers were bitsandbytes 4-bit, and the bnb dispatcher claims them first.
+  - Evaluation loads the base in plain fp16 so the adapter can be merged, and plain `Linear` layers fall through to the torchao check.
+  - Same library, same adapter. Only the *base layer type* differed, so a working training run proved nothing about loading the adapter.
+- **Fix:** the notebook runs `pip uninstall -y torchao` after installing. Nothing in this project uses it. In the broken session, the user uninstalled it and re-ran only the evaluation cell. No re-training was needed, because each step runs in a fresh subprocess and the adapter was already on disk.
+- **Lessons:**
+  1. Hosted notebook images are an uncontrolled environment: hundreds of preinstalled packages at versions you didn't choose.
+  2. Smoke-test every distinct load path. Here that's "4-bit base + new LoRA" for training and "fp16 base + saved adapter" for evaluation. Locally, both paths had passed only on CPU, where torchao isn't installed.
+  3. Structuring the notebook as independent steps that write artifacts to disk made recovery cheap.
+- **At scale:** pin a container image (or a `requirements.lock` for the notebook) and run the train → save → reload → infer loop end-to-end in CI on a tiny model in that same image.
