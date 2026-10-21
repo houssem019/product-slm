@@ -105,3 +105,26 @@ Format: **Problem → Root cause → Fix → What I'd do at scale.**
   2. Smoke-test every distinct load path. Here that's "4-bit base + new LoRA" for training and "fp16 base + saved adapter" for evaluation. Locally, both paths had passed only on CPU, where torchao isn't installed.
   3. Structuring the notebook as independent steps that write artifacts to disk made recovery cheap.
 - **At scale:** pin a container image (or a `requirements.lock` for the notebook) and run the train → save → reload → infer loop end-to-end in CI on a tiny model in that same image.
+
+## 13. What the fine-tuned model still gets wrong (test, n=150, exact match 0.63)
+The full list comes from comparing `data/preds/test/qwen2.5-1.5b-lora.jsonl` against the labels.
+
+- **Brand recall 0.82 vs precision 0.96.** It misses brands that look like ordinary words or are very short ("My Spoon", "Sheer Pots", "Wild Bobby", "DC", "CL", "Spectra", "Hallmark"), and cuts multi-word brands short ("Wolf" for "Wolf Spring").
+  - **Cause:** 600 examples teach "the first capitalized token is the brand". They don't teach that "Sheer Pots" is a name and not a description.
+  - **Fix:** more examples where the brand is a dictionary word. Or accept it: missing a brand is cheaper downstream than inventing one.
+- **`sports_fitness` became the default category** for 8 of 28 category errors: a flashlight, a motorbike rack, a Garmin watch case, softball pants. Anything outdoor- or sport-flavoured ends up there.
+  - **Fix:** per-category error analysis on val, then targeted examples for the confused pairs (electronics ↔ sports_fitness).
+- **Long-tail categories fail as predicted (#2).** `baby` has 0 train examples, so the breast pump went to `health_household`. Grocery (1 example) became `home_kitchen`, and the album (`other`) became `toys_games` ("Toys In The Attic").
+  - **The model can't predict a class it has never seen.** The fix is data, not tuning.
+- **Laptop screen sizes missed** (14", 15.6"). It likely over-generalized "a compatible device's screen size isn't a size", which phone-case titles teach repeatedly.
+  - **Lesson:** a rule with a strong surface pattern ("inch" near a device name) gets learned more broadly than intended.
+- **Span-boundary slips:** `(S)` instead of `S`, `Junior Size` instead of `Junior`, `B 11 inches` instead of `11 inches`. The right span, with extra characters.
+  - **Cheap fix:** a post-processing normalizer (strip brackets, a trailing "Size", a variant letter). That's deterministic code, not a model change.
+- **Material taken from finishes and secondary parts:** "18k gold plated", "brass" from "Brass Finish", "satin" from "Satin Lined", "tri blend". These are the subtlest rules in LABELING.md, and each appears in only a handful of train titles.
+- **Some golds are arguable.** A brass compass labeled `sports_fitness`, a basketball poster labeled `home_decor`, and #146 (`Large`, changed in review) where the model kept the original `32x64in`.
+  - **Takeaway:** a few percent of "errors" at this level are label ambiguity, so 0.63 exact match is a conservative number.
+
+## 14. Epoch 3 overfit (mildly)
+- **Observed:** train loss went 0.40 → 0.055 → 0.027 → 0.010 by the end of each epoch. Val loss went 0.0536 → **0.0477** → 0.0493. The best val loss was after epoch 2; epoch 3 cut train loss ~3x while val loss rose.
+- **Why it's only mild:** task metrics are still strong (val exact 0.64). The val rise is small, and val is only 50 titles.
+- **What I'd do:** retrain with `--epochs 2`, or keep the best-val checkpoint (`load_best_model_at_end` with `save_strategy="epoch"`). Pick by val loss, and confirm on test once. I did **not** re-tune after seeing test results; doing so would make the test number optimistic.

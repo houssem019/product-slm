@@ -21,6 +21,7 @@ from pathlib import Path
 
 from pslm.config import ROOT, settings
 from pslm.data.labels import load_labels, load_titles, write_jsonl
+from pslm.eval.gate import gate
 from pslm.eval.metrics import Report, format_report, score
 from pslm.llm import LLMClient, Usage, get_llm, model_slug
 from pslm.llm.replay import ReplayLLM
@@ -92,6 +93,9 @@ def main() -> None:
     p.add_argument("--limit", type=int, help="first N titles only (smoke tests)")
     p.add_argument("--record", action="store_true", help="save responses to the cassette for CI replay")
     p.add_argument("--out", type=Path, default=PREDS)
+    p.add_argument(
+        "--gate", type=Path, help="fail (exit 1) if metrics drop below the thresholds in this file"
+    )
     a = p.parse_args()
 
     model = a.model or {"anthropic": settings.teacher_model, "ollama": settings.ollama_model}.get(a.provider)
@@ -125,6 +129,12 @@ def main() -> None:
     out.with_suffix(".report.json").write_text(json.dumps(summary, indent=1), encoding="utf-8")
     print(format_report(rep, f"{name} on {a.split}, {prompt} prompt (vs reference labels)"))
     print({k: summary[k] for k in ("strict_json", "latency_ms_p50", "cost_usd", "cost_per_1k_usd")})
+    if a.gate:
+        failures = gate(name, a.split, rep.summary(), a.gate)
+        if failures:
+            print(f"GATE FAILED for {name}:{a.split}:\n  " + "\n  ".join(failures))
+            sys.exit(1)
+        print(f"gate passed for {name}:{a.split}")
 
 
 if __name__ == "__main__":

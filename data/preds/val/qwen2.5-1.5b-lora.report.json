@@ -1,0 +1,124 @@
+{
+ "split": "val",
+ "model": "Qwen2.5-1.5B-Instruct+qwen2.5-1.5b-lora",
+ "n": 50,
+ "strict_json": 1.0,
+ "latency_ms_p50": 982.6,
+ "latency_ms_p95": 1380.2,
+ "usage": {
+  "input_tokens": 7345,
+  "output_tokens": 1367,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0
+ },
+ "cost_usd": 0.0,
+ "cost_per_1k_usd": 0.0,
+ "prompt": "student",
+ "metrics": {
+  "n": 50,
+  "json_valid": 1.0,
+  "exact_match": 0.64,
+  "accuracy": {
+   "category": 0.76,
+   "brand": 0.94,
+   "size": 0.9,
+   "material": 0.94
+  },
+  "f1": {
+   "brand": 0.958,
+   "size": 0.727,
+   "material": 0.87
+  }
+ },
+ "report": {
+  "n": 50,
+  "valid": 50,
+  "exact": 32,
+  "correct": {
+   "category": 38,
+   "brand": 47,
+   "size": 45,
+   "material": 47
+  },
+  "prf": {
+   "brand": {
+    "precision": 1.0,
+    "recall": 0.919,
+    "f1": 0.958
+   },
+   "size": {
+    "precision": 0.727,
+    "recall": 0.727,
+    "f1": 0.727
+   },
+   "material": {
+    "precision": 0.909,
+    "recall": 0.833,
+    "f1": 0.87
+   }
+  },
+  "per_category": {
+   "apparel": {
+    "n": 13,
+    "correct": 13
+   },
+   "arts_crafts": {
+    "n": 3,
+    "correct": 1
+   },
+   "automotive": {
+    "n": 2,
+    "correct": 2
+   },
+   "beauty_personal_care": {
+    "n": 2,
+    "correct": 0
+   },
+   "bedding_bath": {
+    "n": 1,
+    "correct": 1
+   },
+   "electronics": {
+    "n": 6,
+    "correct": 6
+   },
+   "footwear": {
+    "n": 4,
+    "correct": 4
+   },
+   "furniture": {
+    "n": 3,
+    "correct": 3
+   },
+   "health_household": {
+    "n": 1,
+    "correct": 0
+   },
+   "home_decor": {
+    "n": 1,
+    "correct": 0
+   },
+   "home_kitchen": {
+    "n": 4,
+    "correct": 2
+   },
+   "jewelry_accessories": {
+    "n": 3,
+    "correct": 3
+   },
+   "office_school": {
+    "n": 3,
+    "correct": 3
+   },
+   "sports_fitness": {
+    "n": 1,
+    "correct": 0
+   },
+   "tools_home_improvement": {
+    "n": 3,
+    "correct": 0
+   }
+  },
+  "errors": {}
+ }
+}

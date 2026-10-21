@@ -1,0 +1,152 @@
+{
+ "split": "test",
+ "model": "Qwen2.5-1.5B-Instruct+qwen2.5-1.5b-lora",
+ "n": 150,
+ "strict_json": 1.0,
+ "latency_ms_p50": 949.5,
+ "latency_ms_p95": 1247.5,
+ "usage": {
+  "input_tokens": 22286,
+  "output_tokens": 4023,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0
+ },
+ "cost_usd": 0.0,
+ "cost_per_1k_usd": 0.0,
+ "prompt": "student",
+ "metrics": {
+  "n": 150,
+  "json_valid": 1.0,
+  "exact_match": 0.633,
+  "accuracy": {
+   "category": 0.813,
+   "brand": 0.88,
+   "size": 0.913,
+   "material": 0.933
+  },
+  "f1": {
+   "brand": 0.884,
+   "size": 0.763,
+   "material": 0.854
+  }
+ },
+ "report": {
+  "n": 150,
+  "valid": 150,
+  "exact": 95,
+  "correct": {
+   "category": 122,
+   "brand": 132,
+   "size": 137,
+   "material": 140
+  },
+  "prf": {
+   "brand": {
+    "precision": 0.964,
+    "recall": 0.816,
+    "f1": 0.884
+   },
+   "size": {
+    "precision": 0.853,
+    "recall": 0.69,
+    "f1": 0.763
+   },
+   "material": {
+    "precision": 0.833,
+    "recall": 0.875,
+    "f1": 0.854
+   }
+  },
+  "per_category": {
+   "apparel": {
+    "n": 35,
+    "correct": 32
+   },
+   "arts_crafts": {
+    "n": 6,
+    "correct": 4
+   },
+   "automotive": {
+    "n": 12,
+    "correct": 10
+   },
+   "baby": {
+    "n": 1,
+    "correct": 0
+   },
+   "beauty_personal_care": {
+    "n": 1,
+    "correct": 1
+   },
+   "bedding_bath": {
+    "n": 2,
+    "correct": 1
+   },
+   "electronics": {
+    "n": 22,
+    "correct": 17
+   },
+   "footwear": {
+    "n": 6,
+    "correct": 5
+   },
+   "furniture": {
+    "n": 4,
+    "correct": 3
+   },
+   "garden_outdoor": {
+    "n": 4,
+    "correct": 4
+   },
+   "grocery": {
+    "n": 1,
+    "correct": 0
+   },
+   "health_household": {
+    "n": 5,
+    "correct": 5
+   },
+   "home_decor": {
+    "n": 12,
+    "correct": 10
+   },
+   "home_kitchen": {
+    "n": 9,
+    "correct": 6
+   },
+   "industrial_scientific": {
+    "n": 1,
+    "correct": 1
+   },
+   "jewelry_accessories": {
+    "n": 10,
+    "correct": 10
+   },
+   "musical_instruments": {
+    "n": 2,
+    "correct": 2
+   },
+   "office_school": {
+    "n": 5,
+    "correct": 2
+   },
+   "other": {
+    "n": 1,
+    "correct": 0
+   },
+   "pet_supplies": {
+    "n": 5,
+    "correct": 5
+   },
+   "sports_fitness": {
+    "n": 5,
+    "correct": 4
+   },
+   "tools_home_improvement": {
+    "n": 1,
+    "correct": 0
+   }
+  },
+  "errors": {}
+ }
+}

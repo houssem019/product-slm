@@ -1,0 +1,32 @@
+{
+ "qwen2.5-1.5b-lora:val": {
+  "json_valid": 0.98,
+  "exact_match": 0.62,
+  "accuracy": {
+   "category": 0.74,
+   "brand": 0.92,
+   "size": 0.88,
+   "material": 0.92
+  },
+  "f1": {
+   "brand": 0.93,
+   "size": 0.7,
+   "material": 0.85
+  }
+ },
+ "qwen2.5-1.5b-lora:test": {
+  "json_valid": 0.98,
+  "exact_match": 0.61,
+  "accuracy": {
+   "category": 0.79,
+   "brand": 0.86,
+   "size": 0.89,
+   "material": 0.91
+  },
+  "f1": {
+   "brand": 0.86,
+   "size": 0.74,
+   "material": 0.83
+  }
+ }
+}

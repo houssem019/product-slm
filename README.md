@@ -1,9 +1,12 @@
 # Retail Product Attribute Extractor — Fine-Tuned SLM
 
 LoRA-fine-tuned small language model that extracts structured attributes (category, brand, size, material) from noisy
-retail product titles into schema-validated JSON, benchmarked against a frontier LLM and served with vLLM.
+retail product titles into schema-validated JSON. It's distilled from Claude labels and benchmarked against a 5x
+larger prompted LLM.
 
-> 🚧 Work in progress. Done so far: data, labels, LLM layer, baseline, QLoRA training code and Colab notebook. Next: the T4 run and evaluation, then serving. See `docs/BUILD_LOG.md`.
+> **Frontier comparison:** the code to benchmark Claude Haiku/Sonnet on the same test set exists (`--provider anthropic`). It hasn't been run, because this project was built without API credits. With a key, it's one command per model, at cents for 150 titles.
+
+> 🚧 Work in progress. Done: data, labels, LLM layer, QLoRA training on a T4, evaluation, CI eval gate. Next: serving (vLLM with JSON-guided decoding, a `/extract` endpoint) and Docker. See `docs/BUILD_LOG.md`.
 
 ```
 "Tal 64OZ Ranger Pro Stainless Steel Vacuum Insulated Water Bottle (Black)"
@@ -17,13 +20,24 @@ retail product titles into schema-validated JSON, benchmarked against a frontier
   - The test set got a second review pass against the guidelines. The reviewer was the same model that labeled, not a human (2 of 150 labels corrected; see `docs/CHALLENGES.md` #9).
 - **Schema:** [`src/pslm/schema.py`](src/pslm/schema.py) has 23 closed categories and nullable brand/size/material. The same JSON schema drives Claude structured outputs, Ollama and vLLM guided decoding.
 
-## Results so far (val, n = 50, small, so read ±0.07)
+## Results (test, n = 150 held-out titles)
 
-| model | prompt | exact match | category acc | brand F1 | size F1 | material F1 | JSON valid | p50 latency |
+| model | prompt | exact match | category acc | brand F1 | size F1 | material F1 | JSON valid (strict) | p50 latency |
 |---|---|---|---|---|---|---|---|---|
-| qwen2.5:7b zero-shot (Ollama, CPU) | full guidelines | 0.46 | 0.68 | 0.89 | 0.57 | 0.70 | 1.00 | 10.6 s |
-| Qwen2.5-1.5B zero-shot | short | _pending T4 run_ | | | | | | |
-| Qwen2.5-1.5B + QLoRA | short | _pending T4 run_ | | | | | | |
+| Qwen2.5-1.5B zero-shot | short (~150 tok) | 0.107 | 0.533 | 0.248 | 0.622 | 0.505 | 0.89 (0.00) | 1.3 s (T4) |
+| qwen2.5:7b zero-shot (Ollama, Q4) | full guidelines (~1.7k tok) | 0.567 | 0.773 | **0.927** | 0.697 | 0.773 | 1.00 (1.00)* | 13.1 s (CPU) |
+| **Qwen2.5-1.5B + QLoRA** | short (~150 tok) | **0.633** | **0.813** | 0.884 | **0.763** | **0.854** | **1.00 (1.00)** | 0.95 s (T4) |
+
+\* Ollama decoding is constrained to the JSON schema. The fine-tuned model's 100% strict validity is unconstrained: it learned the format.
+
+**Reading it honestly:**
+- **Fine-tuning works.** Same base model, same short prompt, adapter added: exact match goes from 0.11 to 0.63 (paired 95% CI for the gain is [+0.45, +0.61]). The untuned model wraps every answer in prose or fences, and invents categories (16 schema-invalid outputs).
+- **The fine-tuned 1.5B *matches* a 5x larger model that is given the full guidelines.** It leads on exact match by +0.067, but the 95% paired-bootstrap CI is [−0.027, +0.160], and no per-field difference is significant at n=150. Reproduce it with `python -m pslm.eval.compare`.
+- **The 7b is better on brand recall.** The win for the 1.5B is cost: a 10x shorter prompt and 5x fewer parameters, with no guideline text to maintain at inference.
+- **What "accuracy" means here:** labels are Claude's, following [`docs/LABELING.md`](docs/LABELING.md). The test set was re-checked by the same model, not a human. So these numbers measure **agreement with the teacher**, which is what distillation optimizes.
+- **Latencies** are from different hardware and plain unbatched `generate`. Treat them as indicative; serving throughput comes next with vLLM.
+- **Failure modes** are in [`docs/CHALLENGES.md`](docs/CHALLENGES.md) #13: brand recall on word-like names, `sports_fitness` as a catch-all, long-tail classes with 0–1 train examples, and span boundaries like `(S)`.
+- **Training cost:** QLoRA on a free Colab T4 took 447 s and trained 18.5M params (1.2%). CI replays every recorded run and **gates** the fine-tuned model's metrics against [`data/eval/baseline.json`](data/eval/baseline.json).
 
 ## Training
 - **Method:** QLoRA on Qwen2.5-1.5B-Instruct with a 4-bit NF4 base and LoRA r=16 on all projections. The loss covers only the JSON answer. Details are in `src/pslm/train/train.py`.
