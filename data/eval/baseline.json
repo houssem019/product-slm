@@ -28,5 +28,20 @@
    "size": 0.74,
    "material": 0.83
   }
+ },
+ "qwen2.5-1.5b-lora-vllm-guided:test": {
+  "json_valid": 0.98,
+  "exact_match": 0.68,
+  "accuracy": {
+   "category": 0.79,
+   "brand": 0.91,
+   "size": 0.94,
+   "material": 0.9
+  },
+  "f1": {
+   "brand": 0.91,
+   "size": 0.85,
+   "material": 0.82
+  }
  }
 }

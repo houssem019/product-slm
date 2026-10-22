@@ -141,3 +141,30 @@ The full list comes from comparing `data/preds/test/qwen2.5-1.5b-lora.jsonl` aga
 - **Fix:** a lock around the backend. Each request's titles still go to vLLM as one batch, which is where the GPU efficiency comes from for a bulk-enrichment API (callers send lists).
 - **Trade-off:** many small concurrent requests queue behind each other instead of being batched together.
 - **At scale:** run vLLM's async engine (or `vllm serve --enable-lora` with its OpenAI-compatible API) and make this service a thin client. vLLM's continuous batching then merges concurrent requests on the GPU. Keep the same `output_schema()` in the request's structured-output field.
+
+## 17. A shipped `repetition_penalty` silently cost 7 points of exact match
+- **Symptom:** the serving benchmark ran the *same adapter*, greedy, on the same T4 through two backends. vLLM scored exact match **0.707**; HF transformers scored **0.633**. Greedy decoding of the same weights shouldn't differ by more than fp16 noise.
+- **Narrowing it down:**
+  - **It wasn't guided decoding.** vLLM guided and unguided were byte-identical on all 150 titles.
+  - **The two backends differed on only 21 titles.**
+  - **Category matched on every one of them.** Every difference was brand or size. In 17 of the 21, HF answered `null` and vLLM copied the span from the title, correctly in 16 cases ("SNACTIV", "Wild Bobby", "DC", "Madden Girl", …).
+  - **The paired bootstrap confirms it:** vLLM − HF is +0.073 [+0.027, +0.127] on exact match, +0.053 on brand and +0.047 on size, and 0 on category.
+- **Root cause:**
+  - Qwen2.5-Instruct's `generation_config.json` ships `repetition_penalty: 1.1` along with sampling settings.
+  - HF `generate()` loads that file as its defaults. `do_sample=False` switches off sampling, but **the repetition penalty is a logits processor that still runs under greedy decoding.**
+  - It down-weights every token that already appears in the context, and the context includes the title. Copying "Wild Bobby" out of the title is exactly a repetition, so the model was nudged toward `null`.
+  - vLLM uses its own `SamplingParams` defaults (`repetition_penalty=1.0`) when you pass explicit params, which is how the discrepancy surfaced.
+- **What it had distorted:**
+  - **Fine-tuned model:** every evaluation was done with HF, so all its earlier numbers (0.633, brand recall 0.82) were understated.
+  - **Error analysis (#13):** "brand recall on word-like names" was mostly this bug, not the model.
+  - **Zero-shot 1.5B control:** it was penalized the same way (brand recall 0.14), so the "fine-tuning gain" was mis-measured too.
+  - **Comparison with qwen2.5:7b:** that baseline runs through Ollama, which has its own defaults. Comparing it to the HF-measured student had made the student look tied, when the served student is in fact significantly better.
+- **Fix:**
+  - `hf_client.greedy_config()` builds a fresh `GenerationConfig` (greedy, `repetition_penalty=1.0`, only the EOS/pad/bos ids taken from the shipped file) and replaces the model's.
+  - A behavioral test plants Qwen's penalty in a tiny model's config and asserts `generate()` equals a hand-written argmax loop. I confirmed the test **fails without the fix**.
+  - The HF runs (fine-tuned and zero-shot) were re-measured with the fix (BUILD_LOG step 29).
+- **Lessons:**
+  1. **Pin every decoding parameter explicitly.** A model's shipped `generation_config.json` encodes its authors' chat defaults, not your task's. Never inherit it in an evaluation.
+  2. **Two independent inference stacks are a powerful test.** The disagreement only appeared because serving used a different engine than eval. A single-stack project would have shipped the lower number and a wrong error analysis.
+  3. **Look at *which* outputs differ, not just how many.** "Only copy fields, always toward null" pointed straight at a logits-level cause.
+  4. **At scale:** keep the exact decoding config in the eval report, and run a cross-engine consistency check (eval engine vs serving engine on a fixed sample) in CI or at release time.

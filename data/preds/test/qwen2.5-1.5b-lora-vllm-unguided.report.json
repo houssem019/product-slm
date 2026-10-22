@@ -1,0 +1,139 @@
+{
+ "split": "test",
+ "model": "Qwen2.5-1.5B-Instruct+lora (unguided)",
+ "metrics": {
+  "n": 150,
+  "json_valid": 1.0,
+  "exact_match": 0.707,
+  "accuracy": {
+   "category": 0.813,
+   "brand": 0.933,
+   "size": 0.96,
+   "material": 0.927
+  },
+  "f1": {
+   "brand": 0.933,
+   "size": 0.878,
+   "material": 0.843
+  }
+ },
+ "report": {
+  "n": 150,
+  "valid": 150,
+  "exact": 106,
+  "correct": {
+   "category": 122,
+   "brand": 140,
+   "size": 144,
+   "material": 139
+  },
+  "prf": {
+   "brand": {
+    "precision": 0.947,
+    "recall": 0.918,
+    "f1": 0.933
+   },
+   "size": {
+    "precision": 0.9,
+    "recall": 0.857,
+    "f1": 0.878
+   },
+   "material": {
+    "precision": 0.814,
+    "recall": 0.875,
+    "f1": 0.843
+   }
+  },
+  "per_category": {
+   "apparel": {
+    "n": 35,
+    "correct": 32
+   },
+   "arts_crafts": {
+    "n": 6,
+    "correct": 4
+   },
+   "automotive": {
+    "n": 12,
+    "correct": 10
+   },
+   "baby": {
+    "n": 1,
+    "correct": 0
+   },
+   "beauty_personal_care": {
+    "n": 1,
+    "correct": 1
+   },
+   "bedding_bath": {
+    "n": 2,
+    "correct": 1
+   },
+   "electronics": {
+    "n": 22,
+    "correct": 17
+   },
+   "footwear": {
+    "n": 6,
+    "correct": 5
+   },
+   "furniture": {
+    "n": 4,
+    "correct": 3
+   },
+   "garden_outdoor": {
+    "n": 4,
+    "correct": 4
+   },
+   "grocery": {
+    "n": 1,
+    "correct": 0
+   },
+   "health_household": {
+    "n": 5,
+    "correct": 5
+   },
+   "home_decor": {
+    "n": 12,
+    "correct": 10
+   },
+   "home_kitchen": {
+    "n": 9,
+    "correct": 6
+   },
+   "industrial_scientific": {
+    "n": 1,
+    "correct": 1
+   },
+   "jewelry_accessories": {
+    "n": 10,
+    "correct": 10
+   },
+   "musical_instruments": {
+    "n": 2,
+    "correct": 2
+   },
+   "office_school": {
+    "n": 5,
+    "correct": 2
+   },
+   "other": {
+    "n": 1,
+    "correct": 0
+   },
+   "pet_supplies": {
+    "n": 5,
+    "correct": 5
+   },
+   "sports_fitness": {
+    "n": 5,
+    "correct": 4
+   },
+   "tools_home_improvement": {
+    "n": 1,
+    "correct": 0
+   }
+  },
+  "errors": {}
+ }
+}

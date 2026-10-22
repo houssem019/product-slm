@@ -1,0 +1,180 @@
+{
+ "name": "vllm-unguided",
+ "backend": "vllm",
+ "model": "Qwen2.5-1.5B-Instruct+lora (unguided)",
+ "guided": false,
+ "device": "Tesla T4",
+ "split": "test",
+ "n_titles": 150,
+ "model_load_s": 105.7,
+ "runs": [
+  {
+   "batch_size": 1,
+   "batches": 150,
+   "titles_per_s": 0.94,
+   "batch_latency_ms_p50": 1024.1,
+   "batch_latency_ms_p95": 1326.9,
+   "ms_per_title": 1058.6
+  },
+  {
+   "batch_size": 8,
+   "batches": 19,
+   "titles_per_s": 5.93,
+   "batch_latency_ms_p50": 1310.9,
+   "batch_latency_ms_p95": 1791.7,
+   "ms_per_title": 168.5
+  },
+  {
+   "batch_size": 32,
+   "batches": 5,
+   "titles_per_s": 16.78,
+   "batch_latency_ms_p50": 1738.9,
+   "batch_latency_ms_p95": 2103.7,
+   "ms_per_title": 59.6
+  },
+  {
+   "batch_size": 150,
+   "batches": 1,
+   "titles_per_s": 39.41,
+   "batch_latency_ms_p50": 3791.1,
+   "batch_latency_ms_p95": 3791.1,
+   "ms_per_title": 25.4
+  }
+ ],
+ "metrics": {
+  "n": 150,
+  "json_valid": 1.0,
+  "exact_match": 0.707,
+  "accuracy": {
+   "category": 0.813,
+   "brand": 0.933,
+   "size": 0.96,
+   "material": 0.927
+  },
+  "f1": {
+   "brand": 0.933,
+   "size": 0.878,
+   "material": 0.843
+  }
+ },
+ "strict_json": 1.0,
+ "report": {
+  "n": 150,
+  "valid": 150,
+  "exact": 106,
+  "correct": {
+   "category": 122,
+   "brand": 140,
+   "size": 144,
+   "material": 139
+  },
+  "prf": {
+   "brand": {
+    "precision": 0.947,
+    "recall": 0.918,
+    "f1": 0.933
+   },
+   "size": {
+    "precision": 0.9,
+    "recall": 0.857,
+    "f1": 0.878
+   },
+   "material": {
+    "precision": 0.814,
+    "recall": 0.875,
+    "f1": 0.843
+   }
+  },
+  "per_category": {
+   "apparel": {
+    "n": 35,
+    "correct": 32
+   },
+   "arts_crafts": {
+    "n": 6,
+    "correct": 4
+   },
+   "automotive": {
+    "n": 12,
+    "correct": 10
+   },
+   "baby": {
+    "n": 1,
+    "correct": 0
+   },
+   "beauty_personal_care": {
+    "n": 1,
+    "correct": 1
+   },
+   "bedding_bath": {
+    "n": 2,
+    "correct": 1
+   },
+   "electronics": {
+    "n": 22,
+    "correct": 17
+   },
+   "footwear": {
+    "n": 6,
+    "correct": 5
+   },
+   "furniture": {
+    "n": 4,
+    "correct": 3
+   },
+   "garden_outdoor": {
+    "n": 4,
+    "correct": 4
+   },
+   "grocery": {
+    "n": 1,
+    "correct": 0
+   },
+   "health_household": {
+    "n": 5,
+    "correct": 5
+   },
+   "home_decor": {
+    "n": 12,
+    "correct": 10
+   },
+   "home_kitchen": {
+    "n": 9,
+    "correct": 6
+   },
+   "industrial_scientific": {
+    "n": 1,
+    "correct": 1
+   },
+   "jewelry_accessories": {
+    "n": 10,
+    "correct": 10
+   },
+   "musical_instruments": {
+    "n": 2,
+    "correct": 2
+   },
+   "office_school": {
+    "n": 5,
+    "correct": 2
+   },
+   "other": {
+    "n": 1,
+    "correct": 0
+   },
+   "pet_supplies": {
+    "n": 5,
+    "correct": 5
+   },
+   "sports_fitness": {
+    "n": 5,
+    "correct": 4
+   },
+   "tools_home_improvement": {
+    "n": 1,
+    "correct": 0
+   }
+  },
+  "errors": {}
+ }
+}

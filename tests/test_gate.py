@@ -20,15 +20,21 @@ def test_gate_requires_thresholds_for_the_run(tmp_path):
     assert gate("m", "test", {"exact_match": 0.6}, path) == ["no thresholds for m:test in b.json"]
 
 
-def test_committed_baseline_matches_committed_reports():
-    """The thresholds must pass against the committed prediction reports (they were derived from them)."""
+def test_committed_predictions_rescored_from_scratch_pass_the_gate():
+    """Re-score every gated run's raw predictions against the current gold labels with the current metrics code.
+
+    This covers runs without a cassette (the vLLM-served predictions were written on a GPU), and fails if a
+    metrics, normalization or label change would make any gated model look worse than its baseline."""
+    from pslm.data.labels import load_labels, read_jsonl
+    from pslm.distill.label import evaluate
+
     baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
     for key, thresholds in baseline.items():
         run, split = key.split(":")
-        report = json.loads(
-            (BASELINE.parents[1] / "preds" / split / f"{run}.report.json").read_text(encoding="utf-8")
-        )
-        assert check(report["metrics"], thresholds) == [], key
+        rows = read_jsonl(BASELINE.parents[1] / "preds" / split / f"{run}.jsonl")
+        assert len(rows) == len(load_labels(split)), key
+        metrics = evaluate(rows, load_labels(split)).summary()
+        assert check(metrics, thresholds) == [], key
 
 
 def test_paired_bootstrap_detects_only_clear_differences():
