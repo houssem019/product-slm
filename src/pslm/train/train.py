@@ -16,7 +16,7 @@ Design:
 * LoRA on every linear projection (attention + MLP), r=16. On small models, adapting only q/v underfits
   formatting-heavy tasks.
 * Plain `transformers.Trainer` with a 20-line collator instead of TRL's SFTTrainer: fewer moving parts, and the
-  masking is explicit enough to explain in an interview.
+  masking is explicit and easy to follow.
 """
 
 from __future__ import annotations

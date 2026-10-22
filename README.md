@@ -6,7 +6,7 @@ larger prompted LLM.
 
 > **Frontier comparison:** the code to benchmark Claude Haiku/Sonnet on the same test set exists (`--provider anthropic`). It hasn't been run, because this project was built without API credits. With a key, it's one command per model, at cents for 150 titles.
 
-> Done: data, labels, LLM layer, QLoRA training on a T4, evaluation with a CI gate, and serving (FastAPI on vLLM with JSON-schema-constrained decoding, plus Docker). See `docs/BUILD_LOG.md` for the full story and `docs/INTERVIEW.md` for the Q&A.
+> Done: data, labels, LLM layer, QLoRA training on a T4, evaluation with a CI gate, and serving (FastAPI on vLLM with JSON-schema-constrained decoding, plus Docker). See `docs/BUILD_LOG.md` for the full story.
 
 ```
 "Tal 64OZ Ranger Pro Stainless Steel Vacuum Insulated Water Bottle (Black)"

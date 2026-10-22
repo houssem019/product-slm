@@ -13,7 +13,7 @@ Endpoints:
 Batching: a request's titles go to the backend in one call. With vLLM that's one `generate` over the whole list,
 which its scheduler batches on the GPU. Concurrent *requests* are serialized by a lock (vLLM's offline `LLM`
 object isn't thread-safe). At higher concurrency you'd run vLLM's async engine or its OpenAI-compatible server
-behind this API, which batches across requests too (docs/INTERVIEW.md: serving).
+behind this API, which batches across requests too.
 """
 
 from __future__ import annotations

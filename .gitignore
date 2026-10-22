@@ -30,3 +30,7 @@ checkpoints/
 .DS_Store
 Thumbs.db
 slm_results.zip
+
+# Local notes (not published)
+CLAUDE.md
+docs/INTERVIEW.md
