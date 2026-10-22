@@ -52,6 +52,21 @@ larger prompted LLM.
 - Plain transformers, one title at a time on the same GPU, does **0.87 titles/s**, so batching gives ~45x.
 - Constrained decoding produced **byte-identical outputs** to unconstrained on all 150 titles at the same throughput. Its only cost is startup (262 s vs 106 s model load), and it guarantees schema-valid output for any input. Details: `data/bench/*.json`.
 
+## When to use which
+
+| option | quality (test) | throughput / latency | rough cost per 1,000 titles | operational burden |
+|---|---|---|---|---|
+| **Fine-tuned 1.5B on vLLM** | exact 0.71 (best measured) | 39 titles/s at batch 150; ~1 s for a single title | **~$0.003** (a ~$0.35/h T4 at 39 titles/s; a free Colab/Kaggle T4 costs $0) | a GPU service; retrain when the taxonomy or rules change |
+| **Larger open model, prompted** (qwen2.5:7b) | exact 0.57 | ~13 s/title on a laptop CPU | ~$0 on hardware you already have | no training; output depends on prompt wording (CHALLENGES #8) |
+| **Frontier API, prompted** (Claude Haiku / Sonnet 5.5) | not benchmarked here (no API key). The teacher labels come from Claude, so it's the reference the student imitates | network round-trip; no infrastructure | **estimate:** ~$0.15–0.30 (Haiku) and ~$3–6 (Sonnet), from the ~1.7k-token guideline prompt + ~30–250 output tokens at list prices; prompt caching gives the low end, the Batch API halves it | none; pay per call |
+
+The estimates are list-price arithmetic, not measurements. The vLLM numbers come from `data/bench/vllm-guided.json`.
+
+- **High-volume, stable extraction** (catalog enrichment, nightly backfills, millions of titles): use the **fine-tuned SLM**. It's the most accurate option measured here and roughly 100–1000x cheaper per title than a frontier API. It's deterministic for a fixed adapter, and guided decoding guarantees the schema.
+- **Labels, a changing taxonomy, or low volume** (bootstrapping, new categories, under ~10k titles/month): use the **frontier API**. There's no training loop, rules change by editing the prompt, and its quality is what the student is distilled from. That's exactly how this project used it: as the teacher.
+- **No GPU and no API budget** (prototyping, offline or air-gapped): use a **prompted open model** on CPU. It's free, slower, and less accurate, and a guideline edit can move its scores (CHALLENGES #8).
+- **The usual end state is both:** the API labels new data and handles low-confidence or new-category cases, while the fine-tuned model serves the bulk traffic. The labels from the first become the next training set for the second.
+
 ## Training
 - **Method:** QLoRA on Qwen2.5-1.5B-Instruct with a 4-bit NF4 base and LoRA r=16 on all projections. The loss covers only the JSON answer. Details are in `src/pslm/train/train.py`.
 - **Where to run it:** on a free T4 via [`notebooks/train_colab.ipynb`](notebooks/train_colab.ipynb). The notebook trains, evaluates the fine-tuned and zero-shot models on val/test, and packages the results.
