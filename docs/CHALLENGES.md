@@ -106,27 +106,30 @@ Format: **Problem → Root cause → Fix → What I'd do at scale.**
   3. Structuring the notebook as independent steps that write artifacts to disk made recovery cheap.
 - **At scale:** pin a container image (or a `requirements.lock` for the notebook) and run the train → save → reload → infer loop end-to-end in CI on a tiny model in that same image.
 
-## 13. What the fine-tuned model still gets wrong (test, n=150, exact match 0.63)
-The full list comes from comparing `data/preds/test/qwen2.5-1.5b-lora.jsonl` against the labels.
+## 13. What the fine-tuned model still gets wrong (test, n=150, exact match 0.707)
+The first version of this analysis was distorted by the repetition-penalty bug (#17), which inflated brand and size misses. This version uses the corrected predictions. To reproduce, compare `data/preds/test/qwen2.5-1.5b-lora.jsonl` against the labels.
 
-- **Brand recall 0.82 vs precision 0.96.** It misses brands that look like ordinary words or are very short ("My Spoon", "Sheer Pots", "Wild Bobby", "DC", "CL", "Spectra", "Hallmark"), and cuts multi-word brands short ("Wolf" for "Wolf Spring").
-  - **Cause:** 600 examples teach "the first capitalized token is the brand". They don't teach that "Sheer Pots" is a name and not a description.
-  - **Fix:** more examples where the brand is a dictionary word. Or accept it: missing a brand is cheaper downstream than inventing one.
-- **`sports_fitness` became the default category** for 8 of 28 category errors: a flashlight, a motorbike rack, a Garmin watch case, softball pants. Anything outdoor- or sport-flavoured ends up there.
-  - **Fix:** per-category error analysis on val, then targeted examples for the confused pairs (electronics ↔ sports_fitness).
-- **Long-tail categories fail as predicted (#2).** `baby` has 0 train examples, so the breast pump went to `health_household`. Grocery (1 example) became `home_kitchen`, and the album (`other`) became `toys_games` ("Toys In The Attic").
-  - **The model can't predict a class it has never seen.** The fix is data, not tuning.
-- **Laptop screen sizes missed** (14", 15.6"). It likely over-generalized "a compatible device's screen size isn't a size", which phone-case titles teach repeatedly.
-  - **Lesson:** a rule with a strong surface pattern ("inch" near a device name) gets learned more broadly than intended.
-- **Span-boundary slips:** `(S)` instead of `S`, `Junior Size` instead of `Junior`, `B 11 inches` instead of `11 inches`. The right span, with extra characters.
-  - **Cheap fix:** a post-processing normalizer (strip brackets, a trailing "Size", a variant letter). That's deterministic code, not a model change.
-- **Material taken from finishes and secondary parts:** "18k gold plated", "brass" from "Brass Finish", "satin" from "Satin Lined", "tri blend". These are the subtlest rules in LABELING.md, and each appears in only a handful of train titles.
-- **Some golds are arguable.** A brass compass labeled `sports_fitness`, a basketball poster labeled `home_decor`, and #146 (`Large`, changed in review) where the model kept the original `32x64in`.
-  - **Takeaway:** a few percent of "errors" at this level are label ambiguity, so 0.63 exact match is a conservative number.
+- **Category is now the dominant error: 28 titles, accuracy 0.81.**
+  - **`sports_fitness` is a catch-all** for anything outdoor- or sport-flavoured: a flashlight, a motorbike rack, a Garmin watch case, softball pants.
+  - **Long-tail classes fail as predicted (#2).**
+    - `baby` has 0 train examples, so the breast pump went to `health_household`.
+    - `grocery` has 1, so the edible spoon went to `home_kitchen`.
+    - The album "Toys In The Attic" (`other`) went to `toys_games`.
+    - The model can't predict a class it has never seen; the fix is data, not tuning.
+- **Material taken from finishes or secondary parts: 6 hallucinations.** "18k gold plated", "brass" (from "Brass Finish"), "satin" (from "Satin Lined"), "tri blend", "tricot". These are the subtlest rules in LABELING.md, and each appears in only a handful of train titles.
+- **Brand: only 10 errors now (F1 0.93).**
+  - 5 missed, mostly word-like names ("My Spoon", "Sheer Pots", "Hallmark");
+  - 3 boundary errors ("Wolf" for "Wolf Spring", "BRECK" for "BRECK iD", "Cestus Boxx" for "Cestus");
+  - 2 invented from generic words ("Ab" from "Ab Roller Wheel").
+- **Size: 6 errors (F1 0.88).**
+  - Span boundaries: `Junior Size` vs `Junior`, `B 11 inches` vs `11 inches`, `5.25-6?` vs `Small`.
+  - Two misses: `10 FT` in a bundle title, `6.6ft` at the very start of a title.
+  - **Cheap fix for the boundaries:** a deterministic post-processor (strip a trailing "Size", a variant letter, brackets). That's code, not a model change.
+- **Some golds are arguable.** A brass compass as `sports_fitness`, a basketball poster as `home_decor`, and #146 (`Large`, changed in review), where the model kept the original `32x64in`. A few percent of "errors" at this level are label ambiguity.
 
 ## 14. Epoch 3 overfit (mildly)
 - **Observed:** train loss went 0.40 → 0.055 → 0.027 → 0.010 by the end of each epoch. Val loss went 0.0536 → **0.0477** → 0.0493. The best val loss was after epoch 2; epoch 3 cut train loss ~3x while val loss rose.
-- **Why it's only mild:** task metrics are still strong (val exact 0.64). The val rise is small, and val is only 50 titles.
+- **Why it's only mild:** task metrics are still strong (val exact 0.66 with corrected decoding). The val rise is small, and val is only 50 titles.
 - **What I'd do:** retrain with `--epochs 2`, or keep the best-val checkpoint (`load_best_model_at_end` with `save_strategy="epoch"`). Pick by val loss, and confirm on test once. I did **not** re-tune after seeing test results; doing so would make the test number optimistic.
 
 ## 15. A slow network made "just benchmark it on CPU" an hour-long download
@@ -162,7 +165,7 @@ The full list comes from comparing `data/preds/test/qwen2.5-1.5b-lora.jsonl` aga
 - **Fix:**
   - `hf_client.greedy_config()` builds a fresh `GenerationConfig` (greedy, `repetition_penalty=1.0`, only the EOS/pad/bos ids taken from the shipped file) and replaces the model's.
   - A behavioral test plants Qwen's penalty in a tiny model's config and asserts `generate()` equals a hand-written argmax loop. I confirmed the test **fails without the fix**.
-  - The HF runs (fine-tuned and zero-shot) were re-measured with the fix (BUILD_LOG step 29).
+  - The HF runs (fine-tuned and zero-shot, val and test) were re-measured with the fix on CPU, with fresh cassettes. Fine-tuned test exact is now **0.707, identical to vLLM**, with 149/150 identical predictions across engines. Zero-shot rose from 0.107 to 0.207, so the fine-tuning gain is +0.50, not +0.53. The comparison with the 7b went from "not significant" to **+0.14, significant**.
 - **Lessons:**
   1. **Pin every decoding parameter explicitly.** A model's shipped `generation_config.json` encodes its authors' chat defaults, not your task's. Never inherit it in an evaluation.
   2. **Two independent inference stacks are a powerful test.** The disagreement only appeared because serving used a different engine than eval. A single-stack project would have shipped the lower number and a wrong error analysis.

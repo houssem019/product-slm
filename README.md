@@ -6,7 +6,7 @@ larger prompted LLM.
 
 > **Frontier comparison:** the code to benchmark Claude Haiku/Sonnet on the same test set exists (`--provider anthropic`). It hasn't been run, because this project was built without API credits. With a key, it's one command per model, at cents for 150 titles.
 
-> Done: data, labels, LLM layer, QLoRA training on a T4, evaluation with a CI gate, and serving (FastAPI on vLLM with JSON-schema-constrained decoding, plus Docker). Pending: GPU serving benchmark numbers (`notebooks/serve_bench_colab.ipynb`). See `docs/BUILD_LOG.md`.
+> Done: data, labels, LLM layer, QLoRA training on a T4, evaluation with a CI gate, and serving (FastAPI on vLLM with JSON-schema-constrained decoding, plus Docker). See `docs/BUILD_LOG.md` for the full story and `docs/INTERVIEW.md` for the Q&A.
 
 ```
 "Tal 64OZ Ranger Pro Stainless Steel Vacuum Insulated Water Bottle (Black)"
@@ -22,22 +22,35 @@ larger prompted LLM.
 
 ## Results (test, n = 150 held-out titles)
 
-| model | prompt | exact match | category acc | brand F1 | size F1 | material F1 | JSON valid (strict) | p50 latency |
-|---|---|---|---|---|---|---|---|---|
-| Qwen2.5-1.5B zero-shot | short (~150 tok) | 0.107 | 0.533 | 0.248 | 0.622 | 0.505 | 0.89 (0.00) | 1.3 s (T4) |
-| qwen2.5:7b zero-shot (Ollama, Q4) | full guidelines (~1.7k tok) | 0.567 | 0.773 | **0.927** | 0.697 | 0.773 | 1.00 (1.00)* | 13.1 s (CPU) |
-| **Qwen2.5-1.5B + QLoRA** | short (~150 tok) | **0.633** | **0.813** | 0.884 | **0.763** | **0.854** | **1.00 (1.00)** | 0.95 s (T4) |
+| model | prompt | exact match | category acc | brand F1 | size F1 | material F1 | JSON valid (strict) |
+|---|---|---|---|---|---|---|---|
+| Qwen2.5-1.5B zero-shot | short (~150 tok) | 0.207 | 0.560 | 0.773 | 0.584 | 0.452 | 0.92 (0.00) |
+| qwen2.5:7b zero-shot (Ollama, Q4) | full guidelines (~1.7k tok) | 0.567 | 0.773 | 0.927 | 0.697 | 0.773 | 1.00 (1.00)* |
+| **Qwen2.5-1.5B + QLoRA** | short (~150 tok) | **0.707** | **0.813** | **0.933** | **0.878** | **0.843** | **1.00 (1.00)** |
 
 \* Ollama decoding is constrained to the JSON schema. The fine-tuned model's 100% strict validity is unconstrained: it learned the format.
 
 **Reading it honestly:**
-- **Fine-tuning works.** Same base model, same short prompt, adapter added: exact match goes from 0.11 to 0.63 (paired 95% CI for the gain is [+0.45, +0.61]). The untuned model wraps every answer in prose or fences, and invents categories (16 schema-invalid outputs).
-- **The fine-tuned 1.5B *matches* a 5x larger model that is given the full guidelines.** It leads on exact match by +0.067, but the 95% paired-bootstrap CI is [−0.027, +0.160], and no per-field difference is significant at n=150. Reproduce it with `python -m pslm.eval.compare`.
-- **The 7b is better on brand recall.** The win for the 1.5B is cost: a 10x shorter prompt and 5x fewer parameters, with no guideline text to maintain at inference.
-- **What "accuracy" means here:** labels are Claude's, following [`docs/LABELING.md`](docs/LABELING.md). The test set was re-checked by the same model, not a human. So these numbers measure **agreement with the teacher**, which is what distillation optimizes.
-- **Latencies** are from different hardware and plain unbatched `generate`. Treat them as indicative; serving throughput comes next with vLLM.
-- **Failure modes** are in [`docs/CHALLENGES.md`](docs/CHALLENGES.md) #13: brand recall on word-like names, `sports_fitness` as a catch-all, long-tail classes with 0–1 train examples, and span boundaries like `(S)`.
+- **Fine-tuning works.** Same base model, same short prompt, adapter added: exact match +0.50, from 0.21 to 0.71. The paired 95% bootstrap CI is [+0.42, +0.58], and the gain is significant on every field. The untuned model wraps every answer in prose or fences and invents categories (12 invalid outputs).
+- **The fine-tuned 1.5B beats a 5x larger model given the full guidelines.** Exact match is +0.14 [+0.05, +0.23] and size +0.09, both significant. Brand, category and material are statistically tied. It uses a 10x shorter prompt and has no guideline text to maintain at inference.
+- **Two inference engines agree.** The fixed HF path (CPU, fp32) and vLLM (T4, fp16) give identical predictions on 149 of 150 test titles. Reproduce the comparisons with `python -m pslm.eval.compare`.
+- **A decoding bug was found and fixed along the way.** HF `generate()` had inherited Qwen's shipped `repetition_penalty=1.1`, which penalized copying brands and sizes from the title. It hid 7 points of exact match until the serving benchmark ran the same adapter on vLLM ([`docs/CHALLENGES.md`](docs/CHALLENGES.md) #17).
+- **What "accuracy" means here:** labels are Claude's, following [`docs/LABELING.md`](docs/LABELING.md). The test set was re-checked by the same model, not a human. These numbers measure **agreement with the teacher**, which is what distillation optimizes.
+- **Remaining failure modes** ([`docs/CHALLENGES.md`](docs/CHALLENGES.md) #13):
+  - category confusions (`sports_fitness` as a catch-all; long-tail classes with 0–1 train examples);
+  - materials taken from finishes ("18K Gold Plated");
+  - span boundaries (`Junior Size`).
 - **Training cost:** QLoRA on a free Colab T4 took 447 s and trained 18.5M params (1.2%). CI replays every recorded run and **gates** the fine-tuned model's metrics against [`data/eval/baseline.json`](data/eval/baseline.json).
+
+### Serving throughput (one T4, vLLM 0.31.0, 150 test titles)
+
+| batch size | 1 | 8 | 32 | 150 |
+|---|---|---|---|---|
+| vLLM + JSON-schema-constrained decoding: titles/s | 0.94 | 5.9 | 16.7 | **39.2** |
+| batch latency p50 | 1.03 s | 1.32 s | 1.76 s | 3.82 s |
+
+- Plain transformers, one title at a time on the same GPU, does **0.87 titles/s**, so batching gives ~45x.
+- Constrained decoding produced **byte-identical outputs** to unconstrained on all 150 titles at the same throughput. Its only cost is startup (262 s vs 106 s model load), and it guarantees schema-valid output for any input. Details: `data/bench/*.json`.
 
 ## Training
 - **Method:** QLoRA on Qwen2.5-1.5B-Instruct with a 4-bit NF4 base and LoRA r=16 on all projections. The loss covers only the JSON answer. Details are in `src/pslm/train/train.py`.
@@ -72,7 +85,7 @@ docker run --gpus all -p 8000:8000 -v "$PWD/outputs/qwen2.5-1.5b-lora/adapter:/m
 ```
 - `GET /health` reports the backend and model.
 - `GET /metrics` reports latency p50/p95, throughput and errors by type.
-- Throughput and latency on a T4 come from `notebooks/serve_bench_colab.ipynb`: vLLM guided vs unguided vs plain transformers, at batch sizes 1/8/32/150, with accuracy measured for each.
+- The throughput table above comes from `notebooks/serve_bench_colab.ipynb`.
 
 ## Usage
 ```bash

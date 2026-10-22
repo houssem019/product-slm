@@ -3,11 +3,11 @@
  "model": "Qwen2.5-1.5B-Instruct+qwen2.5-1.5b-lora",
  "n": 50,
  "strict_json": 1.0,
- "latency_ms_p50": 982.6,
- "latency_ms_p95": 1380.2,
+ "latency_ms_p50": 12459.2,
+ "latency_ms_p95": 21801.2,
  "usage": {
   "input_tokens": 7345,
-  "output_tokens": 1367,
+  "output_tokens": 1378,
   "cache_read_tokens": 0,
   "cache_write_tokens": 0
  },
@@ -17,44 +17,44 @@
  "metrics": {
   "n": 50,
   "json_valid": 1.0,
-  "exact_match": 0.64,
+  "exact_match": 0.66,
   "accuracy": {
    "category": 0.76,
-   "brand": 0.94,
-   "size": 0.9,
-   "material": 0.94
+   "brand": 0.96,
+   "size": 0.94,
+   "material": 0.92
   },
   "f1": {
-   "brand": 0.958,
-   "size": 0.727,
-   "material": 0.87
+   "brand": 0.959,
+   "size": 0.87,
+   "material": 0.833
   }
  },
  "report": {
   "n": 50,
   "valid": 50,
-  "exact": 32,
+  "exact": 33,
   "correct": {
    "category": 38,
-   "brand": 47,
-   "size": 45,
-   "material": 47
+   "brand": 48,
+   "size": 47,
+   "material": 46
   },
   "prf": {
    "brand": {
-    "precision": 1.0,
-    "recall": 0.919,
-    "f1": 0.958
+    "precision": 0.972,
+    "recall": 0.946,
+    "f1": 0.959
    },
    "size": {
-    "precision": 0.727,
-    "recall": 0.727,
-    "f1": 0.727
+    "precision": 0.833,
+    "recall": 0.909,
+    "f1": 0.87
    },
    "material": {
-    "precision": 0.909,
+    "precision": 0.833,
     "recall": 0.833,
-    "f1": 0.87
+    "f1": 0.833
    }
   },
   "per_category": {

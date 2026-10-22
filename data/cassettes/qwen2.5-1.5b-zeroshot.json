@@ -1,68 +1,68 @@
 {
  "f46847cc057855c1828354f0": {
   "user": "Title: Dewkou Pack-1 Tri-Color Grille Decor Badge, Car Decoration Accessories for Toyota 4Runner Tacoma Tundra & Other Mesh or Slotted Grille (American Flag Red)",
-  "text": "```json\n{\n  \"category\": \"car_decor\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"mesh\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"car_decor\",\n  \"brand\": \"Dewkou\",\n  \"size\": null,\n  \"material\": \"mesh or slotted\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 155,
-   "output_tokens": 34,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1789.7
+  "latency_ms": 26469.6
  },
  "2921ebd7d751b7889b2f6117": {
   "user": "Title: Small Butterfly Craft Stencils for Painting 3 inch Bee Dragonfly Hummingbird Bird Nature Stencils for Kids Adults on Wood Fabric Rock Card Art Paint Wall Furniture Home Decor (60 Animals)",
-  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": \"3 inch\",\n  \"material\": \"wood\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": \"3 inch\",\n  \"material\": \"wood, fabric, rock\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 158,
-   "output_tokens": 36,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1355.7
+  "latency_ms": 24873.2
  },
  "6991c1d3948f23703071d4c1": {
   "user": "Title: LA LEELA Men's Standard Swimsuits Sarong Full Beach Wrap",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"LA LEELA\",\n  \"size\": null,\n  \"material\": \"swimsuits\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 132,
-   "output_tokens": 33,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1241.1
+  "latency_ms": 22734.4
  },
  "9a429b0848a558f8686f10f6": {
   "user": "Title: POLO Ralph Lauren Men's Classic Fit Cotton Knit Boxers, 3-Pack",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Ralph Lauren\",\n  \"size\": null,\n  \"material\": \"cotton\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Ralph Lauren\",\n  \"size\": \"3-Pack\",\n  \"material\": \"Cotton\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 134,
-   "output_tokens": 38,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1410.7
+  "latency_ms": 25546.1
  },
  "9430d3d29a66db1eeb3493b8": {
   "user": "Title: AVEVA RGBW LED Under Cabinet Lights,Puck Lights with Remote USB Rechargeable Lights Closet Lights with Timing, 3500K 7 Color Dimmable Night Lights,Under Cabinet Lights Wireless-3Pack",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"AVEVA\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 163,
-   "output_tokens": 34,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1302.7
+  "latency_ms": 22643.7
  },
  "400dbb697ae7c6c38f687028": {
   "user": "Title: Kenneth Cole Women's Stand Down Wedge Pump Lace-up",
@@ -75,7 +75,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1398.8
+  "latency_ms": 23685.9
  },
  "0c510f800259c6876d0cf00c": {
   "user": "Title: Skinit Clear Case Compatible with Samsung Galaxy S23 - Officially Licensed NFL Dallas Cowboys Distressed Design",
@@ -88,20 +88,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1229.5
+  "latency_ms": 21893.5
  },
  "68d7e43ad01cc1d0bdf3d515": {
   "user": "Title: Everything Legwear Kids Valentine's Day 2 Pair Pack Crew Socks - You Are Berry Cute Strawberries - Fits Shoe Size 9-3 (2 Pair)",
-  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": null,\n  \"size\": \"Crew Socks\",\n  \"material\": \"Strawberries\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": \"Not specified\",\n  \"size\": \"Crew Socks\",\n  \"material\": \"Strawberries\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 150,
-   "output_tokens": 40,
+   "output_tokens": 42,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1431.6
+  "latency_ms": 25981.1
  },
  "019ff65454730df354f09f3b": {
   "user": "Title: 24 Inch Manual Tile Cutter, Professional Porcelain Ceramic Floor Tile Cutting Machine Hand Cutter Tools with Anti-slid Rubber Handle for Precising Cutting",
@@ -114,59 +114,59 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1471.6
+  "latency_ms": 25382.8
  },
  "8086e8d158b8f0c04ae41088": {
   "user": "Title: Simple Joys by Carter's Baby Boys' Long-Sleeve Bodysuit, Pack of 5",
-  "text": "```json\n{\n  \"category\": \"baby\",\n  \"brand\": \"Simple Joys by Carter's\",\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"baby\",\n  \"brand\": \"Simple Joys by Carter's\",\n  \"size\": \"Boys' Long-Sleeve Bodysuit\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 138,
-   "output_tokens": 38,
+   "output_tokens": 48,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1394.6
+  "latency_ms": 27518.0
  },
  "1b5d67d754326cb3b0d6f078": {
   "user": "Title: Men's The Nightmare Before Christmas Halloween Oogie Boogie and his Boys Moon Tarot Card Pull Over Hoodie",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"unknown\",\n  \"size\": null,\n  \"material\": \"unknown\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 139,
-   "output_tokens": 33,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1208.1
+  "latency_ms": 22240.1
  },
  "73f7140b5e8c70d2f7ad7b0d": {
   "user": "Title: Men's The Late Late Show with James Corden Classic Logo T-Shirt",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"The Late Late Show with James Corden\",\n  \"size\": null,\n  \"material\": \"T-Shirt\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 131,
-   "output_tokens": 33,
+   "output_tokens": 43,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1211.8
+  "latency_ms": 22325.0
  },
  "7032ebf3d055de2b0fe84b33": {
   "user": "Title: Pentel Wow! Retractable Super Smooth Ballpoint Pen, (1.4mm) Bold Line, Triangular Barrel, Black Ink, 12 Pack",
-  "text": "```json\n{\n  \"category\": \"writing\",\n  \"brand\": \"Pentel\",\n  \"size\": \"1.4mm\",\n  \"material\": \"Black ink\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"writing_supplies\",\n  \"brand\": \"Pentel\",\n  \"size\": \"1.4mm\",\n  \"material\": \"Black Ink\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 150,
-   "output_tokens": 41,
+   "output_tokens": 43,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1533.6
+  "latency_ms": 20143.5
  },
  "479180fdeb64e744070bc477": {
   "user": "Title: Ray-Ban Women's Rb3747 Round Sunglasses",
@@ -179,46 +179,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1286.2
+  "latency_ms": 11538.6
  },
  "d283ec47a1a930324605f0ab": {
   "user": "Title: IHMOLN Redhead Girls Diamond Painting Kits Meet The Sun and The Hurricane - by Number Full Diamond Cross Stitch Kits for Adults for Tasteful Room Decor & Valentines Day Decor 8x12inch",
-  "text": "```json\n{\n  \"category\": \"crafting\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"crafts\",\n  \"brand\": \"IHMOLN\",\n  \"size\": \"8x12inch\",\n  \"material\": \"diamond\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 160,
-   "output_tokens": 33,
+   "output_tokens": 43,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1204.6
+  "latency_ms": 13711.4
  },
  "da70e77568fedf3fae5b3ae6": {
   "user": "Title: ANartcle Pan Bun Rack Cover,600D Waterproof and Dustproof Bun Rack Cover,Suitable for Commercial Bun Pan Bakery Rack - 10 Sheet,23\" W x 26\" D x 34\" H,Black",
-  "text": "```json\n{\n  \"category\": \"cooking\",\n  \"brand\": null,\n  \"size\": {\n    \"width\": \"23 inches\",\n    \"depth\": \"26 inches\",\n    \"height\": \"34 inches\"\n  },\n  \"material\": \"600D waterproof and dustproof\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"cooking\",\n  \"brand\": \"ANartcle\",\n  \"size\": \"10 Sheet\",\n  \"material\": \"600D Waterproof and Dustproof\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 168,
-   "output_tokens": 69,
+   "output_tokens": 47,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 2510.2
+  "latency_ms": 14478.0
  },
  "194feda8ec55af73d51d10a3": {
   "user": "Title: Konideke 16 Inches F10T5 Replacement Bulb for Jasco T5 10 Watt Warm White 3000K F10T5/830 Fluorescent Tube for Counter and Cabinet Fixture (3)",
-  "text": "```json\n{\n  \"category\": \"lighting\",\n  \"brand\": \"Konideke\",\n  \"size\": \"16 inches\",\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"lighting\",\n  \"brand\": \"Konideke\",\n  \"size\": \"16 inches\",\n  \"material\": \"fluorescent tube\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 170,
-   "output_tokens": 39,
+   "output_tokens": 43,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1482.8
+  "latency_ms": 13326.3
  },
  "77532d80e5f108f68cbff40e": {
   "user": "Title: Vionic Fallyn Women's Toe Post Supportive Sandal",
@@ -231,7 +231,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1373.1
+  "latency_ms": 11766.5
  },
  "b4ccfe277cf67543171e55b5": {
   "user": "Title: Geox Women's Lola62 Ballerina Flat",
@@ -244,20 +244,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1324.5
+  "latency_ms": 11891.7
  },
  "336b1dbddb1a34ca1aea9840": {
   "user": "Title: Hello Kitty Baby Girls 5 Pack No Show Socks",
-  "text": "```json\n{\n  \"category\": \"baby\",\n  \"brand\": \"Hello Kitty\",\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"baby\",\n  \"brand\": \"Hello Kitty\",\n  \"size\": \"No Show\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 128,
-   "output_tokens": 34,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1322.7
+  "latency_ms": 11838.3
  },
  "7e0b6e1097815a4b0f988d70": {
   "user": "Title: Personalized Library Book Stamp (036)",
@@ -270,7 +270,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1329.0
+  "latency_ms": 11320.8
  },
  "7a74229c6f28cb6129e4b389": {
   "user": "Title: Clarks Women's Laurieann Bay Clog",
@@ -283,33 +283,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1238.7
+  "latency_ms": 11134.5
  },
  "d6328cddc7d989fa7799556b": {
   "user": "Title: RHOTALL Switch Controller Charger for Nintendo Switch, OLED, Lite, 6 in 1 Joycon and Pro Controller Charging Dock Station, Controller Charging Stand with LED Indicator and Type C Charge Cable",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"RHOTALL\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 156,
-   "output_tokens": 32,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1187.7
+  "latency_ms": 12590.3
  },
  "9475c7741eba1aeb6eae282c": {
   "user": "Title: JGTONG Digital Spoon Scale, Digital Kitchen Scales 500g/0.1g Kitchen Measuring Spoon Food Scale Digital Multi-Function with Accurate LCD Display for Dispensing Coffee Beans, Milk, Flour,Condiment",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"JGTONG\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 165,
-   "output_tokens": 34,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1243.1
+  "latency_ms": 11712.8
  },
  "ee6a128e9828859aabb87bda": {
   "user": "Title: Danxee Leisure Chair Accent Chair Armchair Upholstered Linen Accent Chair with Wood Legs Reading Chair for Living Room Home Office Bedroom (Beige)",
@@ -322,20 +322,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1325.2
+  "latency_ms": 11560.0
  },
  "d12323f6ab9168f0caa0cf30": {
   "user": "Title: YiXinBB Custom Name & Number Phone Case Atlanta Basketball Jersey Phone Case TPU Shock Protective for iPhone 14 Pro Max 13 12 11 Pro Mini Xs Xr 8 7 6 Plus",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"TPU\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"YiXinBB\",\n  \"size\": null,\n  \"material\": \"TPU\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 165,
-   "output_tokens": 34,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1251.5
+  "latency_ms": 12563.1
  },
  "0059532daea172967a880730": {
   "user": "Title: USTZFTBCL Spring Autumn Vintage Suit Women Jeans Jacket Casual Tops Loose Short Denim Suit Outerwear Female Cowboy Coat",
@@ -348,7 +348,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1341.8
+  "latency_ms": 11505.4
  },
  "243a92456cff952d223b563d": {
   "user": "Title: Boncun Footstools and Ottomans Small Foot Stool Wooden Footrest Ottoman Small Foot Rest for Chair Wood Foot Stool for Living Room (Log-Yellow)",
@@ -361,33 +361,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1273.6
+  "latency_ms": 11704.8
  },
  "f1eb0ef7472cd53b981aee8d": {
   "user": "Title: OKMAGE Teeth Whitening Strips, Teeth Whitening Sensitive Teeth Products, Professional Effects Tooth Whitening 7D, Whitening Strips for Teeth 14 Treatments (28 Strips)",
-  "text": "```json\n{\n  \"category\": \"beauty_personal_care\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"beauty_personal_care\",\n  \"brand\": \"OKMAGE\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 160,
-   "output_tokens": 36,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1325.2
+  "latency_ms": 13703.7
  },
  "c8dce34044cb0b118137f1e1": {
   "user": "Title: yonwait 1 Pack Rearview Mirror Phone Holder, Rotatable and Retractable Adjustment Car Phone Holder, GPS Holder, Suitable for Most Mobile Phones and Cars (Black)",
-  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": \"yonwait\",\n  \"size\": null,\n  \"material\": \"Black\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 153,
-   "output_tokens": 33,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1211.3
+  "latency_ms": 12593.7
  },
  "e652d9e28c787608abd6d889": {
   "user": "Title: ZGZR Industrial Pipe Clothing Rack Heavy Duty Double Closet Rod Clothes Rack, Clothing Rods for Hanging Clothes, Wall Mounted Clothes Garment Rack Closet System 90in Black",
@@ -400,7 +400,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1409.2
+  "latency_ms": 18458.1
  },
  "a3053c4804129caea7811356": {
   "user": "Title: Casual Pants for Women Loose Fit Lounge Trousers Fashion Trousers Loose Comfy Linen Pants for Ladies",
@@ -413,20 +413,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1444.2
+  "latency_ms": 21959.1
  },
  "c2cc85d12daf710a69a93f98": {
   "user": "Title: Ever-Pretty Women's V-Neck Ruffle Sleeves Ruched Bust Chiffon Floor Length Formal Dresses 0164A-USA",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"chiffon\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Ever-Pretty\",\n  \"size\": null,\n  \"material\": \"chiffon\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 149,
-   "output_tokens": 36,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1331.2
+  "latency_ms": 21121.3
  },
  "f1635cb375ed36bae2f873a9": {
   "user": "Title: Bsubseach Women Swimwear Beach Kimono Cardigan Long Swimsuit Cover Ups Bikini Cover Up",
@@ -439,46 +439,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1202.1
+  "latency_ms": 19948.7
  },
  "6f3aec50a4982d8b23402a37": {
   "user": "Title: Woodies Paradise Challenge Collab Flat Lens Mirrored Zebra Wood Polarized Sunglasses | 100% UVA/UVB Protection",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"Wood\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Woodies\",\n  \"size\": null,\n  \"material\": \"Polarized\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 146,
-   "output_tokens": 34,
+   "output_tokens": 38,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1294.3
+  "latency_ms": 20012.7
  },
  "a8024d84d4c3718610483c19": {
   "user": "Title: FOCO Kids' Wordmark Family Matching Collection Set Holiday Pjs",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"FOCO\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 131,
-   "output_tokens": 33,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1264.2
+  "latency_ms": 23296.1
  },
  "6317dee241fe3fd29ec8ccef": {
   "user": "Title: CUENSTOP Power Supply for Genesis 2 3, AV Cable for Genesis 2 3, AC Power Adapter and Audio Video RCA AV Cable Compatible with SEGA Genesis 2 3 Console",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"CUENSTOP\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 157,
-   "output_tokens": 32,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1195.4
+  "latency_ms": 23178.1
  },
  "6b29af0616b6c2fa9ce09ffe": {
   "user": "Title: The ConfiDental Cleansing Tablets (140 tablets) - Mouthguard Cleaner & Dental Appliances Cleaner. Clean and Brightens, Removable Dental Alliances",
@@ -491,7 +491,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1223.2
+  "latency_ms": 14974.9
  },
  "9886cdeda83bf9b7cb5d9e38": {
   "user": "Title: 100 Pieces Floss Bobbins and 36 Compartments Jewelry Storage Box, 1 Pieces Floss Winder and 2 Pieces Color Chip",
@@ -504,11 +504,11 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1315.9
+  "latency_ms": 16328.8
  },
  "dc92577127f0cc3445ab4874": {
   "user": "Title: Magnetic Phone Case Shockproof Cover Cases Magnet Ring Wierless Charging Compatible with iPhone 13 Pro Soft TPU Protective Bumper Red",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"soft tpu\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"soft TPU\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
@@ -517,7 +517,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1305.5
+  "latency_ms": 21943.0
  },
  "97852750296c7e221e2f2439": {
   "user": "Title: Comforter Storage Bag - Large Capacity Clothes Storage Bag Organizer with Reinforced Handle Thick Fabric for Comforters, Pillows, Blankets, Bedding/Quilt, Blanket, Duvet, Mothproof & Space Saver",
@@ -530,20 +530,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1499.4
+  "latency_ms": 25487.7
  },
  "df44c9d5f65fb8cee8826af6": {
   "user": "Title: 925 Sterling Silver Abalone Dragonfly Bangle Bracelet Animal Cuff Slip On Fine Jewelry For Women Gifts For Her",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"Sterling Silver\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"null\",\n  \"size\": null,\n  \"material\": \"925 Sterling Silver, Abalone\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 143,
-   "output_tokens": 39,
+   "output_tokens": 45,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1449.8
+  "latency_ms": 28085.4
  },
  "35727f319ce58150624b334c": {
   "user": "Title: adidas Men's Preseason Stretch Fit",
@@ -556,85 +556,85 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1381.1
+  "latency_ms": 21391.3
  },
  "52a4c2fb34b7a34206523e52": {
   "user": "Title: Screen Protector for iPhone 14 Pro Max 6.7 inch, 2 Tempered Glass [Easy Installation Frame] [9H Hardness] [99.99% HD Clear] [Case Friendly] [Bubble Free] 2 screen protector in 1",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": \"6.7 inch\",\n  \"material\": \"tempered glass\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": \"6.7 inch\",\n  \"material\": \"2 Tempered Glass\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 173,
-   "output_tokens": 39,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1451.8
+  "latency_ms": 24050.4
  },
  "f973d7364bc342c6db51a0b3": {
   "user": "Title: Anime One Piece Shower Curtain Thousand Sunny Oda's Art Ukiyo-e for Bathroom Decor Waterproof Polyester Fabric Bath Curtain with 12 Hooks,70 x 70 inch",
-  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": \"70 x 70 inches\",\n  \"material\": \"Waterproof Polyester Fabric\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": \"unknown\",\n  \"size\": \"70 x 70 inch\",\n  \"material\": \"waterproof polyester fabric\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 153,
-   "output_tokens": 44,
+   "output_tokens": 45,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1630.5
+  "latency_ms": 23746.0
  },
  "5f3c432dceed3daa244f00c9": {
   "user": "Title: MOONSMILE elbow brace (Black)",
-  "text": "```json\n{\n  \"category\": \"sports_fitness\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"sports_fitness\",\n  \"brand\": \"MOONSMILE\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 126,
-   "output_tokens": 33,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1213.6
+  "latency_ms": 22893.4
  },
  "cdff8fd9153b2902de208115": {
   "user": "Title: APEXSUN Universal Cup Holder,Mega Strength Adjustable Clamp for Holder for Baby Stroller,Bike,Motorcycle,Wheelchair,Walker,360 Degrees Rotation Drink Holder fits Any Size Cup,Bottle,Can etc(White)",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"APEXSUN\",\n  \"size\": \"360 Degrees Rotation\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 165,
-   "output_tokens": 34,
+   "output_tokens": 42,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1271.9
+  "latency_ms": 27322.7
  },
  "569490e3112600d4d6ac9f74": {
   "user": "Title: Coofel 47 Inch Computer Desk, Modern Simple Style Small Office Desk, Writing Desk, Study Table, Work Desk for Home Office, Student Study Writing (47\" x 24\" x 30\")",
-  "text": "```json\n{\n  \"category\": \"furniture\",\n  \"brand\": null,\n  \"size\": {\n    \"length\": \"47 inches\",\n    \"width\": \"24 inches\",\n    \"height\": \"30 inches\"\n  },\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"furniture\",\n  \"brand\": null,\n  \"size\": \"47\\\" x 24\\\" x 30\\\"\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 163,
-   "output_tokens": 61,
+   "output_tokens": 45,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 2237.7
+  "latency_ms": 29023.8
  },
  "81278d1e945b3d450ef29b4e": {
   "user": "Title: QUICQOD Retro Groovy Aesthetics Distorted Pastel Purple and Yellow Plaid Checkered Mouse Pad 8.7 x 8.7 Inches,Non-Slip Rubber Base Mousepads for Home Office Dorm Desk Decor,Gifts for Teen Girls",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": \"8.7 x 8.7 inches\",\n  \"material\": \"non-slip rubber base\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"QUICQOD\",\n  \"size\": \"8.7 x 8.7 Inches\",\n  \"material\": \"Non-Slip Rubber Base\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 171,
-   "output_tokens": 48,
+   "output_tokens": 52,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1820.6
+  "latency_ms": 31944.5
  },
  "fe08d4eeda4f196ff6f22ab0": {
   "user": "Title: Pataku Tools & Home Improvement > Storage & Home Organization > Garage Storage > Mounted Storage Systems",
@@ -647,7 +647,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1282.0
+  "latency_ms": 24012.8
  },
  "ad87de3e27785204d18a4d4c": {
   "user": "Title: OFEYCHUN Ruffle Hem Short Homecoming Dresses for Teens Sparkly Cowl Neck Spaghetti Strap Cocktail Dresses",
@@ -660,46 +660,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1775.6
+  "latency_ms": 9271.5
  },
  "89a1ef428627cd22c18442d7": {
   "user": "Title: SENJEOK 20 Pack Plastic Percussion Tambourine, 4 Inch Half Moon Musical Tambourines with 4 Bells, Mini Handheld Tambourine for Family, School",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": \"4 inches\",\n  \"material\": \"plastic\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"SENJEOK\",\n  \"size\": \"4 Inch\",\n  \"material\": \"Plastic\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 156,
-   "output_tokens": 40,
+   "output_tokens": 43,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1447.0
+  "latency_ms": 10711.8
  },
  "47796b91aa24d79cfc9f87d8": {
   "user": "Title: LCrock Robot Vacuum and Mop Combo, Robotic Vacuum Cleaner, WiFi/Alexa/App, Mopping Robot Vacuum 1400 PA Suction, Self-Charging, Tangle-Free, Cleans Hard Floor, Pet Hair and Carpet",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"LCrock\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 166,
-   "output_tokens": 32,
+   "output_tokens": 34,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1189.6
+  "latency_ms": 8559.4
  },
  "f087f9c0085fc28f7df12ea5": {
   "user": "Title: AIWA Portable Boombox - Waterproof Bluetooth Speaker, Rechargeable Wireless Boombox with Multi Color LED Lighting and Digital Display, AUX Input and Carry Handle, 15 Hour Playtime",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"AIWA\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 154,
-   "output_tokens": 32,
+   "output_tokens": 34,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1174.1
+  "latency_ms": 8747.3
  },
  "36ccf06707136c271b2ad3c1": {
   "user": "Title: Pomchies unisex-adult Modern",
@@ -712,63 +712,63 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1253.7
+  "latency_ms": 8300.8
  },
  "2f86488814c5d3466d821e9c": {
   "user": "Title: NEW - SNACTIV LITE - 4PC Bundle - All New Colors! - The Official Snacking Tool of The Future, As Seen On Shark Tank! Finger Chopsticks | Snack Chopsticks | Chopsticks For Gamers",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"SNACTIV\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 164,
-   "output_tokens": 36,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1295.0
+  "latency_ms": 9557.7
  },
  "18bcc00536be3f687a62b233": {
   "user": "Title: Romwe Girl's Cute Striped Spaghetti Strap Button Front Belted Summer Cami Dress Multicolor Colorblock",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Romwe\",\n  \"size\": null,\n  \"material\": \"Cami\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 139,
-   "output_tokens": 33,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1206.8
+  "latency_ms": 9501.1
  },
  "276542a1ef623b59fbd04575": {
   "user": "Title: AGVEE 1.5ft Charging Adapter Cable for Apple Pencil 1st Generation, USB-C Type-C Male to Lightning Female Connector Charger Cord Coupler Enables Apple Pencil Pen 1st Gen Match iPad 10, Dark Gray",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"AGVEE\",\n  \"size\": \"1.5ft\",\n  \"material\": \"USB-C Type-C Male to Lightning Female Connector\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 167,
-   "output_tokens": 32,
+   "output_tokens": 48,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1176.1
+  "latency_ms": 11493.0
  },
  "db93a853d807d917ff5a707e": {
   "user": "Title: Arena Women's Standard Bodylift Tummy Control Embrace Back One Piece Shaping Swimsuit",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Arena\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 136,
-   "output_tokens": 33,
+   "output_tokens": 34,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1261.1
+  "latency_ms": 8619.3
  },
  "9d74f6c78d464635e1d0f7c6": {
   "user": "Title: Arcade Joystick Clear Bullet Topball Top ball Handle For Sanwa JLF-TP-8YT joystick Seimitsu Pro Edition Stick (Clear red)",
-  "text": "```json\n{\n  \"category\": \"gaming\",\n  \"brand\": \"Seimitsu\",\n  \"size\": null,\n  \"material\": \"clear\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"gaming\",\n  \"brand\": \"Seimitsu\",\n  \"size\": null,\n  \"material\": \"Clear\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
@@ -777,20 +777,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1344.2
+  "latency_ms": 9324.2
  },
  "4f1e4b9c73b741a973520766": {
   "user": "Title: Custom Fit Automotive Reflective Windshield Sunshade Compatible with 2023 2024 Honda CRV",
-  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": \"Honda\",\n  \"size\": null,\n  \"material\": \"Reflective\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 141,
-   "output_tokens": 33,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1193.0
+  "latency_ms": 9420.6
  },
  "9f679bd8e7bba0535384115d": {
   "user": "Title: 1 Pack 2023 Newly Mini Dog GPS Tracking Device, Portable Bluetooth Intelligent Anti-Lost Device for Luggages/Kid/Pet Bluetooth Alarms,No Monthly Fee(Black)",
@@ -803,7 +803,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1242.0
+  "latency_ms": 9013.6
  },
  "56c326c12e2fc8bfe379640e": {
   "user": "Title: AHUATEN Small Massager - Small Cordless Hand-held Massager with 20 Vibrations & 8 Speeds, Mini Massager, Rechargeable Personal Massager for Neck Shoulder Back",
@@ -816,7 +816,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1334.6
+  "latency_ms": 9385.6
  },
  "0998b37b4aa140a0cb8617c7": {
   "user": "Title: ASUS Prime Z790M-Plus LGA 1700(Intel 12th&13th Gen) microATX motherboard (PCIe 5.0, 3xM.2 slots,10+1 DrMOS,DDR5,1 Gb LAN, DP,USB 3.2 Gen2x2 Type-C,front USB3.2 Gen 1 Type-C, Thunderbolt(USB4)support)",
@@ -829,7 +829,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1253.5
+  "latency_ms": 9292.7
  },
  "d57832c584bba63c828d800d": {
   "user": "Title: Rechargeable Electric Spin Scrubber for Deep Cleaning | Cordless Scrubber with 360 Bathroom Scrubber Cleaning Brush | Portable, Sturdy Household Cleaning Brush for Tile, Tub, Floor, Sink, & Windows",
@@ -842,20 +842,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1238.3
+  "latency_ms": 8557.0
  },
  "8c4759e41c420cb4e6bad44f": {
   "user": "Title: My Spoon - Heat Resistant Edible Spoon - individually wrapped (pack of 200) - for coffee, tea, spreads, ice-cream - Eco-friendly, Non-GMO (CINNAMON)",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"Eco-friendly, Non-GMO\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"CINNAMON\",\n  \"size\": null,\n  \"material\": \"Eco-friendly, Non-GMO\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 162,
-   "output_tokens": 43,
+   "output_tokens": 48,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1577.6
+  "latency_ms": 11208.7
  },
  "9ccdcea0f5b801175f506a59": {
   "user": "Title: Newborn Baby Boys Girls Clothes Long Sleeve Easter Bunny Oversized Sweatshirt Romper Bodysuit Outfit",
@@ -868,7 +868,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1292.2
+  "latency_ms": 8691.4
  },
  "e8bbabad354f37a247f9bb35": {
   "user": "Title: Northwest NCAA Unisex-Adult Raschel Rug",
@@ -881,7 +881,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1343.4
+  "latency_ms": 9169.5
  },
  "9e3c57b1f7eca855cef89b92": {
   "user": "Title: CLOTHUP Ceramic Silverware Caddy, Utensil Caddy with Metal Holder, Countertop Silverware Utensil Organizer Holder, Knives Spoons and Forks Utensil Organizer Holder for Kitchen and Party",
@@ -894,7 +894,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1363.7
+  "latency_ms": 9384.7
  },
  "e695ec857b6d738df68ed164": {
   "user": "Title: adidas Mens Midweight Essential Tricot Zip Track Pants (as1, Alpha, x_l, Regular, Regular, Black/Grey Six)",
@@ -907,20 +907,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1432.1
+  "latency_ms": 9956.7
  },
  "0e804333525158028dce60db": {
   "user": "Title: Stelle Girls' Softball Pants (Black, M)",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": \"M\",\n  \"material\": \"Soft\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Stelle\",\n  \"size\": \"M\",\n  \"material\": \"Black\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 129,
-   "output_tokens": 35,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1273.1
+  "latency_ms": 9148.4
  },
  "3ef4f536712ae7f57c92496c": {
   "user": "Title: Geetery 2 Pcs Celestial Moon and Sun Wall Decor Wood Tarot Cards Boho Wall Art Wooden Hanging Wiccan Decor Mystic Astrology Decor Witchy Wall Art for Home Bedroom Living Room Gallery, No Frame",
@@ -933,20 +933,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1220.5
+  "latency_ms": 8604.5
  },
  "c04ea17e25ec2ed1f981c94d": {
   "user": "Title: So Fresh and Clean Colorful Bathroom Art Poster Prints for Home Kid Washroom Restroom Nursery Toilet Laundry Decor,Funny Bathroom Rules Word Art Decorations Prints Wall Art Unframed 4pcs 8x10inches",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": {\n    \"width\": 8,\n    \"height\": 10\n  },\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": \"8x10 inches\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 162,
-   "output_tokens": 50,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1836.3
+  "latency_ms": 9564.4
  },
  "2dd7334f3146883102efe682": {
   "user": "Title: Tequila Window Sill Decor Stained Acrylic Succulent Stained Acrylic Agave Plant Painted Acrylic Tequila Plant Plug-in Planter Home Decor Decoration Suncatcher Stained Tequila Plants Gift (B 11 inches)",
@@ -959,7 +959,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1538.9
+  "latency_ms": 10165.0
  },
  "919c1fdd86602b541a78db40": {
   "user": "Title: Motorbike Surfboard Rack, Strong Easy To Install Motorbike Surfboard Stand Aluminum Alloy Simple Angle Adjustable for Windsurfers (black)",
@@ -972,20 +972,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1308.1
+  "latency_ms": 9491.9
  },
  "ffa8c8a689f76fcdb3e680b4": {
   "user": "Title: Balsa Wood Sticks (1/16\" x 1/16\" x 12\", Pack of 100) Model Grade Hobby Craft Balsa Wood Thin Square Dowel, Perfect for Modeling, Crafts, Hobbies, Architecture Mockups, Wood Burning, by Binos",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": \"1/16\\\" x 1/16\\\" x 12\\\"\",\n  \"material\": \"balsa wood\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"Binos\",\n  \"size\": \"1/16\" x 1/16\" x 12\",\n  \"material\": \"balsa wood\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 178,
-   "output_tokens": 55,
+   "output_tokens": 57,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1992.3
+  "latency_ms": 13857.8
  },
  "e8a82202397dffdfaff70e85": {
   "user": "Title: Gold Glitter 15th Birthday Centerpiece Sticks, 12-Pack Number 15 Table Topper Anniversary Party Decorations",
@@ -998,20 +998,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1261.9
+  "latency_ms": 9446.4
  },
  "72fc0febb393842011cb7033": {
   "user": "Title: MRRWIBH Fits Stainless Steel Chrome Window Door Sill Trims",
-  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"stainless steel chrome\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"stainless steel, chrome\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 132,
-   "output_tokens": 37,
+   "output_tokens": 38,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1342.2
+  "latency_ms": 9600.9
  },
  "aee432d86acc7029e2403e11": {
   "user": "Title: FairySandy 6 Pcs Nordic Vikings Wood Sign Hanging Wooden Drakkar Rune Wall Decor Mythology Mediaeval Wall Plaque Boat Pagan Scandinavian Vegvisir Runes Artwork for Kitchen Bathroom Home (Lively)",
@@ -1024,7 +1024,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1255.5
+  "latency_ms": 8715.8
  },
  "475e4bf79369f07cabd7544a": {
   "user": "Title: Sundia Roping Calf Head Steer Dummy Practice Kit Two Pair of Detachable Horn",
@@ -1037,7 +1037,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1331.9
+  "latency_ms": 9079.7
  },
  "bd34dc6466201f8995778b0a": {
   "user": "Title: 12 PCS 15\" x 16\" Sublimation Tote Bags,Polyester Tote Bags for Sublimation, DIY Customization Blank Canvas Tote Bags",
@@ -1050,46 +1050,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1717.4
+  "latency_ms": 11261.8
  },
  "99b40a66684fc7c2f8bc9c14": {
   "user": "Title: HP 2023 14\" FHD IPS Laptop, Windows 11, Ryzen 3 Processor Up to 3.50GHz, 8GB Ram, 128GB SSD, Super-Fast WiFi, HDMI, Dale Silver (Renewed)",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"HP\",\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"HP\",\n  \"size\": \"14\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 175,
-   "output_tokens": 33,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1227.0
+  "latency_ms": 8935.8
  },
  "11a14ddffcacfc824ddf5868": {
   "user": "Title: Hanging Planting Grow Bags, 15 Pockets Hanging Vertical Wall Planter Wall Mounted Grow Bag Outdoor Indoor Gardening Vertical Greening Flower Container, Planting Bags Storage Bags",
-  "text": "```json\n{\n  \"category\": \"gardening\",\n  \"brand\": null,\n  \"size\": \"15 pockets\",\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"gardening\",\n  \"brand\": null,\n  \"size\": \"15 Pockets\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 152,
-   "output_tokens": 36,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1309.6
+  "latency_ms": 9516.4
  },
  "a167ad088666a43b460c0b17": {
   "user": "Title: Solid 14K Yellow Gold CZ Cubic Zirconia Cross Ladies Pendant Charm (Height = 5/8\", Width = 1/2\")",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": {\n    \"height\": \"5/8\\\"\",\n    \"width\": \"1/2\"\n  },\n  \"material\": \"14K Yellow Gold, CZ Cubic Zirconia\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": \"5/8\\\" x 1/2\\\"\",\n  \"material\": \"14K Yellow Gold, CZ Cubic Zirconia\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 149,
-   "output_tokens": 67,
+   "output_tokens": 57,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 2413.4
+  "latency_ms": 13404.4
  },
  "b3a3f728a15f47b612da3ac6": {
   "user": "Title: Dual Screen Magnetic Phone Holder for Laptop Portable Laptop Holder Adjustable Stand Foldable Side Mount Clip Slim Portable 3 in 1 Multi-Functional Holder Laptop",
@@ -1102,33 +1102,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1148.4
+  "latency_ms": 8672.2
  },
  "4805177d05eeae1e7199846e": {
   "user": "Title: LOWOSA Particle Board Shoe Rack - Modern Design for Closet Storage",
-  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"particle board\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": \"LOWOSA\",\n  \"size\": null,\n  \"material\": \"particle board\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 130,
-   "output_tokens": 35,
+   "output_tokens": 38,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1271.9
+  "latency_ms": 9429.9
  },
  "565fbfb2836932c2a8b937df": {
   "user": "Title: Evegfts Silver Chain for Men, 3.5 MM Men Necklaces Cuban Link Chain Necklace for Men Women Jewelry Gift for Women Men Boy Girls Sturdy Shiny Mens Chain 20 Inch-25",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": \"3.5 MM\",\n  \"material\": \"Silver\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"Evegfts\",\n  \"size\": \"3.5 MM\",\n  \"material\": \"Silver\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 160,
-   "output_tokens": 41,
+   "output_tokens": 45,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1485.0
+  "latency_ms": 11288.7
  },
  "9a79165ded2f12563b8e74d3": {
   "user": "Title: Brillirare 4 Pack Tactical LED Flashlight with Rechargeable Battery, High Lumen Zoomable 3 Modes Mini Handheld Pen Light for Cycling Hiking Camping Outdoor Emergency Flashlights",
@@ -1141,11 +1141,11 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1243.3
+  "latency_ms": 8728.3
  },
  "76dcd835a473cf3213d3218f": {
   "user": "Title: DHOUTSL Wall Art Tapestry Marvin Anime The Martian 60 x 51 inch Tapestry Wall Hanging for Bedroom Dorm Living Room Home Decor",
-  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": \"60 x 51 inches\",\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": \"60 x 51 inch\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
@@ -1154,7 +1154,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1442.1
+  "latency_ms": 10065.7
  },
  "b5e5be06961ff7b78dd177ee": {
   "user": "Title: Sheer Pots Sheer Glass Pot Planter with Drainage Holes & Tray - Decorative & Modern for All House Plants (4 Inches)",
@@ -1167,7 +1167,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1342.0
+  "latency_ms": 9415.7
  },
  "1cbd4b650d02112e278a3602": {
   "user": "Title: 2023-2024 Planner Refill - 8-Disc Discbound Appointment Book Refill, July 2023-June 2024, Refill Planner with Tabs, Junior Size, 5-1/2\" x 8-1/2\", Leaf",
@@ -1180,20 +1180,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1261.0
+  "latency_ms": 9026.2
  },
  "fef1828de871e8436cd7d12b": {
   "user": "Title: lenovo IdeaPad 3 Business Laptop 15.6\" FHD IPS Touchscreen 11th Gen Intel Quad-Core i5-1155G7 (Beat i7-10710U) 16GB RAM 1TB SSD Intel Iris Xe Graphic USB-C Privacy Webcam Win11 Blue + HDMI Cable",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Lenovo\",\n  \"size\": \"15.6 inches\",\n  \"material\": null,\n  \"model\": \"IdeaPad 3\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Lenovo\",\n  \"size\": \"15.6\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 190,
-   "output_tokens": 50,
+   "output_tokens": 38,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1810.3
+  "latency_ms": 10034.7
  },
  "3fa325d4f91189b3a170581e": {
   "user": "Title: Carousel Calendars, White Tailed Deer 2023 Wall Calendar",
@@ -1206,33 +1206,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1225.6
+  "latency_ms": 8583.6
  },
  "bf19f5e01c8bfe68e404b0b1": {
   "user": "Title: \"XOOKUN Heavy Duty Tailgate Hinge Bracket, 2PCS Steel Reinforced, Compatible with 07-18 Wrangler JK\".",
-  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"Steel\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": \"XOOKUN\",\n  \"size\": null,\n  \"material\": \"Steel\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 148,
-   "output_tokens": 34,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1236.9
+  "latency_ms": 9387.2
  },
  "d1000724f45bf2af0eb279a1": {
   "user": "Title: Airpod Pro Case, 3D Cartoon Funny Cute Cover,with Cartoon Pendant,Compatible for Airpod Pro.(2021) (Peanut Candy)",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"unknown\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 151,
-   "output_tokens": 32,
+   "output_tokens": 33,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1213.7
+  "latency_ms": 8792.5
  },
  "c4a50c41cf0bda8fd6253f53": {
   "user": "Title: Artificial Pink Polyester Geranium Hanging Bush",
@@ -1245,46 +1245,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1387.5
+  "latency_ms": 9311.5
  },
  "75c99c4e76bb919dc640a877": {
   "user": "Title: DEVASO Carrying Case for Nintendo Switch/Switch OLED/Switch Lite, Professional Waterproof Case Soft Lining Small Hard Case for Nintendo Switch Console OLED Model Pro Controller & Accessories(Black&White)",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": \"Small\",\n  \"material\": \"Waterproof\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"DEVASO\",\n  \"size\": \"Small\",\n  \"material\": \"Waterproof\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 157,
-   "output_tokens": 35,
+   "output_tokens": 38,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1272.4
+  "latency_ms": 9843.4
  },
  "4ffbbb2420f0aec73d57bd02": {
   "user": "Title: Gyizho fits iPhone 15 Phone Case [Compatible with MagSafe] [10FT Drop Resistant] Matte Skin Feeling Back Cover for iPhone 15 Magnetic Case (Black)",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"matte skin\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Gyizho\",\n  \"size\": null,\n  \"material\": \"Matte Skin\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 156,
-   "output_tokens": 35,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1343.5
+  "latency_ms": 10078.6
  },
  "2d9f43b762d35ea486f2f53a": {
   "user": "Title: Brock Replacement Set Driver and Passenger Headlights Compatible with 1996-2000 Sebring Convertible 5263987AB 5263986AB",
-  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": \"Brock\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 159,
-   "output_tokens": 33,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1234.8
+  "latency_ms": 9270.1
  },
  "da0b62ca73b0f861addd3139": {
   "user": "Title: 36 Pairs 12 Colors Heart Charms for Jewelry Making Heart Shaped Magnetic Clasps Connected for DIY Couple Bracelet Necklace Making (16x10.5mm)",
@@ -1297,85 +1297,85 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1762.9
+  "latency_ms": 19202.2
  },
  "34937a66382e556a9ed134ff": {
   "user": "Title: Men's Coco Seize Your Moment T-Shirt",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Coco\",\n  \"size\": null,\n  \"material\": \"T-Shirt\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 126,
-   "output_tokens": 33,
-   "cache_read_tokens": 0,
-   "cache_write_tokens": 0
-  },
-  "latency_ms": 1202.5
- },
- "7bb15d10611c643469f6e40d": {
-  "user": "Title: Vanity Fair Women's Illumination String Bikini Panties (Regular & Plus Size)",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": {\n    \"regular\": true,\n    \"plus_size\": true\n  },\n  \"material\": null\n}\n```",
-  "stop_reason": "end_turn",
-  "model": "Qwen2.5-1.5B-Instruct",
-  "usage": {
-   "input_tokens": 134,
-   "output_tokens": 47,
-   "cache_read_tokens": 0,
-   "cache_write_tokens": 0
-  },
-  "latency_ms": 1764.8
- },
- "81734cf0c53db81c2c153ec6": {
-  "user": "Title: Bme Jasper Solid Wood TV Stand, Under 10 Minutes Assembly (Legs Only), Aesthetic Rattan Doors, Mid Century Entertainment Center for Living Room, Bedroom, 65 inches, Media Console - Dark Chocolate",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": \"65 inches\",\n  \"material\": \"wood\"\n}\n```",
-  "stop_reason": "end_turn",
-  "model": "Qwen2.5-1.5B-Instruct",
-  "usage": {
-   "input_tokens": 163,
-   "output_tokens": 38,
-   "cache_read_tokens": 0,
-   "cache_write_tokens": 0
-  },
-  "latency_ms": 1381.6
- },
- "025aaee782512057ab2490a4": {
-  "user": "Title: HonestBaby Baby Girls' 2-Pack Organic Cotton Snug-fit Footed Pajamas",
-  "text": "```json\n{\n  \"category\": \"baby\",\n  \"brand\": \"HonestBaby\",\n  \"size\": null,\n  \"material\": \"organic cotton\"\n}\n```",
-  "stop_reason": "end_turn",
-  "model": "Qwen2.5-1.5B-Instruct",
-  "usage": {
-   "input_tokens": 135,
    "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1341.1
+  "latency_ms": 16894.7
+ },
+ "7bb15d10611c643469f6e40d": {
+  "user": "Title: Vanity Fair Women's Illumination String Bikini Panties (Regular & Plus Size)",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Vanity Fair\",\n  \"size\": \"Regular & Plus Size\",\n  \"material\": null\n}\n```",
+  "stop_reason": "end_turn",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "usage": {
+   "input_tokens": 134,
+   "output_tokens": 40,
+   "cache_read_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "latency_ms": 14623.3
+ },
+ "81734cf0c53db81c2c153ec6": {
+  "user": "Title: Bme Jasper Solid Wood TV Stand, Under 10 Minutes Assembly (Legs Only), Aesthetic Rattan Doors, Mid Century Entertainment Center for Living Room, Bedroom, 65 inches, Media Console - Dark Chocolate",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"Bme\",\n  \"size\": \"65 inches\",\n  \"material\": \"wood\"\n}\n```",
+  "stop_reason": "end_turn",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "usage": {
+   "input_tokens": 163,
+   "output_tokens": 40,
+   "cache_read_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "latency_ms": 14292.0
+ },
+ "025aaee782512057ab2490a4": {
+  "user": "Title: HonestBaby Baby Girls' 2-Pack Organic Cotton Snug-fit Footed Pajamas",
+  "text": "```json\n{\n  \"category\": \"baby\",\n  \"brand\": \"HonestBaby\",\n  \"size\": \"2-Pack\",\n  \"material\": \"Organic Cotton\"\n}\n```",
+  "stop_reason": "end_turn",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "usage": {
+   "input_tokens": 135,
+   "output_tokens": 40,
+   "cache_read_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "latency_ms": 16030.7
  },
  "0a847e5c4b09866e18fb193b": {
   "user": "Title: Yamaha Stage Custom Birch 5pc Drum Shell Pack - 20\" Kick, Cranberry Red",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": \"20\\\"\",\n  \"material\": \"bark\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"Yamaha\",\n  \"size\": \"20\",\n  \"material\": \"bark\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 137,
-   "output_tokens": 38,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1394.2
+  "latency_ms": 16063.6
  },
  "9335fe25f3a313edf35c3b3a": {
   "user": "Title: IUAIU for iPhone Colorful Oil Painting Exquisite Phone Case for iPhone 14/13/12/11Pro Max, with Pearl Lanyard (Blue,for iPhone 11)",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"oil painting\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"IUAIU\",\n  \"size\": null,\n  \"material\": \"oil painting\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 161,
-   "output_tokens": 34,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1213.1
+  "latency_ms": 14511.4
  },
  "3cb35a0c78b204c90f280004": {
   "user": "Title: Hallmark Paper Wonder Shoebox Funny Pop Up Birthday Card, Congratulations Card, Mothers Day Card, or Fathers Day Card (Grouchy Cat)",
@@ -1388,59 +1388,59 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1194.6
+  "latency_ms": 13428.1
  },
  "f19f545763439b1debf639f9": {
   "user": "Title: Hellosay 2023 Upgrade Tower Fan with LED Light,Portable USB Rechargeable Standing Fan,Super Quiet Bladeless Electric Tower Fan,Mini Vertical Conditioner for Home Office Bedroom (White),13x4.1inches",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": \"13x4.1 inches\",\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Hellosay\",\n  \"size\": \"13x4.1 inches\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 167,
-   "output_tokens": 39,
+   "output_tokens": 42,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1412.8
+  "latency_ms": 15690.9
  },
  "7ffd5a56629a675c69b6a2cb": {
   "user": "Title: BRECK iD Silicone Bracelet - Medical Info Bracelet for Adults, Kids and Teens (Small: 5.25-6?, Yellow)",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": \"small\",\n  \"material\": \"silicone\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"BRECK iD\",\n  \"size\": \"Small\",\n  \"material\": \"Silicone\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 148,
-   "output_tokens": 39,
+   "output_tokens": 44,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1404.4
+  "latency_ms": 14509.7
  },
  "9b48e5829d6493ab5bc164fc": {
   "user": "Title: BOSWELL Spooky Halloween Themed DIY Diamon Painting kit with Complete Tools and accesories for Adults and Children Home Wall Decor (12 Pack)",
-  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": \"BOSWELL\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 150,
-   "output_tokens": 33,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1228.5
+  "latency_ms": 17613.1
  },
  "b823408ab328763c69d66b3d": {
   "user": "Title: Roper Women's Casual Shoe Sneaker",
-  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": \"Roper\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 125,
-   "output_tokens": 33,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1222.6
+  "latency_ms": 20373.4
  },
  "5ee1cfe67b7a877eb453e500": {
   "user": "Title: Emily the Strange Gothic Print Spaghetti Strap Halter Top with Lace-up Closure Bottom Two Piece Bikini Set Bathing Suit",
@@ -1453,7 +1453,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1230.2
+  "latency_ms": 14329.5
  },
  "07d39b98f4737a02180827a7": {
   "user": "Title: Lunuaoe Boys And Girls Anime T-Shirt Shorts Set Kids Shirt Shorts Suit",
@@ -1466,20 +1466,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1373.4
+  "latency_ms": 18862.8
  },
  "f48a6d454a5352f2b5bc3c74": {
   "user": "Title: TreeBud Cartoon Non Slip Bath Mats for Kids, Cute Pattern Oval 27 x 15 Inch Shower Mat for Tub, Anti Slip Machine Washable Bathtub Mats for Toddlers Baby Children (Forest Animals)",
-  "text": "```json\n{\n  \"category\": \"bedding_bath\",\n  \"brand\": null,\n  \"size\": \"27 x 15 inch\",\n  \"material\": \"Anti Slip\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"bedding_bath\",\n  \"brand\": null,\n  \"size\": \"27 x 15 Inch\",\n  \"material\": \"Anti Slip Machine Washable\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 162,
-   "output_tokens": 44,
+   "output_tokens": 47,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1581.8
+  "latency_ms": 18160.0
  },
  "d3657a6fdb4f3ce541f835a2": {
   "user": "Title: 9 PCS St.Patrick's Day Glass Ornaments-Irish Tree Glass Blown Ornaments-St.Patrick Glass Green Top Hat Hanging Ornaments-Irish Tree Ornament for Spring St.Patrick's Day Ireland Party Decoration",
@@ -1492,20 +1492,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1263.3
+  "latency_ms": 10268.7
  },
  "6e4e7e1ef5b23c6a7c4d5391": {
   "user": "Title: New Era Men's Charcoal Philadelphia Eagles Super Bowl LVII Opening Night Sideline 9FORTY Adjustable Hat",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"New Era\",\n  \"size\": null,\n  \"material\": \"cotton\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"New Era\",\n  \"size\": \"9FORTY\",\n  \"material\": \"Not stated\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 140,
-   "output_tokens": 37,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1346.5
+  "latency_ms": 11147.5
  },
  "9ea5a9ce9c9b6d34aebf384c": {
   "user": "Title: Classic Snapback Hats for Men Flat Bill Hats for Women Snapback Dad Baseball Cap Cool Caps Adjustable Outdoor Grill Fisherman",
@@ -1518,20 +1518,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1209.2
+  "latency_ms": 9200.8
  },
  "ebccc6a09106f67c50c71d32": {
   "user": "Title: topliu Bluetooth Sunglasses - Bluetooth 5.0 Audio Glasses with Voice Control, Open Ear Style Smart Glasses for Listen Music and Calls with Volume UP and Down - IP44 Waterproof",
-  "text": "```json\n{\n  \"category\": \"accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"accessories\",\n  \"brand\": \"Topliu\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 155,
-   "output_tokens": 33,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1221.9
+  "latency_ms": 9343.4
  },
  "9ae09761ca990dc12207420f": {
   "user": "Title: DRIPFLEX Charcoal Black Cyberpunk 2077 Ultimate Gaming Samurai Motorcycle Real Leather Bomber Cosplay Jacket Costume",
@@ -1544,7 +1544,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1369.1
+  "latency_ms": 9475.7
  },
  "1fa1c5a014e52308abaa455a": {
   "user": "Title: Flower and Grass Window Decals for Bird Strikes - Anti-Collision Window Decals to Save Birds from Window Collisions,Non Adhesive Reusable Vinyl Rainbow Window Stickers,B",
@@ -1557,7 +1557,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1298.1
+  "latency_ms": 9498.5
  },
  "3a4c1372cbdefc2ecd74a7e8": {
   "user": "Title: 2PC Pet Hair Remover for Couch, Lint Remover, Dog Hair Remover for Clothes, Cleaner Pro Pet Hair Remover, Lint Shaver, Cat Hair Remover for Furniture, Carpet Rake Scraper",
@@ -1570,46 +1570,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1213.0
+  "latency_ms": 8588.5
  },
  "ec8eaad1666e5d008a9ea90c": {
   "user": "Title: NITOYO Tesla Model Y Front Grill Mesh, Upgrade 3 in 1 Disassemble Car Grille Grid Insert for Tesla Model Y Accessories 2023 2022 2021, Air Inlet Vent Grille Cover Replacement for Tesla Model Y",
-  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": \"NITOYO\",\n  \"size\": null,\n  \"material\": \"metal\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 173,
-   "output_tokens": 33,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1184.9
+  "latency_ms": 9359.6
  },
  "6936b73a6c17436e479acd36": {
   "user": "Title: Jacksonville Fan | Jax Fantasy Football Sports Mens Premium Tri Blend T-Shirt",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"premium tri blend\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Jax Fantasy\",\n  \"size\": null,\n  \"material\": \"Premium Tri Blend\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 131,
-   "output_tokens": 36,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1287.7
+  "latency_ms": 9540.8
  },
  "086b617163d78d608c482b7e": {
   "user": "Title: Barzel 18K Gold Plated Multicolor Earrings - Made In Brazil",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"18K Gold Plated\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"Barzel\",\n  \"size\": null,\n  \"material\": \"18K Gold Plated\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 134,
-   "output_tokens": 42,
+   "output_tokens": 44,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1511.9
+  "latency_ms": 10544.3
  },
  "b1a90ccef912d3b9c16855eb": {
   "user": "Title: Toys In The Attic",
@@ -1622,7 +1622,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1223.1
+  "latency_ms": 8577.6
  },
  "975c3488fd4dced04eab2832": {
   "user": "Title: Wireless Car Charger, Qi Wireless Charging Phone Mount, Supports 7.5W & 10W Wireless Fast Charging",
@@ -1635,46 +1635,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1238.8
+  "latency_ms": 8568.2
  },
  "51b3dce9e7de848b6c0a55d2": {
   "user": "Title: Wild Bobby Your Feelings Humor Men's Graphic T-Shirt",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Wild Bobby\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 129,
-   "output_tokens": 33,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1213.7
+  "latency_ms": 9023.6
  },
  "4a2224428fe49678a1e2bfc7": {
   "user": "Title: Kenneth Cole Men's Travel Ready Wool 32\" Finished Bottom Hem Suit",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Kenneth Cole\",\n  \"size\": null,\n  \"material\": \"wool\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Kenneth Cole\",\n  \"size\": \"32\",\n  \"material\": \"wool\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 132,
-   "output_tokens": 38,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1348.5
+  "latency_ms": 9754.0
  },
  "f5de82ddbe949e899bd4fd56": {
   "user": "Title: ZunFeo Floral Tops for Women 2023 Crewneck Short Sleeve Summer Casual Top Cute Petite Dressy Tunic Shirts Ladies Blouses",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": \"petite\",\n  \"material\": \"cotton\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": \"2023 Crewneck Short Sleeve Summer Casual Top Cute Petite Dressy Tunic Shirts Ladies Blouses\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 148,
-   "output_tokens": 37,
+   "output_tokens": 55,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1318.5
+  "latency_ms": 16995.5
  },
  "fc8172057dc4494c1fa9555e": {
   "user": "Title: Womens Tops Hide Belly Tunic 2023 Summer Short Sleeve T Shirts for Leggings Zipper Cold Shoulder Casual Henley Shirts",
@@ -1687,33 +1687,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1169.1
+  "latency_ms": 10473.3
  },
  "86fc19713faff24e2cdb0f9c": {
   "user": "Title: 20W iPhone Fasst Charger, 4Pack [MFi Certified] 2pcs 20W PD Apple Type C Wall Charger Block with 2pcs 10 FT Apple USB-C to Lightning Cable for iPhone 14/13/12/11/Pro Max/Mini/Pro/XR/iPad/Plus",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Apple\",\n  \"size\": \"20W\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 190,
-   "output_tokens": 32,
-   "cache_read_tokens": 0,
-   "cache_write_tokens": 0
-  },
-  "latency_ms": 1131.4
- },
- "448c31e6c838d17ed01b1670": {
-  "user": "Title: Remelon Womens Short Sleeve V Neck Button Down Shirt Tunic Party Sheer Mesh Flared Long Maxi Dress with Belt",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"sheer mesh\"\n}\n```",
-  "stop_reason": "end_turn",
-  "model": "Qwen2.5-1.5B-Instruct",
-  "usage": {
-   "input_tokens": 141,
    "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1306.0
+  "latency_ms": 11729.0
+ },
+ "448c31e6c838d17ed01b1670": {
+  "user": "Title: Remelon Womens Short Sleeve V Neck Button Down Shirt Tunic Party Sheer Mesh Flared Long Maxi Dress with Belt",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Remelon\",\n  \"size\": null,\n  \"material\": \"sheer mesh\"\n}\n```",
+  "stop_reason": "end_turn",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "usage": {
+   "input_tokens": 141,
+   "output_tokens": 38,
+   "cache_read_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "latency_ms": 12276.3
  },
  "79137544065610e24f0d3ff4": {
   "user": "Title: 7\" x 12\" Wooden Refillable Dog Calendar Holder filled with the rest of 2023 and 2024 calendars and includes an order form page for 2025-WESTIE",
@@ -1726,46 +1726,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1641.1
+  "latency_ms": 12551.9
  },
  "b7fe3ee20a0c45f2201c723f": {
   "user": "Title: Wolf Spring Liquid Dog Multivitamin - Natural Dog Health Supplement for Dog Joint Health, Skin, & Digestion - Dog Vitamins Multivitamin & Dog Immune Supplement - Add Directly to Food! (6 Bottles)",
-  "text": "```json\n{\n  \"category\": \"pet_supplies\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"pet_supplies\",\n  \"brand\": \"Wolf\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 163,
-   "output_tokens": 34,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1235.8
+  "latency_ms": 10667.7
  },
  "fdd033a44127a8c6720f0df7": {
   "user": "Title: SuanlaTDS 1Pc Easter Cute Costume Bunny Rabbit Hat with Ears for Cats & Small Dogs Party Pet Accessory Headwear (Yellow, One Size)",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": \"One Size\",\n  \"material\": \"Not Stated\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"SuanlaTDS\",\n  \"size\": \"One Size\",\n  \"material\": \"Not stated\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 152,
-   "output_tokens": 41,
+   "output_tokens": 45,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1476.2
+  "latency_ms": 13281.1
  },
  "2c7f36a8421e1d93f335a461": {
   "user": "Title: MUNBYN Pink Shipping Label Printer&Shipping Scale",
-  "text": "```json\n{\n  \"category\": \"office_school\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"office_school\",\n  \"brand\": \"MUNBYN\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 128,
-   "output_tokens": 33,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1178.4
+  "latency_ms": 10436.1
  },
  "50f0f2df89e58fc6765509f3": {
   "user": "Title: 6 Pack Cellphone Phone Grip and Phone Stand, Collapsible Cell Phone Holder for Smartphones - Green Rose Gold Purple Pink Marble",
@@ -1778,72 +1778,72 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1203.9
+  "latency_ms": 11728.9
  },
  "ea20026ce47b408cf1c93348": {
   "user": "Title: ONETWOFIT Pull Up Bar for Doorway, 440 lbs Heavy Duty Adjustable Portable Upper Body Fitness Workout Bar for Home Gyms, Multi-Grip Strength Wall Mounted Door Frame Chin-Up Bar for Most Doors",
-  "text": "```json\n{\n  \"category\": \"fitness\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"fitness\",\n  \"brand\": \"ONETWOFIT\",\n  \"size\": \"440 lbs\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 162,
-   "output_tokens": 32,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1133.8
+  "latency_ms": 14370.9
  },
  "d67bd7a579fb0e5bd054f798": {
   "user": "Title: Spectra - Synergy Gold Portable - Dual Adjustable Electric Breast Pump - Breastfeeding Essential",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Spectra\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 134,
-   "output_tokens": 32,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1133.4
+  "latency_ms": 13251.1
  },
  "b468e7768b1c74418d2fdae0": {
   "user": "Title: Ab Roller Wheel,Abdominal Roller Machine with Smart LCD Display,Foldable Ab Wheel for Core Strength Training,Steel Ab Workout Equipment with Rubber Grip,Mat,Home Gym Equipment for Men & Women",
-  "text": "```json\n{\n  \"category\": \"fitness\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"steel\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"fitness\",\n  \"brand\": \"Ab\",\n  \"size\": null,\n  \"material\": \"Steel\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 157,
-   "output_tokens": 33,
+   "output_tokens": 34,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1189.3
+  "latency_ms": 13232.0
  },
  "b91f3973f072d1503f63d92c": {
   "user": "Title: DC Men's Manteca 4 High Top Skate Shoe",
-  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": \"DC\",\n  \"size\": \"4\",\n  \"material\": \"not stated\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 128,
-   "output_tokens": 33,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1186.7
+  "latency_ms": 13452.6
  },
  "d1df1be5fe2c9b64289afb23": {
   "user": "Title: FAUYES Neon Rope Lights, 11.5FT RGB Neon Strip Lights,Waterproof IP67,Music Sync,24Key Remote,APP Control,WiFi Voice Activation Compatible with Alexa, Google Assistant, for Bedside DIY Wall Decor",
-  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_decor\",\n  \"brand\": \"FAUYES\",\n  \"size\": \"11.5FT\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 169,
-   "output_tokens": 33,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1237.9
+  "latency_ms": 15035.4
  },
  "782b190d9d32da25a93f53d5": {
   "user": "Title: Tropical Print Tummy Control Tankini Sets Swimsuits Summer Women Loose Fit Bathing Suit Beach Hawaii Flowy Swimwear",
@@ -1856,20 +1856,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1232.3
+  "latency_ms": 12731.6
  },
  "b9fa64cecfc6353e36a8b8e3": {
   "user": "Title: DICMIC Front Right Passenger Side Power Window Lift Motor Compatible with 2003-2009 Nissan 350Z 2003-2007 Infiniti G35 2 Door Coupe Replace# 742-512, 80730-CD00A",
-  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": \"DICMIC\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 187,
-   "output_tokens": 33,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1169.6
+  "latency_ms": 13339.5
  },
  "8c2a64a5940f2fd0dfab207b": {
   "user": "Title: Rope Leash for Dogs, Poop Bag w/roll of Bags and Waste Clip Carrier.",
@@ -1882,33 +1882,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1285.4
+  "latency_ms": 12114.5
  },
  "5f02ec68c1ba8d507d38f329": {
   "user": "Title: VANCLE Adjustable Nylon Watch Strap Quick Release 20mm Soft Breathable Sport Replacement Watch Bands for Women Men (Pink Sand)",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": \"20mm\",\n  \"material\": \"Nylon\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"VANCLE\",\n  \"size\": \"20mm\",\n  \"material\": \"Nylon\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 144,
-   "output_tokens": 41,
+   "output_tokens": 44,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1482.7
+  "latency_ms": 15319.7
  },
  "51eb4832789ff80acfaac63a": {
   "user": "Title: Renegade White Lines Whitewall Tire Cleaner - Powerful Formula for Sparkling Tires",
-  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": \"Renegade\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 134,
-   "output_tokens": 33,
+   "output_tokens": 35,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1194.1
+  "latency_ms": 12821.3
  },
  "43fd6cc7e4edb9e1a2c021cb": {
   "user": "Title: Vintage Marine Military British Prismatic Solid Brass Finish Compass",
@@ -1921,46 +1921,46 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1382.5
+  "latency_ms": 14021.1
  },
  "eab3a3e102cbe701d406afd8": {
   "user": "Title: Madden Girl Women's MARLOWW",
-  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": \"MARLOWW\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 124,
-   "output_tokens": 33,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1214.9
+  "latency_ms": 13128.1
  },
  "949a46bd675d87904b586ee9": {
   "user": "Title: CL Men's Thermal Underwear Long Johns 2 Pack Winter Long Underwear Base Layer",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"thermal\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"CL\",\n  \"size\": \"2 Pack\",\n  \"material\": \"Long Underwear Base Layer\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 134,
-   "output_tokens": 34,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1260.0
+  "latency_ms": 13797.1
  },
  "501382f23e787343ca2149a3": {
   "user": "Title: Fujifilm Mini 11 Instant Camera Charcoal Gray + MiniMate Accessories Bundle + Color Filters, Album, Frames",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Fujifilm\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 141,
-   "output_tokens": 32,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1155.1
+  "latency_ms": 13215.8
  },
  "2e490539b1e2b4c778b21ba9": {
   "user": "Title: Blood Pressure Monitor Digital Automatic Blood Pressure Machine Adjustable Wristband Wrist Type Cuff BP Monitor with Carrying Case for Home Use",
@@ -1973,7 +1973,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1226.9
+  "latency_ms": 12664.6
  },
  "458b598555b4fa44fe266f67": {
   "user": "Title: CALUU LeBron James Basketball sports inspirational poster (12x18inch,No Frame)",
@@ -1986,7 +1986,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1512.8
+  "latency_ms": 12334.0
  },
  "0d672b3d857db5d79302b966": {
   "user": "Title: Calvin Klein Women's Iconica Sneaker",
@@ -1999,7 +1999,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1322.3
+  "latency_ms": 11611.0
  },
  "680ec88a2cbe018496a68188": {
   "user": "Title: Portable Clothes Storage Bag Wardrobe Sorting Storage Box, Double Zipper Closure and Reinforced Handle,for Pillows,Blankets,Toys or Other Clothes (S)",
@@ -2012,20 +2012,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1253.9
+  "latency_ms": 11009.0
  },
  "31146d0e41c4c4c061ac344f": {
   "user": "Title: Clear Snap-On Crystal Hard Case Cover Compatible for Sony PSP 3000 Series, PSP Slim 2000 Series, Attractive and Usable",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"Crystal\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Sony\",\n  \"size\": null,\n  \"material\": \"Crystal\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 149,
-   "output_tokens": 33,
+   "output_tokens": 34,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1190.0
+  "latency_ms": 11416.4
  },
  "9e64efe5ae2e3a25b3ebee71": {
   "user": "Title: Women's High Waist Pants Drawstring Capri Pants Harem Sweatpants Stylish Soft Casual with Pockets Cropped Trouser",
@@ -2038,7 +2038,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1309.1
+  "latency_ms": 10878.4
  },
  "e611c81689a4e948368145a6": {
   "user": "Title: iLeadon Design for MacBook Air 13 inch Case 2022 2021 2020 2019 2018 Release A2337 M1 A2179 A1932 with Touch ID, Glitter Plastic Hard Shell&Sleeve Bag&Keyboard Cover&Screen Protector,Topographic Black",
@@ -2051,33 +2051,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1416.5
+  "latency_ms": 12402.8
  },
  "7ed7f9178246cbd8feab0b45": {
   "user": "Title: YONGSHENGHUA Plus Size Faith 2 Piece Outfits for Women Short Sets Sports Tops Summer Casual Shorts Matching Lounge Sets",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": \"plus size\",\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"YONGSHENGHUA\",\n  \"size\": \"plus size\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 143,
-   "output_tokens": 35,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1297.9
+  "latency_ms": 12622.8
  },
  "c8df592dd3e9c38de65827a1": {
   "user": "Title: ReachMe Womens Baggy High Waisted Cargo Pants with Pockets y2k Straight Wide Leg Tactical Parachute Pants",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"ReachMe\",\n  \"size\": null,\n  \"material\": \"polyester\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 141,
-   "output_tokens": 33,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1213.9
+  "latency_ms": 12026.4
  },
  "99bea3a425f4a18df13095ed": {
   "user": "Title: Moisturizer Container,Airless Pump Bottles, Cream Jar Vacuum Bottle Dispenser, Pump Jars for Lotions and Creams,Face Moisturizer Push Down Pump (50g)",
@@ -2090,72 +2090,72 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1446.4
+  "latency_ms": 12006.4
  },
  "dbd610d5bb732ec11e029641": {
   "user": "Title: HUMTTO mens Athletics Sandals",
-  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"footwear\",\n  \"brand\": \"HUMTTO\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 125,
-   "output_tokens": 33,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1240.0
+  "latency_ms": 11141.9
  },
  "ede2050318ae96a0e72034ed": {
   "user": "Title: MBI AUTO - Painted to Match, Rear Bumper Replacement Cover for 2004-2010 Toyota Sienna Minivan 04-10, TO1100229",
-  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"Painted\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"automotive\",\n  \"brand\": \"MBI AUTO\",\n  \"size\": null,\n  \"material\": \"Painted to Match\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 162,
-   "output_tokens": 35,
-   "cache_read_tokens": 0,
-   "cache_write_tokens": 0
-  },
-  "latency_ms": 1304.4
- },
- "d956c602e68839706aa3e75f": {
-  "user": "Title: Eyekepper Bifocal Sunglasses Outdoor Reading Glasses Sunshine Readers",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
-  "stop_reason": "end_turn",
-  "model": "Qwen2.5-1.5B-Instruct",
-  "usage": {
-   "input_tokens": 130,
-   "output_tokens": 33,
-   "cache_read_tokens": 0,
-   "cache_write_tokens": 0
-  },
-  "latency_ms": 1205.1
- },
- "b8935a0bd723ed3f6e4fe3a2": {
-  "user": "Title: ATTITUDE Multi-Purpose Cleaner with Essential Oils, EWG Verified, Plant and Mineral-Based Ingredients, Vegan Household Products, Refillable Aluminum Bottle, Geranium and Lemongrass, 16 Fl Oz",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"ATTITUDE\",\n  \"size\": null,\n  \"material\": \"Plant and Mineral-Based\"\n}\n```",
-  "stop_reason": "end_turn",
-  "model": "Qwen2.5-1.5B-Instruct",
-  "usage": {
-   "input_tokens": 161,
    "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1555.7
+  "latency_ms": 12631.7
  },
- "362d75a8f98da9b631c5ee16": {
-  "user": "Title: Tamron 18-200mm Di II VC All-In-One Zoom Lens for Canon Mount (AFB018C-700) with Sandisk Extreme PRO SDXC 64GB UHS-1 Memory Card",
-  "text": "```json\n{\n  \"category\": \"camera\",\n  \"brand\": \"Tamron\",\n  \"size\": null,\n  \"material\": \"plastic\"\n}\n```",
+ "d956c602e68839706aa3e75f": {
+  "user": "Title: Eyekepper Bifocal Sunglasses Outdoor Reading Glasses Sunshine Readers",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Eyekepper\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
-   "input_tokens": 167,
+   "input_tokens": 130,
    "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1325.4
+  "latency_ms": 11208.2
+ },
+ "b8935a0bd723ed3f6e4fe3a2": {
+  "user": "Title: ATTITUDE Multi-Purpose Cleaner with Essential Oils, EWG Verified, Plant and Mineral-Based Ingredients, Vegan Household Products, Refillable Aluminum Bottle, Geranium and Lemongrass, 16 Fl Oz",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"ATTITUDE\",\n  \"size\": null,\n  \"material\": \"Plant and Mineral-Based Ingredients, Vegan\"\n}\n```",
+  "stop_reason": "end_turn",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "usage": {
+   "input_tokens": 161,
+   "output_tokens": 43,
+   "cache_read_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "latency_ms": 12736.0
+ },
+ "362d75a8f98da9b631c5ee16": {
+  "user": "Title: Tamron 18-200mm Di II VC All-In-One Zoom Lens for Canon Mount (AFB018C-700) with Sandisk Extreme PRO SDXC 64GB UHS-1 Memory Card",
+  "text": "```json\n{\n  \"category\": \"camera\",\n  \"brand\": \"Tamron\",\n  \"size\": \"18-200mm\",\n  \"material\": \"Sandisk Extreme PRO SDXC 64GB UHS-1 Memory Card\"\n}\n```",
+  "stop_reason": "end_turn",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "usage": {
+   "input_tokens": 167,
+   "output_tokens": 57,
+   "cache_read_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "latency_ms": 16537.4
  },
  "6c081635f3fe4c9dc3e3c3f7": {
   "user": "Title: 6Pcs Bed Frame Leg Covers - Bed Frame Leg Protector - Toe Savers Protector for Bed Frame Leg Protect Toes from Bumping Iron Bed Frame (6Pcs)",
@@ -2168,7 +2168,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1246.0
+  "latency_ms": 11280.6
  },
  "22670ad9f0a7ac0eecbc8f4b": {
   "user": "Title: COACH Coated Canvas Signature Willow Bucket 24",
@@ -2181,33 +2181,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1448.5
+  "latency_ms": 12577.1
  },
  "23d5796e271655ba26762599": {
   "user": "Title: TURBANS BY THOMPSON Turban for Men Halo Turban One Piece Satin Lined Headwrap for Waves and Locs Black",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"satin\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"THOMPSON\",\n  \"size\": null,\n  \"material\": \"satin\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 146,
-   "output_tokens": 38,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1385.6
+  "latency_ms": 12713.5
  },
  "8be4f0e7e1728fd4b3da23ee": {
   "user": "Title: P PURLOVE Full XL Over Twin XL Over Queen Triple Bunk Bed, Metal Bunk Bed Frame with Long and Short Ladder, Safety Rails, Space Saving(Black)",
-  "text": "```json\n{\n  \"category\": \"furniture\",\n  \"brand\": null,\n  \"size\": {\n    \"full_xl\": \"Over Twin\",\n    \"xl\": \"Queen\",\n    \"triple_bunk_bed\": \"Triple\"\n  },\n  \"material\": \"Metal\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"furniture\",\n  \"brand\": \"P PURLOVE\",\n  \"size\": \"Full XL\",\n  \"material\": \"Metal\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 153,
-   "output_tokens": 63,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 2306.7
+  "latency_ms": 12625.3
  },
  "98c81b5ac3055e8cb44a1937": {
   "user": "Title: HP Z240 SFF Workstation Desktop PC, Intel Core i7-6700 up to 4.20GHz Processor, 32GB RAM, 1TB SSD, WiFi & Bluetooth, HDMI, Windows 10 Pro (Renewed), Black",
@@ -2220,7 +2220,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1227.4
+  "latency_ms": 11677.1
  },
  "8ea36eee145aa63e3cfa259f": {
   "user": "Title: Vans Unisex-Adult Casual",
@@ -2233,33 +2233,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1361.2
+  "latency_ms": 11059.1
  },
  "c14a2d4f5874df256ac5874e": {
   "user": "Title: WerkWeit 2 Step Stainless Steel in-Board Outboard Transom Platform with 1 Handrail Marine Telescoping Boat Ladder with Fiberglass Swim Platform Collapsible Step Ladder for Swimming Pool Pontoon Dock",
-  "text": "```json\n{\n  \"category\": \"boating\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"stainless steel\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"boating\",\n  \"brand\": \"WerkWeit\",\n  \"size\": null,\n  \"material\": \"stainless steel\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 161,
-   "output_tokens": 36,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1313.5
+  "latency_ms": 13792.5
  },
  "1d0a8389235bcc3046307b70": {
   "user": "Title: Icebreaker Merino Women's Dia Long Sleeve Zip Top, New Zealand Merino Wool",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"merino wool\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Icebreaker\",\n  \"size\": null,\n  \"material\": \"New Zealand Merino Wool\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 134,
-   "output_tokens": 36,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1305.4
+  "latency_ms": 13773.4
  },
  "95bc74a30a09df4ffd06e8fa": {
   "user": "Title: Mailbox Delivery Notification Alert Signal Flag",
@@ -2272,7 +2272,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1224.2
+  "latency_ms": 12288.3
  },
  "1b9a4f40453db5aa7613162d": {
   "user": "Title: MEPTY Infrared Heater for Outdoor",
@@ -2285,20 +2285,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1240.6
+  "latency_ms": 12644.1
  },
  "7215f9f4cd3f88df3e9aa1ac": {
   "user": "Title: 2 Pcs Car Rear View Side Mirror Rain Eyebrow, Car Exterior Trim Accessories, Carbon Fiber Rear View Mirror Visor Guard Car Side Mirror Rain Eyebrow Guard Universal for Most Car, Truck, SUV",
-  "text": "```json\n{\n  \"category\": \"car\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"carbon fiber\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"car_accessories\",\n  \"brand\": \"unknown\",\n  \"size\": null,\n  \"material\": \"carbon fiber\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 160,
-   "output_tokens": 34,
+   "output_tokens": 37,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1245.0
+  "latency_ms": 14520.4
  },
  "8199456ffcc8578e48ba8d7e": {
   "user": "Title: Meromore Fence Mount - Action Camera Aluminum Fence Mount Compatible with GoPro, iPhone, Phones, Digital Camera, Ideal Backstop Camera Fence Clip for Recording Baseball, Softball, Football Games",
@@ -2311,20 +2311,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1325.3
+  "latency_ms": 13584.2
  },
  "9735c3614e1fd15f62d1e2b8": {
   "user": "Title: Loungefly Disney Rapunzel Princess Scene Crossbody Bag",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"Loungefly\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 128,
-   "output_tokens": 36,
+   "output_tokens": 39,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1329.6
+  "latency_ms": 14247.8
  },
  "23ca455ffd010513a8222cd2": {
   "user": "Title: prAna Women's Borra Pocket Capri",
@@ -2337,7 +2337,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1398.6
+  "latency_ms": 13346.5
  },
  "a7e62d724e7c10f00f51d7c6": {
   "user": "Title: Portable Air Conditioner Mini Air Cooler Desk Fan Personal Water-cooled Air Cooler 3 Speeds Quiet Air Circulator Fan for Home, Office, Bedroom and Office with LED Lights (Green)",
@@ -2350,20 +2350,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1158.7
+  "latency_ms": 12196.0
  },
  "efabc63b46f35b07814e75f4": {
   "user": "Title: Multifunctional Egg Whisk - 2 in 1 Food Clip & Egg Whisk, Multifunctional Kitchen Tool for Cooking Salad Mixer and Food Clip, Egg Beater (Mix-color) (1piece Orange)",
-  "text": "```json\n{\n  \"category\": \"cooking\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"cooking_kitchen\",\n  \"brand\": \"unknown\",\n  \"size\": null,\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 163,
-   "output_tokens": 33,
+   "output_tokens": 36,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1205.6
+  "latency_ms": 12754.0
  },
  "de52cf4a60f89c7646ae2be9": {
   "user": "Title: 6.6ft Colorful Feather Boas Natural Feather Boa Women Girls Dress Up Boa for Party Dress Up Halloween Costume Dec",
@@ -2376,33 +2376,33 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1252.5
+  "latency_ms": 12999.8
  },
  "7ce8ed45a3774cfb3f87a8e6": {
   "user": "Title: Miimall Compatible for Garmin Forerunner 965 Case, Full Cover PC Case with Tempered Glass Screen Protector for Garmin Forerunner 965/ Garmin 965 Accessories (Black)",
-  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"tempered glass\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"electronics\",\n  \"brand\": \"Miimall\",\n  \"size\": null,\n  \"material\": \"tempered glass\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 161,
-   "output_tokens": 35,
+   "output_tokens": 38,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1276.9
+  "latency_ms": 13824.4
  },
  "82f7790f24d23e65a948b6db": {
   "user": "Title: Toolzia Shower Foot Massager Scrubber, Shower Foot Scrubber Massager Cleaner, Foot Cleaner Massage Mat with Non Slip Suction Cups",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": \"Toolzia\",\n  \"size\": null,\n  \"material\": \"Non Slip Suction Cups\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 144,
-   "output_tokens": 34,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1199.1
+  "latency_ms": 14668.8
  },
  "fc63cc9dc0aedf864fd83edd": {
   "user": "Title: Earrings for Women, Birthstone Earrings, 8x6mm Pear Genuine or Synthetic Gemstone, Leverback Earrings, Teardrop Earrings, Huggie Earrings, Drop Earrings, Dangle Earrings, Silver Earrings or Gold Flash",
@@ -2415,7 +2415,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1624.6
+  "latency_ms": 16705.0
  },
  "a5776733313b30a5a93a093d": {
   "user": "Title: Handmade Spiral Taper Candle - 7.5 inches Twisted Candles Sticks Dripless Dinner Candle for Home Decoration Wedding Holiday Party & All Occasions, Set of 2 (White)",
@@ -2428,7 +2428,7 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1466.0
+  "latency_ms": 14768.8
  },
  "2e0c1f08cb08e7fa5db70db1": {
   "user": "Title: This is Truck Country Official Licensed RAM Logo Men's Graphic Short Sleeve Tee",
@@ -2441,37 +2441,37 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1386.6
+  "latency_ms": 13227.9
  },
  "8a07e066822921a36be472aa": {
   "user": "Title: Cestus Boxx, Work Gloves with Grip, Extra Padded Palm, Warehouse Gloves, Breathable, Form Fitting, Box Handling Gloves Men",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"breathable\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Cestus\",\n  \"size\": null,\n  \"material\": \"breathable, form fitting\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 147,
-   "output_tokens": 36,
+   "output_tokens": 42,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1285.5
+  "latency_ms": 15132.8
  },
  "8c3cedecf925a2981626a182": {
   "user": "Title: Guide Gear Men's Insulated Leather Gloves",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"leather\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"Guide Gear\",\n  \"size\": null,\n  \"material\": \"leather\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 125,
-   "output_tokens": 38,
+   "output_tokens": 40,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1377.3
+  "latency_ms": 14502.1
  },
  "7fb78f9fd9df86fd2333c093": {
   "user": "Title: RV Mirror Covers Set of Two (Beige, 15\")",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": \"15 inches\",\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": \"15\",\n  \"material\": \"null\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
@@ -2480,20 +2480,20 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1380.9
+  "latency_ms": 13628.5
  },
  "20174a7f8edc18440113f6e5": {
   "user": "Title: ICE CARATS 14k Yellow Gold Dainty Letter N Initial Name Monogram Slide Pendant Charm Fine Jewelry For Women Gifts For Her",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"14k Yellow Gold\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"ICE CARATS\",\n  \"size\": \"N\",\n  \"material\": \"14k Yellow Gold\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 144,
-   "output_tokens": 41,
+   "output_tokens": 45,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1498.7
+  "latency_ms": 16207.3
  },
  "3aa1587a902dfb7140e431a0": {
   "user": "Title: Women's Summer Bell Sleeve Blouse Sequin Long Mesh Tops Print Casual Splice Shoulder Blouse Women Cold Loose Sleeve",
@@ -2506,59 +2506,59 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1353.8
+  "latency_ms": 13986.3
  },
  "402eb632ec37fd406c342198": {
   "user": "Title: Nature Made Choline Supplements, Supports Liver Health, Nervous System Function and Brain Health, 40 Vegan Gummies, 20 Day Supply",
-  "text": "```json\n{\n  \"category\": \"health_household\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": null\n}\n```",
+  "text": "```json\n{\n  \"category\": \"health_household\",\n  \"brand\": \"Nature Made\",\n  \"size\": \"40 Vegan Gummies\",\n  \"material\": null\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 148,
-   "output_tokens": 34,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1224.0
+  "latency_ms": 15035.5
  },
  "5cf979c9103e88e4bfef4698": {
   "user": "Title: Komake 2-in-1 Watermelon Fork, 2 Pack Watermelon Fruit Cutting Fork, Summer Watermelon Fork Slicer Cutter, Dual Head Stainless Steel Fruit Fork for Home Party Family Camping",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": null,\n  \"material\": \"Stainless Steel\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"Komake\",\n  \"size\": null,\n  \"material\": \"Stainless Steel\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 156,
-   "output_tokens": 39,
+   "output_tokens": 41,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1483.6
+  "latency_ms": 15127.0
  },
  "2fa5d90f1aa9fd6b2e48fe8e": {
   "user": "Title: Tal 64OZ Ranger Pro Stainless Steel Vacuum Insulated Water Bottle - Leak-Proof Double Walled Thermos w/Carry Loop 80 Hrs Cold, 26 Hot Reusable Metal holds 8 cups (WM2584) (Black)",
-  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": null,\n  \"size\": \"80 Hrs Cold, 26 Hot\",\n  \"material\": \"Stainless Steel\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"jewelry_accessories\",\n  \"brand\": \"Tal\",\n  \"size\": \"64OZ\",\n  \"material\": \"Stainless Steel\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 174,
-   "output_tokens": 49,
+   "output_tokens": 45,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1758.8
+  "latency_ms": 16224.6
  },
  "95506068405f87298c10bf36": {
   "user": "Title: DIY 5D Diamond Painting by Number Kits, Landscape Night Large Size Full Drill Crystal Rhinestone Diamond Embroidery Dotz Cross Stitch Canvas Arts Craft for Home Wall Decor Square Drill 32x64in",
-  "text": "```json\n{\n  \"category\": \"craft\",\n  \"brand\": null,\n  \"size\": {\n    \"width\": \"32cm\",\n    \"height\": \"64cm\"\n  },\n  \"material\": \"diamonds\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"crafts\",\n  \"brand\": \"unknown\",\n  \"size\": \"32x64in\",\n  \"material\": \"diamonds\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 161,
-   "output_tokens": 53,
+   "output_tokens": 42,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1929.0
+  "latency_ms": 15145.7
  },
  "2268f49f6edd2b7bfd22a473": {
   "user": "Title: Ivysport unisex-adult Classic",
@@ -2571,32 +2571,32 @@
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1186.5
+  "latency_ms": 12321.0
  },
  "3b326280fcc619623cb7d00e": {
   "user": "Title: Champion Men's 9\" Everyday Cotton Short with Pockets (Retired Colors)",
-  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": null,\n  \"size\": \"9\\\"\",\n  \"material\": \"cotton\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"apparel\",\n  \"brand\": \"Champion\",\n  \"size\": \"9\",\n  \"material\": \"cotton\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 134,
-   "output_tokens": 36,
+   "output_tokens": 38,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1285.3
+  "latency_ms": 13636.3
  },
  "691c87d7055c1abd73ce2144": {
   "user": "Title: Dog crate cover wood-dog kennel wood table top-dog crate furniture-dog kennel furniture-dog crate topper wood-dog kennel cover (25\" x 38\" (crate size 23\" x 36\"), Ebony)",
-  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": \"25\\\" x 38\\\"\",\n  \"material\": \"wood\"\n}\n```",
+  "text": "```json\n{\n  \"category\": \"home_kitchen\",\n  \"brand\": null,\n  \"size\": \"25\\\" x 38\\\" (crate size 23\\\" x 36\\\"), Ebony\",\n  \"material\": \"wood\"\n}\n```",
   "stop_reason": "end_turn",
   "model": "Qwen2.5-1.5B-Instruct",
   "usage": {
    "input_tokens": 171,
-   "output_tokens": 42,
+   "output_tokens": 57,
    "cache_read_tokens": 0,
    "cache_write_tokens": 0
   },
-  "latency_ms": 1519.0
+  "latency_ms": 19901.9
  }
 }

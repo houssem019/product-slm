@@ -3,11 +3,11 @@
  "model": "Qwen2.5-1.5B-Instruct",
  "n": 50,
  "strict_json": 0.0,
- "latency_ms_p50": 1325.2,
- "latency_ms_p95": 1820.6,
+ "latency_ms_p50": 21893.5,
+ "latency_ms_p95": 28085.4,
  "usage": {
   "input_tokens": 7345,
-  "output_tokens": 1861,
+  "output_tokens": 1941,
   "cache_read_tokens": 0,
   "cache_write_tokens": 0
  },
@@ -16,45 +16,45 @@
  "prompt": "student",
  "metrics": {
   "n": 50,
-  "json_valid": 0.88,
-  "exact_match": 0.08,
+  "json_valid": 0.9,
+  "exact_match": 0.18,
   "accuracy": {
-   "category": 0.52,
-   "brand": 0.4,
-   "size": 0.74,
-   "material": 0.6
+   "category": 0.54,
+   "brand": 0.66,
+   "size": 0.68,
+   "material": 0.54
   },
   "f1": {
-   "brand": 0.34,
-   "size": 0.381,
-   "material": 0.471
+   "brand": 0.698,
+   "size": 0.385,
+   "material": 0.378
   }
  },
  "report": {
   "n": 50,
-  "valid": 44,
-  "exact": 4,
+  "valid": 45,
+  "exact": 9,
   "correct": {
-   "category": 26,
-   "brand": 20,
-   "size": 37,
-   "material": 30
+   "category": 27,
+   "brand": 33,
+   "size": 34,
+   "material": 27
   },
   "prf": {
    "brand": {
-    "precision": 0.8,
-    "recall": 0.216,
-    "f1": 0.34
+    "precision": 0.846,
+    "recall": 0.595,
+    "f1": 0.698
    },
    "size": {
-    "precision": 0.4,
-    "recall": 0.364,
-    "f1": 0.381
+    "precision": 0.333,
+    "recall": 0.455,
+    "f1": 0.385
    },
    "material": {
-    "precision": 0.364,
-    "recall": 0.667,
-    "f1": 0.471
+    "precision": 0.28,
+    "recall": 0.583,
+    "f1": 0.378
    }
   },
   "per_category": {
@@ -88,7 +88,7 @@
    },
    "furniture": {
     "n": 3,
-    "correct": 1
+    "correct": 2
    },
    "health_household": {
     "n": 1,
@@ -120,7 +120,7 @@
    }
   },
   "errors": {
-   "invalid_schema": 6
+   "invalid_schema": 5
   }
  }
 }

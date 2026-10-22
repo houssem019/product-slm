@@ -1,32 +1,32 @@
 {
  "qwen2.5-1.5b-lora:val": {
   "json_valid": 0.98,
-  "exact_match": 0.62,
+  "exact_match": 0.64,
   "accuracy": {
    "category": 0.74,
-   "brand": 0.92,
-   "size": 0.88,
-   "material": 0.92
+   "brand": 0.94,
+   "size": 0.92,
+   "material": 0.9
   },
   "f1": {
    "brand": 0.93,
-   "size": 0.7,
-   "material": 0.85
+   "size": 0.85,
+   "material": 0.81
   }
  },
  "qwen2.5-1.5b-lora:test": {
   "json_valid": 0.98,
-  "exact_match": 0.61,
+  "exact_match": 0.68,
   "accuracy": {
    "category": 0.79,
-   "brand": 0.86,
-   "size": 0.89,
-   "material": 0.91
+   "brand": 0.91,
+   "size": 0.94,
+   "material": 0.9
   },
   "f1": {
-   "brand": 0.86,
-   "size": 0.74,
-   "material": 0.83
+   "brand": 0.91,
+   "size": 0.85,
+   "material": 0.82
   }
  },
  "qwen2.5-1.5b-lora-vllm-guided:test": {
